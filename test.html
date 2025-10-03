@@ -7,20 +7,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         :root {
-            /* Primary Colors */
+         
             --color-navy-blue: #1E3A8A;
             --color-dark-blue: #0F172A;
 
-            /* Secondary (Greens for Growth) */
+          
             --color-dark-green: #059669;
             --color-emerald-green: #10B981;
             --color-teal-accent: #14B8A6;
 
-            /* Accent Colors */
+           
             --color-golden-yellow: #FBBF24;
             --color-amber-hover: #F59E0B;
 
-            /* Neutral / Background */
+           
             --color-soft-white: #F9FAFB;
             --color-medium-gray: #9CA3AF;
             --color-cool-gray: #6B7280;
@@ -47,46 +47,46 @@
             padding: 0 20px;
         }
 
-/* 1. STYLING FOR THE GREEN, ROUNDED BACKGROUND (The Wrapper) */
+
 .logo-wrapper {
-    /* Keep the size you liked */
+  
     width: 55px; 
     height: 55px;
     
-    /* ---- CHANGE HERE: Apply your desired green background color ---- */
-    background-color: #059669; /* Your desired green */
+  
+    background-color: #059669; 
     
-    /* Rounded Shape (adjust for perfect circle or soft square) */
-    border-radius: 12px; /* For a soft square, or use 50% for a perfect circle */
     
-    /* Center the icon inside the wrapper */
+    border-radius: 12px; 
+    
+    
     display: inline-flex;
     align-items: center;
     justify-content: center;
     
-    /* General alignment */
+   
     vertical-align: middle; 
     
-    /* ---- CHANGE HERE: Increase space between logo and text ---- */
-    margin-right: 20px; /* Increased from 15px to 20px for more space */
+    
+    margin-right: 20px; 
 }
 
-/* 2. STYLING FOR THE WHITE COMPASS ICON */
+
 .logo-icon-fa {
-    /* Make the icon white (the compass needle) */
+     
     color: white; 
     
-    /* Keep the icon size */
+    
     font-size: 30px; 
 }
 
-/* Optional: Center the entire heading */
+
 .container h1 {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-        /* Header Styles */
+       
         .header {
             background: linear-gradient(135deg, var(--color-navy-blue) 0%, var(--color-dark-blue) 100%);
             color: white;
@@ -128,7 +128,7 @@
             z-index: 2;
         }
 
-        /* Main Content */
+        
         .main-content {
             padding: 80px 0;
         }
@@ -152,7 +152,7 @@
             margin: 0 auto 40px auto;
         }
 
-        /* Feature Cards */
+        
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -253,7 +253,7 @@
             font-size: 1.3rem;
         }
 
-        /* Assessment Styles */
+        
         .assessment-container {
             max-width: 800px;
             margin: 0 auto;
@@ -386,7 +386,7 @@
             transform: none !important;
         }
 
-        /* Results Styles */
+        
         .results-header {
             text-align: center;
             margin-bottom: 50px;
@@ -489,7 +489,7 @@
             z-index: 2;
         }
 
-        /* Stats Section */
+       
         .stats-section {
             background: var(--color-soft-white);
             padding: 60px 0;
@@ -520,7 +520,7 @@
             font-weight: 500;
         }
 
-        /* Roadmap Page Styles */
+        
         .roadmap-container {
             max-width: 900px;
             margin: 0 auto;
@@ -618,7 +618,7 @@
             font-weight: bold;
         }
 
-        /* Responsive Design */
+        
         @media (max-width: 768px) {
             .header h1 {
                 font-size: 2.5rem;
@@ -655,12 +655,12 @@
             }
         }
 
-        /* Hidden class for page transitions */
+        
         .hidden {
             display: none;
         }
 
-        /* Loading animation */
+        
         .loading {
             text-align: center;
             padding: 40px;
@@ -683,7 +683,7 @@
     </style>
 </head>
 <body>
-    <!-- Welcome Page -->
+   
     <div id="welcomePage">
         <header class="header">
             <div class="container">
@@ -753,7 +753,7 @@
         </main>
     </div>
 
-    <!-- Assessment Page -->
+    
     <div id="assessmentPage" class="hidden">
         <header class="header">
             <div class="container">
@@ -778,7 +778,7 @@
                     <div class="question-section">
                         <h2 class="question-title" id="questionText">Loading question...</h2>
                         <div class="options-grid" id="optionsContainer">
-                            <!-- Options will be populated by JavaScript -->
+                           
                         </div>
                     </div>
 
@@ -795,7 +795,7 @@
         </main>
     </div>
 
-    <!-- Results Page -->
+   
     <div id="resultsPage" class="hidden">
         <header class="header">
             <div class="container">
@@ -812,7 +812,7 @@
                 </div>
 
                 <div class="results-grid" id="resultsContainer">
-                    <!-- Results will be populated by JavaScript -->
+                 
                 </div>
 
                 <div style="text-align: center; margin-top: 50px;">
@@ -824,7 +824,7 @@
         </main>
     </div>
 
-    <!-- Roadmap Page -->
+   
     <div id="roadmapPage" class="hidden">
         <div class="roadmap-container">
             <div class="roadmap-header">
@@ -836,13 +836,13 @@
             </div>
 
             <div class="roadmap-timeline" id="roadmapTimeline">
-                <!-- Timeline will be populated by JavaScript -->
+              
             </div>
         </div>
     </div>
 
     <script>
-        // Assessment Questions
+        
         const questions = [
             {
                 question: "What type of work environment energizes you most?",
@@ -936,7 +936,7 @@
             }
         ];
 
-        // Career Data
+        
         const careers = {
             tech: {
                 title: "💻 Software Developer",
@@ -1270,12 +1270,12 @@
             }
         };
 
-        // Assessment State
+       
         let currentQuestion = 0;
         let answers = [];
         let scores = { tech: 0, business: 0, creative: 0, healthcare: 0, education: 0, finance: 0 };
 
-        // Initialize Assessment
+        
         function startAssessment() {
             document.getElementById('welcomePage').classList.add('hidden');
             document.getElementById('assessmentPage').classList.remove('hidden');
@@ -1317,7 +1317,7 @@
         function selectOption(optionIndex) {
             answers[currentQuestion] = optionIndex;
             
-            // Update visual selection
+            
             const options = document.querySelectorAll('.option-card');
             options.forEach((option, index) => {
                 option.classList.toggle('selected', index === optionIndex);
@@ -1349,7 +1349,7 @@
 
         function nextQuestion() {
             if (answers[currentQuestion] !== undefined) {
-                // Update scores
+                
                 const selectedOption = questions[currentQuestion].options[answers[currentQuestion]];
                 Object.keys(selectedOption.scores).forEach(career => {
                     scores[career] += selectedOption.scores[career];
@@ -1368,7 +1368,7 @@
             document.getElementById('assessmentPage').classList.add('hidden');
             document.getElementById('resultsPage').classList.remove('hidden');
 
-            // Calculate results
+           
             const maxScore = Math.max(...Object.values(scores));
             const results = Object.entries(careers).map(([key, career]) => ({
                 key,
@@ -1376,7 +1376,7 @@
                 match: Math.round((scores[key] / maxScore) * 100)
             })).sort((a, b) => b.match - a.match);
 
-            // Display results
+            
             const resultsContainer = document.getElementById('resultsContainer');
             resultsContainer.innerHTML = '';
 
