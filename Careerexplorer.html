@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Career Explorer</title>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <link href="career.css" rel="stylesheet">
+        <script src="career.js" defer></script>
+    </head>
+    <body>
+        <header>
+        <div class="mainLogo" onclick="window.location.href='main.html'">
+            <div class="Hicon" style="margin-left: 20px;"><i class="fas fa-compass"></i></div>
+            <h2 >PathFinder</h2>
+        </div>
+<div class="home" onclick="window.location.href='main.html'">Home</div>
+        <div class="navbar">
+            <ul>
+                <li>
+                    <a href="#" id="dropdownToggle">Services Offered ▾</a>
+                    <ul class="dropdown-menu" id="dropdownMenu">
+                        <li><a href="test.html">Career Assessment Test</a></li>
+                        <li><a href="explorer.html">Career Explorer</a></li>
+                        <li><a href="blogs.html">Blogs & Articles</a></li>
+                        <li><a href="inspiration.html">Inspiration Hub</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" id="themesToggle">Themes ▾</a>
+                    <ul class="dropdown-menu" id="themesMenu">
+                        <li><a href="#" data-theme="light"><i class="fas fa-sun"></i> Light Theme</a></li>
+                        <li><a href="#" data-theme="dark"><i class="fas fa-moon"></i> Dark Theme</a></li>
+                        <li><a href="#" data-theme="contrast"><i class="fas fa-adjust"></i> High Contrast</a></li>
+                        <li><a href="#" data-theme="reading"><i class="fas fa-book-open"></i> Blue Filter</a></li>
+                    </ul>
+                </li>
+              
+            </ul>
+        </div>
+
+        <div class="header-actions">
+            <div class="AboutUs">About Us</div>
+            <div class="ContactUs">Contact Us</div>
+
+            <button class="icon-button" id="textSizeToggle" title="Adjust Text Size">
+                <i class="fas fa-text-height"></i>
+            </button>
+        </div>
+    </header>
+        <div class="titlebox">
+            <h1><b>Career Explorer</b></h1>
+            <p>Unlock your true potential with tailored career guidance</p>
+        </div>
+        <div class="container">
+            <input class="searchbar" id="searchInput" placeholder="Search careers, skills or industry....">
+            <button id="exploreBtn">Explore</button> 
+            <div class="filters">
+                <button class="filter-btn active" onclick="filterCareers('all', event)">All</button>
+                <button class="filter-btn" onclick="filterCareers('technology', event)">Technology</button>
+                <button class="filter-btn" onclick="filterCareers('healthcare', event)">Healthcare</button>
+                <button class="filter-btn" onclick="filterCareers('creative', event)">Creative</button>
+                <button class="filter-btn" onclick="filterCareers('business', event)">Business</button>
+                <button class="filter-btn" onclick="filterCareers('education', event)">Education</button>
+                <button class="filter-btn" onclick="filterCareers('media', event)">Media</button>
+                <button class="filter-btn" onclick="filterCareers('law', event)">law</button>
+            </div>
+        </div>
+        <div id="noResults" style="display:none; color:red; margin-top:90px; font-weight:bold; font-size: 1.5rem; margin-bottom: 90px; ">
+            No results found.
+        </div>
+
+        <div class="horizontalstack">
+            <div class="careerbox" data-skills="Programming , Problem-solving, Debugging, Teamwork" data-education="Bachelor’s in Computer Science or Software Engineering" data-outlook="Very strong growth (+22%) due to AI, cloud computing, and software demand">   
+                <div class="careericon">💻</div>
+                <div class="careertext">
+                    <h2 class="h2">Software Engineer</h2>
+                    <p>Technology</p><br>
+                    <p>Design and develop software applications, systems, and platforms using various programming languages and technologies.</p>
+                    <div class="row">
+                        <b>$95,000 - $180,000</b>
+                        <h5> +22% growth</h5> 
+                    </div>  
+                </div>
+            </div>
+             <div class="careerbox" data-skills="Data Analysis, Machine Learning, Statistics, Python, R, SQL" data-education="Bachelor’s or Master’s in Data Science, Computer Science, or Mathematics"data-outlook="High demand across industries as companies rely on big data insights">
+                <div class="careericon">📊</div>
+                <div class="careertext">
+                    <h2 class="h2">Data Scientist</h2>
+                    <p>Technology</p><br>
+                    <p>Analyze complex data to help organizations make informed decisions using statistical methods and machine learning.</p>
+                    <div class="row">
+                        <b>$100,000 - $200,000</b>
+                        <h5> +35% growth</h5> 
+                    </div>  
+                </div>
+            </div>
+             <div class="careerbox" data-skills="Patient Care, Critical Thinking, Communication, Empathy" data-education="Bachelor’s in Nursing (BSN), RN License" data-outlook="Strong growth due to aging population and healthcare demand">
+                <div class="careericon">🏥</div>
+                <div class="careertext">
+                    <h2 class="h2">Registered Nurse</h2>
+                    <p>Healthcare</p><br>
+                    <p>Provide patient care, administer medications, and support healthcare teams in various medical settings.</p>
+                    <div class="row">
+                        <b>$75,000 - $120,000</b>
+                        <h5>+7% growth</h5> 
+                    </div>  
+                </div>
+            </div>
+             <div class="careerbox"  data-skills="Creativity, Adobe Creative Suite, Visual Communication, Branding" data-education="Bachelor’s in Graphic Design or related field" data-outlook="Steady demand with shift to digital marketing and freelance opportunities">
+                <div class="careericon">🎨</div>
+                <div class="careertext">
+                    <h2 class="h2">UX Designer</h2>
+                    <p>Creative</p><br>
+                    <p>Create intuitive and engaging user experiences for digital products through research, design, and testing.</p>
+                    <div class="row">
+                        <b>$70,000 - $140,000</b>
+                        <h5>+13% growth</h5> 
+                    </div>  
+                </div>
+            </div>
+             <div class="careerbox" data-skills="Analytical Thinking, Business Process Modeling, Communication, SQL, Excel" data-education="Bachelor’s in Business Administration, IT, or related field" data-outlook="Growing demand as businesses seek data-driven decision making">
+                <div class="careericon">📈</div>
+                <div class="careertext">
+                    <h2 class="h2">Marketing Manager</h2>
+                    <p>Business</p><br>
+                    <p>Develop and execute marketing strategies to promote products, services, and brand awareness.</p>
+                    <div class="row">
+                        <b>$65,000 - $130,000</b>
+                        <h5>+10% growth</h5> 
+                    </div>  
+                </div>
+            </div>
+            <div class="careerbox" data-skills="Classroom Management, Communication, Creativity, Child Development"  data-education="Bachelor’s degree in Education or Teaching Certification" data-outlook="Steady demand with opportunities in schools worldwide">
+                <div class="careericon">📚</div>
+                <div class="careertext">
+                    <h2 class="h2">Elementary Teacher</h2>
+                    <p>Education</p><br>
+                    <p>Educate and inspire young learners while developing their academic, social, and emotional skills.</p>
+                    <div class="row">
+                        <b>$45,000 - $75,000</b>
+                        <h5>+8% growth</h5> 
+                    </div>  
+                </div>
+            </div>
+            <div class="careerbox" data-skills="Network Security, Ethical Hacking, Risk Management, Problem-solving" data-education="Bachelor’s degree in Cybersecurity, IT, or Computer Science"  data-outlook="High demand with significant growth due to increasing cyber threats">
+                <div class="careericon">🔒</div>
+                <div class="careertext">
+                    <h2 class="h2">Cybersecurity Analyst</h2>
+                    <p>Technology</p><br>
+                    <p>Protect organizations from cyber threats by monitoring, detecting, and responding to security incidents.</p>
+                    <div class="row">
+                        <b>$85,000 - $160,000</b>
+                        <h5>+33% growth</h5> 
+                    </div>  
+                </div>
+            </div>
+            <div class="careerbox" data-skills="Rehabilitation, Physical Therapy, Patient Care, Anatomy Knowledge"  data-education="Doctor of Physical Therapy (DPT) degree"  data-outlook="Strong demand as the population ages and requires mobility care">
+                <div class="careericon">🏃‍♂️</div>
+                <div class="careertext">
+                    <h2 class="h2">Physical Therapist</h2>
+                    <p>Healthcare</p><br>
+                    <p>Help patients recover from injuries and improve their physical mobility through therapeutic exercises and treatments.</p>
+                    <div class="row">
+                        <b>$80,000 - $120,000</b>
+                        <h5>$80,000 - $120,000</h5> 
+                    </div>  
+                </div>
+            </div>
+            <div class="careerbox" 
+     data-skills="Research, Laboratory Techniques, Critical Thinking, Data Analysis"  
+     data-education="Ph.D. or Master’s degree in Biology, Chemistry, or related sciences"  
+     data-outlook="Strong demand in pharmaceuticals, healthcare, and environmental fields">
+    <div class="careericon">🧪</div>
+    <div class="careertext">
+        <h2 class="h2">Research Scientist</h2>
+        <p>Science</p><br>
+        <p>Conduct experiments and research to advance knowledge in medical, environmental, and industrial sciences.</p>
+        <div class="row">
+            <b>$70,000 - $140,000</b>
+            <h5>+15% growth</h5> 
+        </div>  
+    </div>
+</div>
+
+<div class="careerbox" 
+     data-skills="Financial Analysis, Risk Management, Attention to Detail, Communication"  
+     data-education="Bachelor’s degree in Finance, Accounting, or Economics"  
+     data-outlook="Stable demand with strong growth in corporate and global finance">
+    <div class="careericon">💼</div>
+    <div class="careertext">
+        <h2 class="h2">Financial Analyst</h2>
+        <p>Business</p><br>
+        <p>Analyze financial data to guide businesses and individuals in investment and budgeting decisions.</p>
+        <div class="row">
+            <b>$65,000 - $110,000</b>
+            <h5>+9% growth</h5> 
+        </div>  
+    </div>
+</div>
+
+<div class="careerbox" 
+     data-skills="Legal Research, Critical Thinking, Negotiation, Public Speaking"  
+     data-education="Juris Doctor (JD) degree and state bar exam"  
+     data-outlook="Competitive field with steady demand in corporate, criminal, and civil law">
+    <div class="careericon">⚖️</div>
+    <div class="careertext">
+        <h2 class="h2">Lawyer</h2>
+        <p>Law</p><br>
+        <p>Represent clients in legal matters, draft documents, and provide legal advice in courts and organizations.</p>
+        <div class="row">
+            <b>$80,000 - $190,000</b>
+            <h5>+6% growth</h5> 
+        </div>  
+    </div>
+</div>
+
+<div class="careerbox" 
+     data-skills="Creativity, Technical Drawing, Project Management, CAD Software"  
+     data-education="Bachelor’s or Master’s degree in Architecture"  
+     data-outlook="Steady growth with increasing demand for sustainable and modern infrastructure">
+    <div class="careericon">🏛️</div>
+    <div class="careertext">
+        <h2 class="h2">Architect</h2>
+        <p>Creative</p><br>
+        <p>Design and oversee the construction of buildings, blending functionality, safety, and aesthetics.</p>
+        <div class="row">
+            <b>$70,000 - $150,000</b>
+            <h5>+8% growth</h5> 
+        </div>  
+    </div>
+</div>
+
+<div class="careerbox" 
+     data-skills="Piloting, Navigation, Communication, Crisis Management"  
+     data-education="Commercial Pilot License (CPL) and flight training school certification"  
+     data-outlook="High demand in global aviation, particularly in commercial airlines">
+    <div class="careericon">✈️</div>
+    <div class="careertext">
+        <h2 class="h2">Commercial Pilot</h2>
+        <p>Transportation</p><br>
+        <p>Operate aircraft to transport passengers and cargo safely while adhering to aviation regulations.</p>
+        <div class="row">
+            <b>$85,000 - $160,000</b>
+            <h5>+11% growth</h5> 
+        </div>  
+    </div>
+</div>
+
+<div class="careerbox" 
+     data-skills="Medical Diagnosis, Surgery, Patient Care, Problem-Solving"  
+     data-education="Medical Doctor (MD) degree and specialized residency"  
+     data-outlook="Very high demand with strong job security in healthcare systems worldwide">
+    <div class="careericon">🩺</div>
+    <div class="careertext">
+        <h2 class="h2">Physician</h2>
+        <p>Healthcare</p><br>
+        <p>Diagnose and treat illnesses, prescribe medications, and provide preventive healthcare services.</p>
+        <div class="row">
+            <b>$150,000 - $250,000</b>
+            <h5>+7% growth</h5> 
+        </div>  
+    </div>
+</div>
+<div class="careerbox" 
+     data-skills="Storytelling, Writing, Editing, Creativity, Research"  
+     data-education="Bachelor’s degree in Journalism, Communications, or English"  
+     data-outlook="Steady demand with growth in digital and multimedia journalism">
+    <div class="careericon">📰</div>
+    <div class="careertext">
+        <h2 class="h2">Journalist</h2>
+        <p>Media</p><br>
+        <p>Investigate, write, and report news stories across print, broadcast, and digital platforms.</p>
+        <div class="row">
+            <b>$40,000 - $85,000</b>
+            <h5>+6% growth</h5> 
+        </div>  
+    </div>
+</div>
+
+<div class="careerbox" 
+     data-skills="Teaching, Communication, Research, Leadership"  
+     data-education="Master’s or Ph.D. in subject area; teaching certification"  
+     data-outlook="Growing demand for educators in higher education and research institutions">
+    <div class="careericon">🏫</div>
+    <div class="careertext">
+        <h2 class="h2">Professor</h2>
+        <p>Education</p><br>
+        <p>Teach courses, conduct research, and mentor students at universities and colleges.</p>
+        <div class="row">
+            <b>$70,000 - $140,000</b>
+            <h5>+9% growth</h5> 
+        </div>  
+    </div>
+</div>
+
+<div class="careerbox" 
+     data-skills="Programming, AI, Machine Learning, Data Structures, Robotics"  
+     data-education="Bachelor’s or Master’s in Computer Science or Artificial Intelligence"  
+     data-outlook="Explosive growth with AI and automation adoption worldwide">
+    <div class="careericon">🤖</div>
+    <div class="careertext">
+        <h2 class="h2">AI Engineer</h2>
+        <p>Technology</p><br>
+        <p>Design, develop, and deploy artificial intelligence and machine learning systems to solve real-world problems.</p>
+        <div class="row">
+            <b>$110,000 - $200,000</b>
+            <h5>+40% growth</h5> 
+        </div>  
+    </div>
+</div>
+
+<div class="careerbox" 
+     data-skills="Nutrition Planning, Counseling, Health Education, Problem-solving"  
+     data-education="Bachelor’s in Nutrition or Dietetics; state certification"  
+     data-outlook="Strong demand as people focus on preventive healthcare and wellness">
+    <div class="careericon">🥗</div>
+    <div class="careertext">
+        <h2 class="h2">Dietitian</h2>
+        <p>Healthcare</p><br>
+        <p>Develop nutrition programs and educate individuals on healthy eating and dietary management.</p>
+        <div class="row">
+            <b>$55,000 - $95,000</b>
+            <h5>+11% growth</h5> 
+        </div>  
+    </div>
+</div>
+
+<div class="careerbox" 
+     data-skills="Coding, Web Design, User Experience, Problem-solving"  
+     data-education="Bachelor’s in Computer Science, IT, or Web Development"  
+     data-outlook="Very high demand due to rapid growth of online businesses and digital services">
+    <div class="careericon">🌐</div>
+    <div class="careertext">
+        <h2 class="h2">Web Developer</h2>
+        <p>Technology</p><br>
+        <p>Design, code, and maintain websites and web applications for individuals and organizations.</p>
+        <div class="row">
+            <b>$60,000 - $120,000</b>
+            <h5>+20% growth</h5> 
+        </div>  
+    </div>
+</div>
+
+<div class="careerbox" 
+     data-skills="Pharmacology, Patient Care, Communication, Detail Orientation"  
+     data-education="Doctor of Pharmacy (Pharm.D.) degree and state licensure"  
+     data-outlook="High demand in healthcare systems, retail, and hospitals">
+    <div class="careericon">💊</div>
+    <div class="careertext">
+        <h2 class="h2">Pharmacist</h2>
+        <p>Healthcare</p><br>
+        <p>Dispense medications, advise patients on prescriptions, and ensure safe use of drugs and treatments.</p>
+        <div class="row">
+            <b>$90,000 - $140,000</b>
+            <h5>+5% growth</h5> 
+        </div>  
+    </div>
+</div>
+
+<div class="careerbox" 
+     data-skills="Creativity, 3D Modeling, Animation Software, Storytelling"  
+     data-education="Bachelor’s in Animation, Graphic Design, or Fine Arts"  
+     data-outlook="Growing demand in film, gaming, and digital entertainment industries">
+    <div class="careericon">🎬</div>
+    <div class="careertext">
+        <h2 class="h2">Animator</h2>
+        <p>Creative</p><br>
+        <p>Create 2D and 3D animations for movies, video games, advertisements, and multimedia projects.</p>
+        <div class="row">
+            <b>$50,000 - $100,000</b>
+            <h5>+16% growth</h5> 
+        </div>  
+    </div>
+</div>
+
+<div class="careerbox" 
+     data-skills="Emergency Response, Physical Fitness, Decision-making, Teamwork"  
+     data-education="Fire Academy training and certification"  
+     data-outlook="Stable demand with consistent need for public safety and emergency services">
+    <div class="careericon">🚒</div>
+    <div class="careertext">
+        <h2 class="h2">Firefighter</h2>
+        <p>Public Service</p><br>
+        <p>Respond to emergencies, extinguish fires, and rescue individuals from dangerous situations.</p>
+        <div class="row">
+            <b>$45,000 - $85,000</b>
+            <h5>+7% growth</h5> 
+        </div>  
+    </div>
+</div>
+
+        </div>
+        
+        <!-- Career Detail Modal -->
+<div id="careerModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class="modal-header">
+      <span id="modalIcon" class="modal-icon"></span>
+      <div>
+        <h2 id="modalTitle"></h2>
+        <p id="modalCategory"></p>
+      </div>
+    </div>
+    <div class="modal-body">
+      <h3>Description</h3>
+      <p1 id="modalDescription"></p1>
+      <div class="row1">
+        <h3>Salary Range</h3>
+        <h3>Job Growth Rate</h3>
+      </div>
+      <div class="row1">
+        <p2 id="modalSalary"></p2>
+        <p3 id="modalGrowth"></p3>
+      </div>
+      <h3>Key Skills</h3>
+      <div id="modalSkills" class="skills-cotainer"></div>
+      <h3>Education Requirement</h3> 
+      <span id="modalEducation"></span>
+      <h3>Career Outlook</h3>
+      <span id="modalOutlook"></span>
+    </div>
+  </div>
+</div>
+
+<div class="Abovefooter">
+  <div class="footer-about">
+    <h3>About Us</h3>
+    <p>
+      PathFinder is your trusted career guide, helping students and professionals
+      discover opportunities, assess skills, and get inspired for the future.
+    </p>
+  </div>
+
+  <div class="footer-links">
+    <h3>Quick Links</h3>
+    <ul>
+      <li><a href="test.html">Career Assessment</a></li>
+      <li><a href="explorer.html">Career Explorer</a></li>
+      <li><a href="blogs.html">Blogs & Articles</a></li>
+      <li><a href="inspiration.html">Inspiration Hub</a></li>
+    </ul>
+  </div>
+
+  <div class="footer-contact">
+    <h3>Contact</h3>
+    <p>Email: support@pathfinder.com</p><br>
+    <p>Phone: +92 300 1234567</p>
+    <div class="socials">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+  </div>
+</div>
+<footer>
+    <p> &copy; 2025 PathFinder. All rights reserved.</p>
+</footer>
+    </body>
+</html>
