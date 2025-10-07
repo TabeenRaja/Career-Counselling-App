@@ -1,0 +1,1328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PathFinder - Professional Career Insights & Success Stories</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="blogs.css">
+</head>
+
+
+<body >
+
+   <header >
+        <div class="mainLogo" onclick="window.location.href='main.html'">
+            <div class="Hicon" style="margin-left: 20px;"><i class="fas fa-compass"></i></div>
+            <h2 >PathFinder</h2>
+        </div>
+ <div class="home" onclick="window.location.href='main.html'">Home</div>
+        <div class="navbar">
+            <ul>
+                <li>
+                    <a href="#" id="dropdownToggle">Services Offered ▾</a>
+                    <ul class="dropdown-menu" id="dropdownMenu">
+                        <li><a href="test.html">Career Assessment Test</a></li>
+                        <li><a href="explorer.html">Career Explorer</a></li>
+                        <li><a href="blogs.html">Blogs & Articles</a></li>
+                        <li><a href="inspiration.html">Inspiration Hub</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" id="themesToggle">Themes ▾</a>
+                    <ul class="dropdown-menu" id="themesMenu">
+                        <li><a href="#" data-theme="light"><i class="fas fa-sun"></i> Light Theme</a></li>
+                        <li><a href="#" data-theme="dark"><i class="fas fa-moon"></i> Dark Theme</a></li>
+                        <li><a href="#" data-theme="contrast"><i class="fas fa-adjust"></i> High Contrast</a></li>
+                        <li><a href="#" data-theme="reading"><i class="fas fa-book-open"></i> Blue Filter</a></li>
+                    </ul>
+                </li>
+              
+            </ul>
+        </div>
+
+        <div class="header-actions">
+            <div class="AboutUs">About Us</div>
+            <div class="ContactUs">Contact Us</div>
+
+            <button class="icon-button" id="textSizeToggle" title="Adjust Text Size">
+                <i class="fas fa-text-height"></i>
+            </button>
+        </div>
+    </header>
+
+
+  <div class="welcomeMess">
+    <H1 style="color: white; font-size: 45px;">Insightful articles</H1>
+    <p style="color: white; font-weight: bold;">Explore insightful articles and practical tips to plan and shape a successful future.</p>
+</div>
+
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-16">
+       
+
+
+ <section class="success-section">
+  <div class="success-card">
+    <div class="success-content">
+      <span class="tag">Featured Success Story</span>
+      <h2>From Burnout to Breakthrough: A Tech Executive's Journey</h2>
+      <p>
+        Sarah Martinez transformed her career from a burned-out software engineer
+        to VP of Engineering at a Fortune 500 company. Discover the strategic mindset
+        shifts, networking approaches, and leadership principles that made her transformation possible.
+      </p>
+
+      <div class="author">
+        <img
+          src="https://cdn.pixabay.com/photo/2024/09/02/10/36/ai-generated-9016424_960_720.jpg"
+          alt="Sarah Martinez"
+        />
+        <div>
+          <h4>Sarah Martinez</h4>
+          <p>VP of Engineering, TechCorp</p>
+          <span>12 min read • Published 2 days ago</span>
+        </div>
+      </div>
+
+      <button  onclick="openArticle('featured')" class="read-btn">Read Success Story →</button>
+    </div>
+
+    <div class="success-side">
+      <div class="side-text">
+        <svg
+          class="side-icon"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M12 7a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0V8.414l-4.293 4.293a1 1 0 01-1.414 0L8 10.414l-4.293 4.293a1 1 0 01-1.414-1.414l5-5a1 1 0 011.414 0L11 10.586 14.586 7H12z"
+            clip-rule="evenodd"
+          />
+        </svg>
+        <h3>Career Growth</h3>
+        <p>Inspiring Real-World Success</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+        <!-- Search and Filter Section -->
+        <section class="mb-12">
+           
+            
+            <div class="flex flex-col md:flex-row items-start md:items-center justify-between mb-8">
+                <h2 class="heading">Latest Articles</h2>
+                <div class="flex flex-wrap gap-3">
+                    <button onclick="filterArticles('all')" class="filter-btn filter-active px-6 py-3 rounded-lg font-medium transition-all">
+                        All Articles
+                    </button>
+                    <button onclick="filterArticles('success-stories')"  class="filter-btn filter-inactive px-6 py-3 rounded-lg font-medium transition-all">
+                        Success Stories
+                    </button>
+                    <button onclick="filterArticles('career-tips')" class="filter-btn filter-inactive px-6 py-3 rounded-lg font-medium transition-all">
+                        Career Tips
+                    </button>
+                    <button onclick="filterArticles('leadership')" class="filter-btn filter-inactive px-6 py-3 rounded-lg font-medium transition-all">
+                        Leadership
+                    </button>
+                    <button onclick="filterArticles('skills')" class="filter-btn filter-inactive px-6 py-3 rounded-lg font-medium transition-all">
+                        Skills
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Grid Section -->
+          <section id="articles-grid">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10" id="articles-container">
+                <!-- Article 1 -->
+                <article class="card-professional rounded-2xl overflow-hidden" data-category="career-tips">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=250&fit=crop" alt="Team meeting" class="w-full h-56 object-cover">
+                    <div class="p-8">
+                        <div class="category-tag text-teal-accent mb-4">CAREER STRATEGY</div>
+                        <h3 class="text-2xl font-bold text-dark-blue mb-4 leading-tight">5 Networking Strategies That Actually Work in 2024</h3>
+                        <p class="text-cool-gray mb-6 leading-relaxed">Learn the modern networking approaches that successful professionals use to build meaningful connections and advance their careers.</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face" alt="Michael Chen" class="w-12 h-12 rounded-full object-cover mr-4">
+                                <div>
+                                    <p class="font-semibold text-dark-blue">Michael Chen</p>
+                                    <p class="text-xs text-medium-gray">6 min read</p>
+                                </div>
+                            </div>
+                            <button onclick="openArticle('networking')" class="readButton">
+                                Read More →
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 2 -->
+                <article class="card-professional rounded-2xl overflow-hidden" data-category="success-stories">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=250&fit=crop" alt="Professional woman" class="w-full h-56 object-cover">
+                    <div class="p-8">
+                        <div class="category-tag text-golden-yellow mb-4">SUCCESS STORY</div>
+                        <h3 class="text-2xl font-bold text-dark-blue mb-4 leading-tight">How I Doubled My Salary in 18 Months</h3>
+                        <p class="text-cool-gray mb-6 leading-relaxed">Jessica's strategic approach to skill development and job transitions that led to a 100% salary increase.</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&h=150&fit=crop&crop=face" alt="Jessica Rodriguez" class="w-12 h-12 rounded-full object-cover mr-4">
+                                <div>
+                                    <p class="font-semibold text-dark-blue">Jessica Rodriguez</p>
+                                    <p class="text-xs text-medium-gray">8 min read</p>
+                                </div>
+                            </div>
+                            <button onclick="openArticle('salary')" class="readButton">
+                                Read More →
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 3 -->
+                <article class="card-professional rounded-2xl overflow-hidden" data-category="leadership">
+                    <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?w=400&h=250&fit=crop" alt="Leadership meeting" class="w-full h-56 object-cover">
+                    <div class="p-8">
+                        <div class="category-tag text-navy-blue mb-4">LEADERSHIP</div>
+                        <h3 class="text-2xl font-bold text-dark-blue mb-4 leading-tight">The First 90 Days: New Manager's Playbook</h3>
+                        <p class="text-cool-gray mb-6 leading-relaxed">Essential strategies for new managers to build trust, establish credibility, and drive results in their first quarter.</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face" alt="David Kim" class="w-12 h-12 rounded-full object-cover mr-4">
+                                <div>
+                                    <p class="font-semibold text-dark-blue">David Kim</p>
+                                    <p class="text-xs text-medium-gray">10 min read</p>
+                                </div>
+                            </div>
+                            <button onclick="openArticle('manager')" class="readButton">
+                                Read More →
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 4 -->
+                <article class="card-professional rounded-2xl overflow-hidden" data-category="skills">
+                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=250&fit=crop" alt="Learning and development" class="w-full h-56 object-cover">
+                    <div class="p-8">
+                        <div class="category-tag text-emerald-green mb-4">SKILL DEVELOPMENT</div>
+                        <h3 class="text-2xl font-bold text-dark-blue mb-4 leading-tight">Future-Proof Skills Every Professional Needs</h3>
+                        <p class="text-cool-gray mb-6 leading-relaxed">The critical skills that will remain valuable as technology and workplace dynamics continue to evolve.</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face" alt="Amanda Foster" class="w-12 h-12 rounded-full object-cover mr-4">
+                                <div>
+                                    <p class="font-semibold text-dark-blue">Amanda Foster</p>
+                                    <p class="text-xs text-medium-gray">7 min read</p>
+                                </div>
+                            </div>
+                            <button onclick="openArticle('skills')" class="readButton">
+                                Read More →
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 5 -->
+                <article class="card-professional rounded-2xl overflow-hidden" data-category="career-tips">
+                    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=400&h=250&fit=crop" alt="Interview preparation" class="w-full h-56 object-cover">
+                    <div class="p-8">
+                        <div class="category-tag text-teal-accent mb-4">CAREER STRATEGY</div>
+                        <h3 class="text-2xl font-bold text-dark-blue mb-4 leading-tight">Mastering the Executive Interview Process</h3>
+                        <p class="text-cool-gray mb-6 leading-relaxed">Advanced interview strategies and preparation techniques for senior-level positions and executive roles.</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop&crop=face" alt="Robert Thompson" class="w-12 h-12 rounded-full object-cover mr-4">
+                                <div>
+                                    <p class="font-semibold text-dark-blue">Robert Thompson</p>
+                                    <p class="text-xs text-medium-gray">12 min read</p>
+                                </div>
+                            </div>
+                            <button onclick="openArticle('interview')" class="readButton">
+                                Read More →
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 6 -->
+                <article class="card-professional rounded-2xl overflow-hidden" data-category="success-stories">
+                    <img src="https://images.unsplash.com/photo-1551836022-deb4988cc6c0?w=400&h=250&fit=crop" alt="Career pivot" class="w-full h-56 object-cover">
+                    <div class="p-8">
+                        <div class="category-tag text-golden-yellow mb-4">SUCCESS STORY</div>
+                        <h3 class="text-2xl font-bold text-dark-blue mb-4 leading-tight">From Teacher to Tech: A Complete Career Pivot</h3>
+                        <p class="text-cool-gray mb-6 leading-relaxed">How Maria successfully transitioned from education to product management at a leading tech company.</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face" alt="Maria Gonzalez" class="w-12 h-12 rounded-full object-cover mr-4">
+                                <div>
+                                    <p class="font-semibold text-dark-blue">Maria Gonzalez</p>
+                                    <p class="text-xs text-medium-gray">9 min read</p>
+                                </div>
+                            </div>
+                            <button onclick="openArticle('pivot')" class="readButton">
+                                Read More →
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 7 -->
+                <article class="card-professional rounded-2xl overflow-hidden" data-category="career-tips">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=250&fit=crop" alt="Remote work leadership" class="w-full h-56 object-cover">
+                    <div class="p-8">
+                        <div class="category-tag text-teal-accent mb-4">REMOTE WORK</div>
+                        <h3 class="text-2xl font-bold text-dark-blue mb-4 leading-tight">Leading Remote Teams: The Complete Guide</h3>
+                        <p class="text-cool-gray mb-6 leading-relaxed">Master the art of remote leadership with proven strategies for building trust, maintaining productivity, and fostering team culture.</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face" alt="Alex Rivera" class="w-12 h-12 rounded-full object-cover mr-4">
+                                <div>
+                                    <p class="font-semibold text-dark-blue">Alex Rivera</p>
+                                    <p class="text-xs text-medium-gray">11 min read</p>
+                                </div>
+                            </div>
+                            <button onclick="openArticle('remote')" class="readButton">
+                                Read More →
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 8 -->
+                <article class="card-professional rounded-2xl overflow-hidden" data-category="leadership">
+                    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=400&h=250&fit=crop" alt="Executive presence" class="w-full h-56 object-cover">
+                    <div class="p-8">
+                        <div class="category-tag text-navy-blue mb-4">EXECUTIVE PRESENCE</div>
+                        <h3 class="text-2xl font-bold text-dark-blue mb-4 leading-tight">Building Executive Presence: Command Any Room</h3>
+                        <p class="text-cool-gray mb-6 leading-relaxed">Develop the gravitas, communication skills, and strategic mindset that distinguish true leaders from managers.</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face" alt="Victoria Chen" class="w-12 h-12 rounded-full object-cover mr-4">
+                                <div>
+                                    <p class="font-semibold text-dark-blue">Victoria Chen</p>
+                                    <p class="text-xs text-medium-gray">13 min read</p>
+                                </div>
+                            </div>
+                            <button onclick="openArticle('presence')" class="readButton">
+                                Read More →
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 9 -->
+                <article class="card-professional rounded-2xl overflow-hidden" data-category="success-stories">
+                    <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=400&h=250&fit=crop" alt="Startup success" class="w-full h-56 object-cover">
+                    <div class="p-8">
+                        <div class="category-tag text-golden-yellow mb-4">ENTREPRENEURSHIP</div>
+                        <h3 class="text-2xl font-bold text-dark-blue mb-4 leading-tight">From Corporate to $10M Startup: An Entrepreneur's Journey</h3>
+                        <p class="text-cool-gray mb-6 leading-relaxed">The complete story of leaving a six-figure corporate job to build a multi-million dollar company from scratch.</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&h=150&fit=crop&crop=face" alt="Rachel Kim" class="w-12 h-12 rounded-full object-cover mr-4">
+                                <div>
+                                    <p class="font-semibold text-dark-blue">Rachel Kim</p>
+                                    <p class="text-xs text-medium-gray">16 min read</p>
+                                </div>
+                            </div>
+                            <button onclick="openArticle('startup')" class="readButton">
+                                Read More →
+                            </button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+        </section>
+
+
+ <section class="success-stories">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="heading">Success Stories</h2>
+      <p>Real professionals who transformed their careers with strategic guidance and actionable insights</p>
+      <div class="header-underline"></div>
+    </div>
+
+    <div class="testimonials-grid">
+      <!-- Testimonial 1 -->
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face" alt="Alex Chen">
+          <div>
+            <h4>Alex Chen</h4>
+            <p>Software Engineer → VP Engineering</p>
+            <div class="rating">★★★★★</div>
+          </div>
+        </div>
+        <p class="testimonial-text">
+          “The career strategy guidance helped me transition from individual contributor to executive leadership in just 2 years. The networking approaches alone were game-changing.”
+        </p>
+        <div class="testimonial-footer">
+          <span>300% salary increase</span>
+          <span>2 years</span>
+        </div>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face" alt="Sarah Johnson">
+          <div>
+            <h4>Sarah Johnson</h4>
+            <p>Marketing → Product Management</p>
+            <div class="rating">★★★★★</div>
+          </div>
+        </div>
+        <p class="testimonial-text">
+          “I successfully pivoted from marketing to product management using the strategic frameworks and skill development roadmap. Now leading product at a unicorn startup!”
+        </p>
+        <div class="testimonial-footer">
+          <span>150% salary increase</span>
+          <span>18 months</span>
+        </div>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face" alt="Michael Rodriguez">
+          <div>
+            <h4>Michael Rodriguez</h4>
+            <p>Consultant → Tech Executive</p>
+            <div class="rating">★★★★★</div>
+          </div>
+        </div>
+        <p class="testimonial-text">
+          “The executive interview preparation and leadership development content was invaluable. Landed my dream CTO role at a Fortune 500 company.”
+        </p>
+        <div class="testimonial-footer">
+          <span>400% salary increase</span>
+          <span>3 years</span>
+        </div>
+      </div>
+
+      <!-- Testimonial 4 -->
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&h=150&fit=crop&crop=face" alt="Emily Davis">
+          <div>
+            <h4>Emily Davis</h4>
+            <p>Teacher → UX Director</p>
+            <div class="rating">★★★★★</div>
+          </div>
+        </div>
+        <p class="testimonial-text">
+          “Made a complete career pivot from education to tech design. The transition strategies and skill development guidance made it possible to land my dream role.”
+        </p>
+        <div class="testimonial-footer">
+          <span>200% salary increase</span>
+          <span>2.5 years</span>
+        </div>
+      </div>
+
+      <!-- Testimonial 5 -->
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face" alt="Lisa Park">
+          <div>
+            <h4>Lisa Park</h4>
+            <p>Analyst → Data Science Lead</p>
+            <div class="rating">★★★★★</div>
+          </div>
+        </div>
+        <p class="testimonial-text">
+          “The future-proof skills content helped me identify and develop the right capabilities. Now leading a team of 15 data scientists at a major tech company.”
+        </p>
+        <div class="testimonial-footer">
+          <span>250% salary increase</span>
+          <span>2 years</span>
+        </div>
+      </div>
+
+      <!-- Testimonial 6 -->
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop&crop=face" alt="James Wilson">
+          <div>
+            <h4>James Wilson</h4>
+            <p>Manager → C-Suite Executive</p>
+            <div class="rating">★★★★★</div>
+          </div>
+        </div>
+        <p class="testimonial-text">
+          “The executive leadership content and strategic thinking frameworks were instrumental in my promotion to Chief Operating Officer. Exceptional career guidance.”
+        </p>
+        <div class="testimonial-footer">
+          <span>500% salary increase</span>
+          <span>4 years</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+          
+ <!-- Stats Section -->
+<section class="stats-section">
+  <div class="stats-grid">
+    <div class="stat-item">
+      <div class="stat-number">50,000+</div>
+      <div class="stat-label">Professionals Helped</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">250%</div>
+      <div class="stat-label">Average Salary Increase</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">95%</div>
+      <div class="stat-label">Success Rate</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">2.1 years</div>
+      <div class="stat-label">Average Time to Goal</div>
+    </div>
+  </div>
+</section>
+
+
+    </main>
+
+
+   
+
+    <!-- Article Modal -->
+    <div id="article-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="p-8">
+                <div class="flex items-center justify-between mb-6">
+                    <h2 id="modal-title" class="text-3xl font-bold text-dark-blue"></h2>
+                    <button onclick="closeArticle()" class="text-cool-gray hover:text-dark-blue text-2xl">×</button>
+                </div>
+                <div id="modal-content" class="prose prose-lg max-w-none">
+                    <!-- Article content will be inserted here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="Abovefooter">
+  <div class="footer-about">
+    <h3>About Us</h3>
+    <p>
+      PathFinder is your trusted career guide, helping students and professionals
+      discover opportunities, assess skills, and get inspired for the future.
+    </p>
+  </div>
+
+  <div class="footer-links">
+    <h3>Quick Links</h3>
+    <ul>
+      <li><a href="test.html">Career Assessment</a></li>
+      <li><a href="explorer.html">Career Explorer</a></li>
+      <li><a href="blogs.html">Blogs & Articles</a></li>
+      <li><a href="inspiration.html">Inspiration Hub</a></li>
+    </ul>
+  </div>
+
+  <div class="footer-contact">
+    <h3>Contact</h3>
+    <p>Email: support@pathfinder.com</p>
+    <p>Phone: +92 300 1234567</p>
+    <div class="socials">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+  </div>
+</div>
+<footer>
+    <p> &copy; 2025 PathFinder. All rights reserved.</p>
+</footer>
+<script>//dropdown menu in header
+// script.js — safe and defensive
+document.addEventListener('DOMContentLoaded', () => {
+  // --- element picks (may be null if you don't include them; code will not crash) ---
+  const dropdownToggle = document.getElementById('dropdownToggle'); // Services toggle
+  const dropdownMenu = document.getElementById('dropdownMenu');
+
+  const themesToggle = document.getElementById('themesToggle'); // Theme toggle in header
+  const themesMenu = document.getElementById('themesMenu');
+
+  const textSizeToggle = document.getElementById('textSizeToggle'); // optional "A" icon
+  const themeOptions = document.querySelectorAll('[data-theme]'); // items with data-theme="dark" etc
+  const sizeOptions = document.querySelectorAll('[data-size]'); // optional fine-grain sizes
+
+  const aboutBtn = document.querySelector('.AboutUs'); // optional
+  const contactBtn = document.querySelector('.ContactUs'); // optional
+
+  // helper: close both menus
+  function closeAllMenus() {
+    if (dropdownMenu) dropdownMenu.classList.remove('show');
+    if (themesMenu) themesMenu.classList.remove('show');
+  }
+
+  // Toggle helpers (guarded)
+  if (dropdownToggle && dropdownMenu) {
+    dropdownToggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();            // prevents immediate document click handler
+      dropdownMenu.classList.toggle('show');
+      if (themesMenu) themesMenu.classList.remove('show');
+    });
+  }
+
+  if (themesToggle && themesMenu) {
+    themesToggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      themesMenu.classList.toggle('show');
+      if (dropdownMenu) dropdownMenu.classList.remove('show');
+    });
+  }
+
+  // Click outside -> close menus
+  document.addEventListener('click', (e) => {
+    const clicked = e.target;
+    if (dropdownMenu && dropdownToggle) {
+      if (!dropdownMenu.contains(clicked) && !dropdownToggle.contains(clicked)) {
+        dropdownMenu.classList.remove('show');
+      }
+    }
+    if (themesMenu && themesToggle) {
+      if (!themesMenu.contains(clicked) && !themesToggle.contains(clicked)) {
+        themesMenu.classList.remove('show');
+      }
+    }
+  });
+
+  // Escape key closes menus
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeAllMenus();
+  });
+
+  // --- Theme switching & persistence ---
+  // accepted theme names should match your CSS classes:
+  // e.g. for data-theme="dark" you should have `.dark-theme { ... }` in CSS
+  if (themeOptions.length) {
+    themeOptions.forEach(opt => {
+      opt.addEventListener('click', (e) => {
+        e.preventDefault();
+        const selected = opt.getAttribute('data-theme') || 'light';
+
+        // remove known theme classes (adjust if you have different names)
+        document.body.classList.remove('dark-theme', 'contrast-theme', 'reading-theme');
+
+        if (selected !== 'light') {
+          document.body.classList.add(`${selected}-theme`);
+        }
+
+        localStorage.setItem('pathfinder-theme', selected);
+        if (themesMenu) themesMenu.classList.remove('show');
+      });
+    });
+  }
+
+  // load saved theme
+  const savedTheme = localStorage.getItem('pathfinder-theme') || 'light';
+  if (savedTheme && savedTheme !== 'light') {
+    document.body.classList.add(`${savedTheme}-theme`);
+  }
+
+  // --- Font size control (two approaches supported) ---
+  // 1) Cycle button (textSizeToggle) cycles through sizes array
+  const sizes = ['0.95rem', '1rem', '1.1rem', '1.2rem']; // tweak as you like
+  let sizeIndex = Number(localStorage.getItem('pathfinder-font-index')) || 1;
+
+  function applySize(idx) {
+    document.documentElement.style.fontSize = sizes[idx];
+    localStorage.setItem('pathfinder-font-index', idx);
+  }
+  applySize(sizeIndex);
+
+  if (textSizeToggle) {
+    textSizeToggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      sizeIndex = (sizeIndex + 1) % sizes.length;
+      applySize(sizeIndex);
+    });
+  }
+
+  // 2) If you prefer explicit size options (e.g. dropdown items with data-size),
+  // they should have attributes like data-size="16px" or data-size-index="2"
+  if (sizeOptions.length) {
+    sizeOptions.forEach(opt => {
+      opt.addEventListener('click', (e) => {
+        e.preventDefault();
+        const idx = opt.getAttribute('data-size-index');
+        const val = opt.getAttribute('data-size');
+        if (idx !== null) {
+          sizeIndex = Number(idx);
+          applySize(sizeIndex);
+        } else if (val) {
+          document.documentElement.style.fontSize = val;
+          localStorage.setItem('pathfinder-font-index', 'custom');
+        }
+        if (themesMenu) themesMenu.classList.remove('show');
+        if (dropdownMenu) dropdownMenu.classList.remove('show');
+      });
+    });
+  }
+
+  // --- optional nav buttons ---
+  if (aboutBtn) {
+    aboutBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.open('about.html', '_blank', 'noopener,noreferrer');
+    });
+  }
+  if (contactBtn) {
+    contactBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.open('contact.html', '_blank', 'noopener,noreferrer');
+    });
+  }
+
+  // debug: (remove in production) shows which key elements exist
+  console.info('pathfinder: dropdownToggle=', !!dropdownToggle, 'dropdownMenu=', !!dropdownMenu,
+               'themesToggle=', !!themesToggle, 'themesMenu=', !!themesMenu,
+               'textSizeToggle=', !!textSizeToggle);
+});
+</script>
+    <script>
+        // Article data with comprehensive content for all articles
+        const articles = {
+            featured: {
+                title: "From Burnout to Breakthrough: A Tech Executive's Journey",
+                content: `
+                    <div class="mb-8">
+                        <img src="https://media.licdn.com/dms/image/v2/D4D12AQExM-r3sWf49A/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1705140279082?e=2147483647&v=beta&t=FyZyBuONVRmuLOQE7r3zXu0-fFExNIyRiJU10JlgkJM" alt="Sarah Martinez" class="w-full h-64 object-cover rounded-lg mb-6">
+                        <div class="flex items-center mb-6">
+                            <img src="https://cdn.pixabay.com/photo/2024/09/02/10/36/ai-generated-9016424_960_720.jpg" alt="Sarah Martinez" class="w-16 h-16 rounded-full object-cover mr-4">
+                            <div>
+                                <p class="font-semibold text-dark-blue text-lg">Sarah Martinez</p>
+                                <p class="text-cool-gray">VP of Engineering, TechCorp</p>
+                                <p class="text-medium-gray text-sm">Published 2 days ago • 15 min read</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-2xl font-bold text-dark-blue mb-4">The Breaking Point</h3>
+                    <p class="text-cool-gray mb-6 leading-relaxed">Three years ago, I was working 80-hour weeks as a senior software engineer, constantly stressed, and questioning whether I had chosen the right career path. The pandemic had intensified everything – remote work blurred boundaries, and I found myself answering emails at midnight and starting work before dawn.</p>
+                    
+                    <p class="text-cool-gray mb-6 leading-relaxed">The breaking point came during a particularly challenging product launch. We were three weeks behind schedule, the team was exhausted, and I was personally debugging critical issues at 2 AM while trying to coordinate with offshore teams. I realized I was no longer excited about technology or innovation – I was just surviving. That's when I knew something had to change fundamentally.</p>
+                    
+                    <h3 class="text-2xl font-bold text-dark-blue mb-4">The Strategic Pivot</h3>
+                    <p class="text-cool-gray mb-6 leading-relaxed">Instead of leaving tech entirely, I decided to pivot my approach. I started by conducting a thorough self-assessment – identifying what aspects of my work energized me versus what drained me. I discovered that I loved mentoring junior developers, solving complex architectural problems, and seeing the big picture, but I hated the constant firefighting and lack of strategic thinking.</p>
+                    
+                    <p class="text-cool-gray mb-6 leading-relaxed">I realized that my frustration wasn't with technology itself, but with my role as an individual contributor in a reactive environment. I needed to move into a position where I could shape strategy, build systems, and develop people – not just write code.</p>
+                    
+                    <div class="bg-soft-white p-6 rounded-lg mt-8">
+                        <h4 class="text-xl font-bold text-dark-blue mb-3">Ready to Transform Your Career?</h4>
+                        <p class="text-cool-gray mb-4">If you're feeling stuck or burned out, remember that it's possible to pivot without starting over. The key is strategic thinking and intentional action. Your current skills are valuable – you just need to apply them in new ways.</p>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <button class="bg-dark-green hover:bg-emerald-green text-white px-6 py-3 rounded-lg font-semibold">
+                                Schedule a Career Strategy Session
+                            </button>
+                            
+                        </div>
+                    </div>
+                `
+            },
+            networking: {
+                title: "5 Networking Strategies That Actually Work in 2024",
+                content: `
+                    <div class="mb-8">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=400&fit=crop" alt="Professional networking" class="w-full h-64 object-cover rounded-lg mb-6">
+                        <div class="flex items-center mb-6">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face" alt="Michael Chen" class="w-16 h-16 rounded-full object-cover mr-4">
+                            <div>
+                                <p class="font-semibold text-dark-blue text-lg">Michael Chen</p>
+                                <p class="text-cool-gray">Senior Career Strategist & Former Tech Executive</p>
+                                <p class="text-medium-gray text-sm">Published 1 week ago • 12 min read</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p class="text-cool-gray mb-6 leading-relaxed">Traditional networking advice often feels outdated and inauthentic. "Just go to events and collect business cards" doesn't work in today's digital-first, relationship-focused professional landscape. After helping over 5,000 professionals build meaningful networks that accelerated their careers, I've identified five modern networking strategies that actually deliver results.</p>
+                    
+                    <h3 class="text-2xl font-bold text-dark-blue mb-4">1. The Value-First Approach: Give Before You Get</h3>
+                    <p class="text-cool-gray mb-6 leading-relaxed">Instead of asking "What can you do for me?", start with "How can I help you?" This fundamental mindset shift transforms networking from a transactional activity into relationship building. When you lead with value, people remember you and want to help you in return.</p>
+                    
+                    <div class="bg-white border-l-4 border-emerald-green p-6 mb-6">
+                        <h5 class="font-bold text-dark-blue mb-3">Practical Value-First Tactics:</h5>
+                        <ul class="list-disc list-inside text-cool-gray space-y-2">
+                            <li><strong>Share relevant articles:</strong> When you see content that would interest someone in your network, send it with a personal note</li>
+                            <li><strong>Make strategic introductions:</strong> Connect people who could benefit from knowing each other</li>
+                            <li><strong>Offer your expertise:</strong> If someone posts about a challenge you've solved, offer specific advice</li>
+                            <li><strong>Provide feedback:</strong> Offer to review resumes, presentations, or business ideas</li>
+                            <li><strong>Share opportunities:</strong> Forward job postings, speaking opportunities, or collaboration chances</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-soft-white p-6 rounded-lg mt-8">
+                        <h4 class="text-xl font-bold text-dark-blue mb-3">Start Building Your Network Today</h4>
+                        <p class="text-cool-gray mb-4">Remember: networking is about building relationships, not collecting contacts. Focus on quality connections and genuine value exchange. Start with just one strategy and build from there.</p>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                           
+                          
+                        </div>
+                    </div>
+                `
+            },
+            salary: {
+                title: "How I Doubled My Salary in 18 Months",
+                content: `
+                    <div class="mb-8">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=400&fit=crop" alt="Professional success" class="w-full h-64 object-cover rounded-lg mb-6">
+                        <div class="flex items-center mb-6">
+                            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&h=150&fit=crop&crop=face" alt="Jessica Rodriguez" class="w-16 h-16 rounded-full object-cover mr-4">
+                            <div>
+                                <p class="font-semibold text-dark-blue text-lg">Jessica Rodriguez</p>
+                                <p class="text-cool-gray">Product Manager, TechStart</p>
+                                <p class="text-medium-gray text-sm">Published 3 days ago • 8 min read</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p class="text-cool-gray mb-6 leading-relaxed">Eighteen months ago, I was earning $65,000 as a junior marketing coordinator. Today, I'm making $130,000 as a product manager at a fast-growing startup. Here's exactly how I made it happen.</p>
+                    
+                    <h3 class="text-2xl font-bold text-dark-blue mb-4">The Strategic Foundation</h3>
+                    <p class="text-cool-gray mb-6 leading-relaxed">I realized that incremental raises within my current role wouldn't get me where I wanted to be financially. I needed to make a strategic career move that would position me in a higher-paying field and role.</p>
+                    
+                    <h3 class="text-2xl font-bold text-dark-blue mb-4">Step 1: Market Research</h3>
+                    <p class="text-cool-gray mb-6 leading-relaxed">I spent three months researching high-growth, high-paying roles that aligned with my skills. Product management emerged as the perfect fit – it combined my analytical skills, customer focus, and business acumen.</p>
+                    
+                    <h3 class="text-2xl font-bold text-dark-blue mb-4">Step 2: Skill Development</h3>
+                    <p class="text-cool-gray mb-6 leading-relaxed">I invested in my education:</p>
+                    <ul class="list-disc list-inside text-cool-gray mb-6 space-y-2">
+                        <li>Completed Google's Product Management Certificate</li>
+                        <li>Learned SQL and basic data analysis</li>
+                        <li>Took a UX design course</li>
+                        <li>Read extensively about product strategy</li>
+                    </ul>
+                    
+                    <div class="bg-soft-white p-6 rounded-lg mt-8">
+                        <h4 class="text-xl font-bold text-dark-blue mb-3">Key Takeaways</h4>
+                        <ul class="list-disc list-inside text-cool-gray space-y-2">
+                            <li>Strategic career moves beat incremental raises</li>
+                            <li>Invest in skills that command higher salaries</li>
+                            <li>Position yourself internally before looking externally</li>
+                            <li>Target companies where your unique background adds value</li>
+                        </ul>
+                    </div>
+                `
+            },
+            manager: {
+                title: "The First 90 Days: New Manager's Playbook",
+                content: `
+                    <div class="mb-8">
+                        <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?w=800&h=400&fit=crop" alt="Leadership meeting" class="w-full h-64 object-cover rounded-lg mb-6">
+                        <div class="flex items-center mb-6">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face" alt="David Kim" class="w-16 h-16 rounded-full object-cover mr-4">
+                            <div>
+                                <p class="font-semibold text-dark-blue text-lg">David Kim</p>
+                                <p class="text-cool-gray">Director of Engineering, Former VP at Microsoft</p>
+                                <p class="text-medium-gray text-sm">Published 5 days ago • 15 min read</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p class="text-cool-gray mb-6 leading-relaxed">Transitioning into management is one of the most challenging career moves you'll make. After leading teams at Microsoft, Amazon, and three startups, I've learned that your first 90 days as a manager set the foundation for your entire leadership journey. Here's the comprehensive playbook I wish I had when I first became a manager.</p>
+                    
+                    <h3 class="text-2xl font-bold text-dark-blue mb-4">Days 1-30: Listen, Learn, and Build Trust</h3>
+                    <p class="text-cool-gray mb-6 leading-relaxed">Your first month is about understanding the landscape, not changing it. Resist the urge to make immediate changes or prove yourself through quick wins. Instead, focus on building relationships and gathering intelligence.</p>
+                    
+                    <div class="bg-white border-l-4 border-emerald-green p-6 mb-6">
+                        <h5 class="font-bold text-dark-blue mb-3">Week 1-2: One-on-One Meetings with Your Team</h5>
+                        <p class="text-cool-gray mb-3">Schedule 60-90 minute meetings with each team member. Use this framework:</p>
+                        <ul class="list-disc list-inside text-cool-gray space-y-2">
+                            <li><strong>Personal Background (15 minutes):</strong> Learn about their career journey, motivations, and goals</li>
+                            <li><strong>Current Role Assessment (20 minutes):</strong> What they love, what frustrates them, what they'd change</li>
+                            <li><strong>Team Dynamics (15 minutes):</strong> How the team works together, communication patterns, conflicts</li>
+                            <li><strong>Process and Tools (15 minutes):</strong> What's working, what's broken, what's missing</li>
+                            <li><strong>Future Vision (15 minutes):</strong> Their career aspirations and how you can help</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-soft-white p-6 rounded-lg mt-8">
+                        <h4 class="text-xl font-bold text-dark-blue mb-3">Ready to Excel as a New Manager?</h4>
+                        <p class="text-cool-gray mb-4">The first 90 days are critical, but remember that becoming an effective manager is a continuous journey. Focus on building trust, developing your people, and delivering results.</p>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            
+                        </div>
+                    </div>
+                `
+            },
+            skills: {
+                title: "Future-Proof Skills Every Professional Needs",
+                content: `
+                    <div class="mb-8">
+                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=400&fit=crop" alt="Learning and development" class="w-full h-64 object-cover rounded-lg mb-6">
+                        <div class="flex items-center mb-6">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face" alt="Amanda Foster" class="w-16 h-16 rounded-full object-cover mr-4">
+                            <div>
+                                <p class="font-semibold text-dark-blue text-lg">Amanda Foster</p>
+                                <p class="text-cool-gray">Chief Learning Officer, Former Head of L&D at Google</p>
+                                <p class="text-medium-gray text-sm">Published 1 week ago • 14 min read</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p class="text-cool-gray mb-6 leading-relaxed">In an era of rapid technological change and economic uncertainty, the question isn't whether your job will change—it's how quickly you can adapt. After spending 15 years in learning and development at companies like Google, Microsoft, and Amazon, I've identified the core skills that remain valuable regardless of industry disruption.</p>
+                    
+                    <h3 class="text-2xl font-bold text-dark-blue mb-4">1. Critical Thinking and Complex Problem Solving</h3>
+                    <p class="text-cool-gray mb-6 leading-relaxed">While AI can process information faster than humans, it still struggles with nuanced judgment, ethical considerations, and creative problem-solving. The ability to analyze complex situations, identify root causes, and develop innovative solutions remains uniquely human.</p>
+                    
+                    <div class="bg-white border-l-4 border-emerald-green p-6 mb-6">
+                        <h5 class="font-bold text-dark-blue mb-3">How to Develop Critical Thinking:</h5>
+                        <ul class="list-disc list-inside text-cool-gray space-y-2">
+                            <li><strong>Practice the "5 Whys" technique:</strong> For every problem, ask "why" five times to get to the root cause</li>
+                            <li><strong>Seek diverse perspectives:</strong> Actively engage with people who disagree with you</li>
+                            <li><strong>Question assumptions:</strong> Regularly challenge your own beliefs and the status quo</li>
+                            <li><strong>Study case studies:</strong> Analyze how others have solved similar problems in different contexts</li>
+                            <li><strong>Practice scenario planning:</strong> Consider multiple possible outcomes for any decision</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-soft-white p-6 rounded-lg mt-8">
+                        <h4 class="text-xl font-bold text-dark-blue mb-3">Start Building Your Future-Proof Career Today</h4>
+                        <p class="text-cool-gray mb-4">The future belongs to professionals who can adapt, learn, and add uniquely human value in an increasingly automated world. Focus on developing these seven core skills, and you'll be prepared for whatever changes come next.</p>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                          
+                        </div>
+                    </div>
+                `
+            },
+            interview: {
+                title: "Mastering the Executive Interview Process",
+                content: `
+                    <div class="mb-8">
+                        <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&h=400&fit=crop" alt="Interview preparation" class="w-full h-64 object-cover rounded-lg mb-6">
+                        <div class="flex items-center mb-6">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop&crop=face" alt="Robert Thompson" class="w-16 h-16 rounded-full object-cover mr-4">
+                            <div>
+                                <p class="font-semibold text-dark-blue text-lg">Robert Thompson</p>
+                                <p class="text-cool-gray">Executive Coach & Former Fortune 500 CHRO</p>
+                                <p class="text-medium-gray text-sm">Published 4 days ago • 12 min read</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p class="text-cool-gray mb-6 leading-relaxed">Executive interviews are fundamentally different from standard job interviews. They're strategic conversations where you're evaluated not just on your past achievements, but on your ability to think strategically, lead through uncertainty, and drive organizational transformation. After 20 years in executive search and coaching C-suite leaders, here's your complete guide to mastering the executive interview process.</p>
+                    
+                    <h3 class="text-2xl font-bold text-dark-blue mb-4">Understanding the Executive Interview Process</h3>
+                    <p class="text-cool-gray mb-6 leading-relaxed">Executive interviews often involve multiple rounds, case studies, and presentations to various stakeholders including board members, investors, and key team members. The process can span 6-12 weeks and requires a different level of preparation and strategic thinking.</p>
+                    
+                    <div class="bg-white border-l-4 border-navy-blue p-6 mb-6">
+                        <h5 class="font-bold text-dark-blue mb-3">Typical Executive Interview Structure:</h5>
+                        <ul class="list-disc list-inside text-cool-gray space-y-2">
+                            <li><strong>Initial Screening:</strong> Phone/video call with executive recruiter or CHRO</li>
+                            <li><strong>First Round:</strong> Meeting with hiring manager and key stakeholders</li>
+                            <li><strong>Case Study/Presentation:</strong> Strategic analysis and recommendations</li>
+                            <li><strong>Panel Interview:</strong> Multiple executives and board members</li>
+                            <li><strong>Final Round:</strong> CEO/Board interview and cultural fit assessment</li>
+                        </ul>
+                    </div>
+                    
+                    <h3 class="text-2xl font-bold text-dark-blue mb-4">Key Preparation Strategies</h3>
+                    <p class="text-cool-gray mb-6 leading-relaxed">Executive interview preparation goes far beyond rehearsing your resume. You need to demonstrate strategic thinking, industry expertise, and leadership philosophy while showing how you'll drive results in their specific context.</p>
+                    
+                    <div class="bg-soft-white p-6 rounded-lg mt-8">
+                        <h4 class="text-xl font-bold text-dark-blue mb-3">Ready to Land Your Executive Role?</h4>
+                        <p class="text-cool-gray mb-4">Executive interviews require extensive preparation and strategic thinking. The investment in proper preparation often determines whether you land the role and negotiate the best possible package.</p>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            
+                        </div>
+                    </div>
+                `
+            },
+            pivot: {
+                title: "From Teacher to Tech: A Complete Career Pivot",
+                content: `
+                    <div class="mb-8">
+                        <img src="https://images.unsplash.com/photo-1551836022-deb4988cc6c0?w=800&h=400&fit=crop" alt="Career pivot" class="w-full h-64 object-cover rounded-lg mb-6">
+                        <div class="flex items-center mb-6">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face" alt="Maria Gonzalez" class="w-16 h-16 rounded-full object-cover mr-4">
+                            <div>
+                                <p class="font-semibold text-dark-blue text-lg">Maria Gonzalez</p>
+                                <p class="text-cool-gray">Senior Product Manager, EdTech Unicorn</p>
+                                <p class="text-medium-gray text-sm">Published 6 days ago • 11 min read</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p class="text-cool-gray mb-6 leading-relaxed">After 8 years as a high school math teacher, I successfully transitioned to product management in the tech industry, eventually landing at a $2B EdTech company. The journey wasn't easy, but it was absolutely worth it. Here's exactly how I made the complete career pivot while leveraging my teaching background as a competitive advantage.</p>
+                    
+                    <h3 class="text-2xl font-bold text-dark-blue mb-4">Why I Made the Switch</h3>
+                    <p class="text-cool-gray mb-6 leading-relaxed">I loved teaching and genuinely cared about my students' success, but I felt limited by the constraints of the traditional education system. I wanted to impact education at scale, have more autonomy over my work, and frankly, earn a salary that reflected my skills and dedication. The tech industry offered all of these opportunities.</p>
+                    
+                    <h3 class="text-2xl font-bold text-dark-blue mb-4">The Transition Strategy</h3>
+                    <p class="text-cool-gray mb-6 leading-relaxed">Rather than abandoning my teaching background, I positioned it as my unique value proposition. I understood user needs (students and teachers) better than most product managers, had experience with curriculum design and learning outcomes, and knew how to communicate complex concepts clearly.</p>
+                    
+                    <div class="bg-white border-l-4 border-emerald-green p-6 mb-6">
+                        <h5 class="font-bold text-dark-blue mb-3">My 18-Month Transition Plan:</h5>
+                        <ul class="list-disc list-inside text-cool-gray space-y-2">
+                            <li><strong>Months 1-3:</strong> Researched product management, took online courses, started building a portfolio</li>
+                            <li><strong>Months 4-6:</strong> Networked with EdTech professionals, attended industry events, began freelance consulting</li>
+                            <li><strong>Months 7-12:</strong> Landed part-time product role at education startup while still teaching</li>
+                            <li><strong>Months 13-18:</strong> Transitioned to full-time product manager role at larger EdTech company</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-soft-white p-6 rounded-lg mt-8">
+                        <h4 class="text-xl font-bold text-dark-blue mb-3">Ready for Your Career Pivot?</h4>
+                        <p class="text-cool-gray mb-4">Career pivots are challenging but absolutely possible with the right strategy and persistence. Your existing skills are more transferable than you think – you just need to position them correctly.</p>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                          
+                        </div>
+                    </div>
+                `
+            },
+            remote: {
+                title: "Leading Remote Teams: The Complete Guide",
+                content: `
+                    <div class="mb-8">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=400&fit=crop" alt="Remote work leadership" class="w-full h-64 object-cover rounded-lg mb-6">
+                        <div class="flex items-center mb-6">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face" alt="Alex Rivera" class="w-16 h-16 rounded-full object-cover mr-4">
+                            <div>
+                                <p class="font-semibold text-dark-blue text-lg">Alex Rivera</p>
+                                <p class="text-cool-gray">VP of Remote Operations, Former Slack Executive</p>
+                                <p class="text-medium-gray text-sm">Published 2 weeks ago • 13 min read</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p class="text-cool-gray mb-6 leading-relaxed">Leading remote teams requires a fundamentally different approach than traditional in-person management. After building and scaling remote teams at companies like Slack, GitLab, and Automattic, I've learned that successful remote leadership isn't about replicating office dynamics virtually – it's about creating entirely new systems for communication, collaboration, and culture.</p>
+                    
+                    <h3 class="text-2xl font-bold text-dark-blue mb-4">The Remote Leadership Mindset Shift</h3>
+                    <p class="text-cool-gray mb-6 leading-relaxed">The biggest mistake new remote leaders make is trying to manage remote teams the same way they managed in-person teams. Remote work requires intentional communication, asynchronous collaboration, and outcome-based performance management rather than activity monitoring.</p>
+                    
+                    <div class="bg-white border-l-4 border-teal-accent p-6 mb-6">
+                        <h5 class="font-bold text-dark-blue mb-3">Core Principles of Remote Leadership:</h5>
+                        <ul class="list-disc list-inside text-cool-gray space-y-2">
+                            <li><strong>Trust by default:</strong> Assume positive intent and focus on outcomes, not hours worked</li>
+                            <li><strong>Over-communicate:</strong> What feels like too much communication is usually just enough</li>
+                            <li><strong>Document everything:</strong> Create searchable, accessible records of decisions and processes</li>
+                            <li><strong>Be intentionally inclusive:</strong> Ensure all team members can participate equally regardless of location</li>
+                            <li><strong>Prioritize asynchronous work:</strong> Reduce dependency on real-time collaboration</li>
+                        </ul>
+                    </div>
+                    
+                    <h3 class="text-2xl font-bold text-dark-blue mb-4">Building Trust and Accountability</h3>
+                    <p class="text-cool-gray mb-6 leading-relaxed">Trust is the foundation of effective remote teams, but it must be built intentionally through consistent actions, transparent communication, and clear expectations. Remote leaders need to create systems that make work visible without being invasive.</p>
+                    
+                    <div class="bg-soft-white p-6 rounded-lg mt-8">
+                        <h4 class="text-xl font-bold text-dark-blue mb-3">Master Remote Leadership</h4>
+                        <p class="text-cool-gray mb-4">Remote leadership is a skill that will only become more valuable as distributed work becomes the norm. The leaders who master these skills now will have a significant competitive advantage.</p>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            
+                        </div>
+                    </div>
+                `
+            },
+            presence: {
+                title: "Building Executive Presence: Command Any Room",
+                content: `
+                    <div class="mb-8">
+                        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&h=400&fit=crop" alt="Executive presence" class="w-full h-64 object-cover rounded-lg mb-6">
+                        <div class="flex items-center mb-6">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face" alt="Victoria Chen" class="w-16 h-16 rounded-full object-cover mr-4">
+                            <div>
+                                <p class="font-semibold text-dark-blue text-lg">Victoria Chen</p>
+                                <p class="text-cool-gray">Executive Presence Coach, Former McKinsey Partner</p>
+                                <p class="text-medium-gray text-sm">Published 1 week ago • 15 min read</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p class="text-cool-gray mb-6 leading-relaxed">Executive presence is that intangible quality that makes people listen when you speak, trust your judgment, and want to follow your lead. It's not about being the loudest person in the room or having the most impressive title – it's about projecting confidence, competence, and authenticity in a way that inspires others and drives results.</p>
+                    
+                    <h3 class="text-2xl font-bold text-dark-blue mb-4">The Three Pillars of Executive Presence</h3>
+                    <p class="text-cool-gray mb-6 leading-relaxed">Executive presence rests on three foundational pillars: Gravitas (how you act), Communication (how you speak), and Appearance (how you look). All three must work together to create a compelling leadership presence.</p>
+                    
+                    <div class="bg-white border-l-4 border-navy-blue p-6 mb-6">
+                        <h5 class="font-bold text-dark-blue mb-3">Gravitas: The Weight of Leadership</h5>
+                        <ul class="list-disc list-inside text-cool-gray space-y-2">
+                            <li><strong>Emotional regulation:</strong> Stay calm and composed under pressure</li>
+                            <li><strong>Decisive action:</strong> Make tough decisions with incomplete information</li>
+                            <li><strong>Integrity:</strong> Align your actions with your stated values consistently</li>
+                            <li><strong>Vision:</strong> See the big picture and communicate a compelling future state</li>
+                            <li><strong>Confidence:</strong> Project self-assurance without arrogance</li>
+                        </ul>
+                    </div>
+                    
+                    <h3 class="text-2xl font-bold text-dark-blue mb-4">Mastering Executive Communication</h3>
+                    <p class="text-cool-gray mb-6 leading-relaxed">How you communicate – both verbally and non-verbally – significantly impacts your executive presence. It's not just what you say, but how you say it, when you say it, and what you don't say that matters.</p>
+                    
+                    <div class="bg-soft-white p-6 rounded-lg mt-8">
+                        <h4 class="text-xl font-bold text-dark-blue mb-3">Develop Your Executive Presence</h4>
+                        <p class="text-cool-gray mb-4">Executive presence can be developed with intentional practice and feedback. The investment in building your presence pays dividends throughout your career, opening doors to opportunities and enabling greater impact.</p>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                           
+                        </div>
+                    </div>
+                `
+            },
+            startup: {
+                title: "From Corporate to $10M Startup: An Entrepreneur's Journey",
+                content: `
+                    <div class="mb-8">
+                        <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&h=400&fit=crop" alt="Startup success" class="w-full h-64 object-cover rounded-lg mb-6">
+                        <div class="flex items-center mb-6">
+                            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&h=150&fit=crop&crop=face" alt="Rachel Kim" class="w-16 h-16 rounded-full object-cover mr-4">
+                            <div>
+                                <p class="font-semibold text-dark-blue text-lg">Rachel Kim</p>
+                                <p class="text-cool-gray">CEO & Founder, TechFlow Solutions</p>
+                                <p class="text-medium-gray text-sm">Published 3 days ago • 18 min read</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p class="text-cool-gray mb-6 leading-relaxed">Three years ago, I was a well-paid director at a Fortune 500 company with a comfortable six-figure salary, excellent benefits, and a clear path to VP. Today, I'm the CEO of a $10M ARR SaaS company that I built from scratch. The journey from corporate executive to successful entrepreneur taught me more about business, leadership, and myself than I ever imagined possible.</p>
+                    
+                    <h3 class="text-2xl font-bold text-dark-blue mb-4">The Corporate Golden Handcuffs</h3>
+                    <p class="text-cool-gray mb-6 leading-relaxed">I had what many would consider the perfect corporate career. I was earning $180,000 as a Director of Operations, had stock options, great healthcare, and was on track for promotion to VP within two years. But I felt increasingly frustrated by the slow pace of decision-making, bureaucratic processes, and limited ability to directly impact the company's direction.</p>
+                    
+                    <h3 class="text-2xl font-bold text-dark-blue mb-4">The Entrepreneurial Awakening</h3>
+                    <p class="text-cool-gray mb-6 leading-relaxed">The idea for my startup came from a problem I experienced daily in my corporate role: inefficient workflow management across distributed teams. I spent months researching existing solutions and realized there was a significant gap in the market for a tool that combined project management with real-time collaboration and automated reporting.</p>
+                    
+                    <div class="bg-white border-l-4 border-golden-yellow p-6 mb-6">
+                        <h5 class="font-bold text-dark-blue mb-3">The Validation Process:</h5>
+                        <ul class="list-disc list-inside text-cool-gray space-y-2">
+                            <li><strong>Customer interviews:</strong> Spoke with 100+ potential customers to validate the problem</li>
+                            <li><strong>MVP development:</strong> Built a basic version using no-code tools to test core functionality</li>
+                            <li><strong>Pilot program:</strong> Convinced my current employer to pilot the solution internally</li>
+                            <li><strong>Market research:</strong> Analyzed competitors and identified our unique value proposition</li>
+                            <li><strong>Financial planning:</strong> Calculated runway needed and potential revenue projections</li>
+                        </ul>
+                    </div>
+                    
+                    <h3 class="text-2xl font-bold text-dark-blue mb-4">Making the Leap</h3>
+                    <p class="text-cool-gray mb-6 leading-relaxed">The decision to leave my corporate job wasn't made lightly. I spent six months building the product nights and weekends while still employed, secured our first three paying customers, and saved enough money to cover 18 months of personal expenses. Only then did I submit my resignation.</p>
+                    
+                    <div class="bg-soft-white p-6 rounded-lg mt-8">
+                        <h4 class="text-xl font-bold text-dark-blue mb-3">Ready to Start Your Entrepreneurial Journey?</h4>
+                        <p class="text-cool-gray mb-4">The transition from corporate employee to entrepreneur is challenging but incredibly rewarding. Success requires careful planning, relentless execution, and the ability to learn quickly from failures.</p>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <button class="bg-dark-green hover:bg-emerald-green text-white px-6 py-3 rounded-lg font-semibold">
+                                Join Entrepreneur Accelerator Program
+                            </button>
+                           
+                        </div>
+                    </div>
+                `
+            }
+        };
+
+        // Article search data
+        const articleData = [
+            { element: null, title: "5 Networking Strategies That Actually Work in 2024", category: "career-tips", author: "Michael Chen" },
+            { element: null, title: "How I Doubled My Salary in 18 Months", category: "success-stories", author: "Jessica Rodriguez" },
+            { element: null, title: "The First 90 Days: New Manager's Playbook", category: "leadership", author: "David Kim" },
+            { element: null, title: "Future-Proof Skills Every Professional Needs", category: "skills", author: "Amanda Foster" },
+            { element: null, title: "Mastering the Executive Interview Process", category: "career-tips", author: "Robert Thompson" },
+            { element: null, title: "From Teacher to Tech: A Complete Career Pivot", category: "success-stories", author: "Maria Gonzalez" },
+            { element: null, title: "Leading Remote Teams: The Complete Guide", category: "career-tips", author: "Alex Rivera" },
+            { element: null, title: "Building Executive Presence: Command Any Room", category: "leadership", author: "Victoria Chen" },
+            { element: null, title: "From Corporate to $10M Startup: An Entrepreneur's Journey", category: "success-stories", author: "Rachel Kim" }
+        ];
+
+        // Initialize article data with DOM elements
+        function initializeArticleData() {
+            const articles = document.querySelectorAll('[data-category]');
+            articles.forEach((article, index) => {
+                if (articleData[index]) {
+                    articleData[index].element = article;
+                }
+            });
+        }
+
+        // Enhanced filter functionality with smooth animations
+        function filterArticles(category) {
+            const articles = document.querySelectorAll('[data-category]');
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            
+            // Update button states
+            filterBtns.forEach(btn => {
+                btn.className = btn.className.replace('filter-active', 'filter-inactive');
+            });
+            event.target.className = event.target.className.replace('filter-inactive', 'filter-active');
+            
+            // Filter articles with animation
+            articles.forEach((article) => {
+                const matchesCategory = category === 'all' || article.dataset.category === category;
+                
+                if (matchesCategory) {
+                    article.classList.remove('fade-out');
+                    article.classList.add('fade-in');
+                    article.style.display = 'block';
+                } else {
+                    article.classList.remove('fade-in');
+                    article.classList.add('fade-out');
+                    setTimeout(() => {
+                        if (article.classList.contains('fade-out')) {
+                            article.style.display = 'none';
+                        }
+                    }, 500);
+                }
+            });
+        }
+
+        // Progress bar functionality
+        function updateProgressBar() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const progress = (scrollTop / scrollHeight) * 100;
+            
+            document.getElementById('progress-fill').style.width = Math.min(progress, 100) + '%';
+        }
+
+        // Article modal functionality
+        function openArticle(articleId) {
+            const modal = document.getElementById('article-modal');
+            const title = document.getElementById('modal-title');
+            const content = document.getElementById('modal-content');
+            
+            if (articles[articleId]) {
+                title.textContent = articles[articleId].title;
+                content.innerHTML = articles[articleId].content;
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeArticle() {
+            const modal = document.getElementById('article-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Newsletter subscription
+        function subscribeNewsletter(event) {
+            event.preventDefault();
+            const email = document.getElementById('newsletter-email').value;
+            
+            if (email) {
+                // Simulate API call
+                const button = event.target.querySelector('button');
+                const originalText = button.textContent;
+                button.textContent = 'Subscribing...';
+                button.disabled = true;
+                
+                setTimeout(() => {
+                    alert(`Thank you for subscribing! Welcome to the PathFinder community. You'll receive your first career insight email within 24 hours.`);
+                    document.getElementById('newsletter-email').value = '';
+                    button.textContent = originalText;
+                    button.disabled = false;
+                }, 1500);
+            }
+        }
+
+        // Interactive features for better user experience
+        function addInteractiveFeatures() {
+            // Add reading time estimator
+            const articles = document.querySelectorAll('[data-category]');
+            articles.forEach(article => {
+                const readTime = article.querySelector('.text-xs');
+                if (readTime) {
+                    readTime.style.cursor = 'help';
+                    readTime.title = 'Estimated reading time based on average reading speed';
+                }
+            });
+
+            // Add hover effects to category tags
+            const categoryTags = document.querySelectorAll('.category-tag');
+            categoryTags.forEach(tag => {
+                tag.addEventListener('mouseenter', function() {
+                    this.style.transform = 'scale(1.05)';
+                });
+                tag.addEventListener('mouseleave', function() {
+                    this.style.transform = 'scale(1)';
+                });
+            });
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('article-modal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeArticle();
+            }
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeArticle();
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize article data
+            initializeArticleData();
+            
+            // Add scroll listener for progress bar
+            window.addEventListener('scroll', updateProgressBar);
+            
+            // Add loading animation to cards
+            const cards = document.querySelectorAll('.card-professional');
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                setTimeout(() => {
+                    card.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 150);
+            });
+            
+            // Add staggered animation to testimonials
+            const testimonials = document.querySelectorAll('.testimonial-card');
+            testimonials.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(40px)';
+                setTimeout(() => {
+                    card.style.transition = 'all 1s cubic-bezier(0.4, 0, 0.2, 1)';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, 300 + (index * 200));
+            });
+            
+            // Initialize progress bar
+            updateProgressBar();
+            
+            // Add interactive features
+            addInteractiveFeatures();
+        });
+    </script>
+
+</body>
+</html>

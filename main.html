@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PathFinder</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+ 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+ <header>
+        <div class="mainLogo" onclick="window.location.href='main.html'">
+            <div class="Hicon" style="margin-left: 20px;"><i class="fas fa-compass"></i></div>
+            <h2 >PathFinder</h2>
+        </div>
+<div class="home" onclick="window.location.href='main.html'">Home</div>
+        <div class="navbar">
+            <ul>
+                <li>
+                    <a href="#" id="dropdownToggle">Services Offered ▾</a>
+                    <ul class="dropdown-menu" id="dropdownMenu">
+                        <li><a href="test.html">Career Assessment Test</a></li>
+                        <li><a href="explorer.html">Career Explorer</a></li>
+                        <li><a href="blogs.html">Blogs & Articles</a></li>
+                        <li><a href="inspiration.html">Inspiration Hub</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" id="themesToggle">Themes ▾</a>
+                    <ul class="dropdown-menu" id="themesMenu">
+                        <li><a href="#" data-theme="light"><i class="fas fa-sun"></i> Light Theme</a></li>
+                        <li><a href="#" data-theme="dark"><i class="fas fa-moon"></i> Dark Theme</a></li>
+                        <li><a href="#" data-theme="contrast"><i class="fas fa-adjust"></i> High Contrast</a></li>
+                        <li><a href="#" data-theme="reading"><i class="fas fa-book-open"></i> Blue Filter</a></li>
+                    </ul>
+                </li>
+              
+            </ul>
+        </div>
+
+        <div class="header-actions">
+            <div class="AboutUs">About Us</div>
+            <div class="ContactUs">Contact Us</div>
+
+            <button class="icon-button" id="textSizeToggle" title="Adjust Text Size">
+                <i class="fas fa-text-height"></i>
+            </button>
+        </div>
+    </header>
+<div class="welcomeMess">
+    <H1 style="color: white; font-size: 45px;">Welcome</H1>
+    <p style="color: white; font-weight: bold;">Your journey to the right career starts here!</p>
+</div>
+<br>
+<h1 class="heading" >Recommended for you</h1>
+<br>
+<div class="main">
+    
+    <div class="main1">
+<div class="functionalities1">
+    <div onclick="window.location.href='test.html'" class="box" id="box1">
+        <div   style="display: flex; justify-content: space-around; width: 320px; align-items: center;">
+        <div id="TestIcon"></div>
+        <h3 style="color: #1E3A8A;">Career Assessment test</h3>
+        </div>
+        <p>Evaluate your skills, strengths, and interests to discover the career path that best aligns with your potential and goals.</p>
+    </div>
+
+    <div class="box" id="box2">
+         <div style="display: flex;    justify-content: space-around; width: 240px; align-items: center;">
+         <div id="exploreIcon"></div>
+            <h3 style="color: #1E3A8A;">Career Explorer</h3>
+          </div>
+          <p>Discover a wide range of professions that truly align with your passions, interests, and long-term aspirations.</p>
+    </div>
+
+    
+</div>
+
+    <div class="functionalities2">
+         <div onclick="window.location.href='inspiration.html'" class="box" id="box3">
+         <div style="display: flex; justify-content: space-around; width: 240px; align-items: center;">
+         <div id="InspirationIcon"></div>
+            <h3 style="color: #1E3A8A;">Inspiration Hub</h3>
+          </div>
+          <p>Boost your motivation and confidence with inspiring career stories and videos from real professionals.</p>
+    </div>
+    <div onclick="window.location.href='blogs.html'"class="box" id="box4">
+         <div style="display: flex; justify-content: space-around; width: 240px; align-items: center;">
+         <div id="articlesIcon"></div>
+            <h3 style="color: #1E3A8A;">Guides & Articles</h3>
+          </div>
+          <p>Explore insightful articles, expert guidance, and practical tips to plan and shape a successful future.</p>
+    </div>
+    </div>
+</div><!-- main1 div end--> 
+
+<div class="main2">
+ <h3>Why choose us?</h3>
+<div id="m2" >Expert Career Guidance</div>
+<div id="m2">Explore Career Paths</div>
+<div id="m2">Motivation & Inspiration Hub</div>
+<div id="m2">Informative blogs and articles</div>
+<div id="m2">Free and Reliable Resources</div>
+</div> <!-- main2 div end--> 
+    </div>  <!-- main div end--> 
+    
+
+<!-- Testimonials / Quotes -->
+ <section class="testimonials">
+        <h2 >What Students & Professionals Say</h2>
+        
+        <div class="carousel-container">
+            <div class="testimonial-track" id="testimonialTrack">
+                <div class="testimonial-slide">
+                    <div class="quote-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z" fill="#FBBF24"/>
+                        </svg>
+                    </div>
+                    <p class="testimonial-text">"PathFinder helped me discover my dream career in data science. The personalized recommendations were incredibly accurate and actionable!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">A</div>
+                        <div class="author-info">
+                            <div class="author-name">Ali Rahman</div>
+                            <div class="author-role">Computer Science Student</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-slide">
+                    <div class="quote-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z" fill="#FBBF24"/>
+                        </svg>
+                    </div>
+                    <p class="testimonial-text">"The skill development resources and career roadmaps helped me land my first software engineering position at a top tech company!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">O</div>
+                        <div class="author-info">
+                            <div class="author-name">Omar Hassan</div>
+                            <div class="author-role">Software Developer</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-slide">
+    <div class="quote-icon">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z" fill="#FBBF24"/>
+        </svg>
+    </div>
+    <p class="testimonial-text">"PathFinder's mentorship feature connected me with professionals who truly guided my career choices. It was a game-changer!"</p>
+    <div class="testimonial-author">
+        <div class="author-avatar">N</div>
+        <div class="author-info">
+            <div class="author-name">Nadia Ahmed</div>
+            <div class="author-role">Engineering Student</div>
+        </div>
+    </div>
+</div>
+
+<div class="testimonial-slide">
+    <div class="quote-icon">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z" fill="#FBBF24"/>
+        </svg>
+    </div>
+    <p class="testimonial-text">"I love how PathFinder makes complex career planning so simple and visually engaging. It’s perfect for students like me!"</p>
+    <div class="testimonial-author">
+        <div class="author-avatar">T</div>
+        <div class="author-info">
+            <div class="author-name">Taha Malik</div>
+            <div class="author-role">College Student</div>
+        </div>
+    </div>
+</div>
+
+<div class="testimonial-slide">
+    <div class="quote-icon">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z" fill="#FBBF24"/>
+        </svg>
+    </div>
+    <p class="testimonial-text">"PathFinder gave me the confidence to switch my career path from teaching to HR. I couldn’t be happier!"</p>
+    <div class="testimonial-author">
+        <div class="author-avatar">H</div>
+        <div class="author-info">
+            <div class="author-name">Hira Qureshi</div>
+            <div class="author-role">HR Manager</div>
+        </div>
+    </div>
+</div>
+
+<div class="testimonial-slide">
+    <div class="quote-icon">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z" fill="#FBBF24"/>
+        </svg>
+    </div>
+    <p class="testimonial-text">"Their personalized guidance feature helped me identify the right internships to build my portfolio efficiently."</p>
+    <div class="testimonial-author">
+        <div class="author-avatar">R</div>
+        <div class="author-info">
+            <div class="author-name">Rizwan Ali</div>
+            <div class="author-role">Graphic Designer</div>
+        </div>
+    </div>
+</div>
+
+<div class="testimonial-slide">
+    <div class="quote-icon">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z" fill="#FBBF24"/>
+        </svg>
+    </div>
+    <p class="testimonial-text">"PathFinder’s user interface is so smooth and friendly. I explored everything about my future career in just one evening!"</p>
+    <div class="testimonial-author">
+        <div class="author-avatar">U</div>
+        <div class="author-info">
+            <div class="author-name">Usman Tariq</div>
+            <div class="author-role">University Student</div>
+        </div>
+    </div>
+</div>
+
+<div class="testimonial-slide">
+    <div class="quote-icon">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z" fill="#FBBF24"/>
+        </svg>
+    </div>
+    <p class="testimonial-text">"The resume and cover letter templates gave me the confidence to apply for jobs I once thought were out of reach."</p>
+    <div class="testimonial-author">
+        <div class="author-avatar">E</div>
+        <div class="author-info">
+            <div class="author-name">Eman Farooq</div>
+            <div class="author-role">Marketing Intern</div>
+        </div>
+    </div>
+</div>
+
+<div class="testimonial-slide">
+    <div class="quote-icon">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z" fill="#FBBF24"/>
+        </svg>
+    </div>
+    <p class="testimonial-text">"This platform made me realize the importance of soft skills. The articles section is just amazing!"</p>
+    <div class="testimonial-author">
+        <div class="author-avatar">L</div>
+        <div class="author-info">
+            <div class="author-name">Laiba Noor</div>
+            <div class="author-role">Student</div>
+        </div>
+    </div>
+</div>
+
+<div class="testimonial-slide">
+    <div class="quote-icon">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z" fill="#FBBF24"/>
+        </svg>
+    </div>
+    <p class="testimonial-text">"I used PathFinder to explore IT roles, and within months, I had a solid roadmap for my next 3 years!"</p>
+    <div class="testimonial-author">
+        <div class="author-avatar">K</div>
+        <div class="author-info">
+            <div class="author-name">Kashan Mehmood</div>
+            <div class="author-role">IT Specialist</div>
+        </div>
+    </div>
+</div>
+
+<div class="testimonial-slide">
+    <div class="quote-icon">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z" fill="#FBBF24"/>
+        </svg>
+    </div>
+    <p class="testimonial-text">"From career insights to skill-building resources, PathFinder covers everything. It’s an all-in-one solution!"</p>
+    <div class="testimonial-author">
+        <div class="author-avatar">B</div>
+        <div class="author-info">
+            <div class="author-name">Bilal Shah</div>
+            <div class="author-role">Entrepreneur</div>
+        </div>
+    </div>
+</div>
+
+<div class="testimonial-slide">
+    <div class="quote-icon">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z" fill="#FBBF24"/>
+        </svg>
+    </div>
+    <p class="testimonial-text">"I loved how easy it was to navigate and find exactly what I needed. Definitely recommending this to my classmates!"</p>
+    <div class="testimonial-author">
+        <div class="author-avatar">S</div>
+        <div class="author-info">
+            <div class="author-name">Sana Irfan</div>
+            <div class="author-role">Student</div>
+        </div>
+    </div>
+</div>
+                 <div class="testimonial-slide">
+                    <div class="quote-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z" fill="#FBBF24"/>
+                        </svg>
+                    </div>
+                    <p class="testimonial-text">"The networking opportunities opened doors I never knew existed."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">J</div>
+                        <div class="author-info">
+                            <div class="author-name">James Potter</div>
+                            <div class="author-role">Software Developer</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-slide">
+                    <div class="quote-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z" fill="#FBBF24"/>
+                        </svg>
+                    </div>
+                    <p class="testimonial-text">"PathFinder made my career transition from marketing to UX design incredibly smooth and well-planned. The guidance was invaluable!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">M</div>
+                        <div class="author-info">
+                            <div class="author-name">Maria Rodriguez</div>
+                            <div class="author-role">UX Designer</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-slide">
+                    <div class="quote-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z" fill="#FBBF24"/>
+                        </svg>
+                    </div>
+                    <p class="testimonial-text">"As a career counselor, I recommend PathFinder to all my clients. It's comprehensive, evidence-based, and incredibly user-friendly."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">S</div>
+                        <div class="author-info">
+                            <div class="author-name">Dr. Sarah Mitchell</div>
+                            <div class="author-role">Career Counselor</div>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="testimonial-slide">
+                    <div class="quote-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z" fill="#FBBF24"/>
+                        </svg>
+                    </div>
+                    <p class="testimonial-text">"Industry insights helped me make informed career decisions."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">F</div>
+                        <div class="author-info">
+                            <div class="author-name">Fatima</div>
+                            <div class="author-role">Analyst</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-slide">
+                   <div class="quote-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z" fill="#FBBF24"/>
+                        </svg>
+                    </div>
+                    <p class="testimonial-text">"The career assessment gave me clarity and confidence about my strengths. I finally know which path aligns perfectly with my goals!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">A</div>
+                        <div class="author-info">
+                            <div class="author-name">Ayesha Khan</div>
+                            <div class="author-role">Business Graduate</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-slide">
+                   <div class="quote-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z" fill="#FBBF24"/>
+                        </svg>
+                    </div>
+                    <p class="testimonial-text">"The networking opportunities and industry insights opened doors I never knew existed. PathFinder truly accelerated my career growth!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">J</div>
+                        <div class="author-info">
+                            <div class="author-name">James Thompson</div>
+                            <div class="author-role">Project Manager</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="carousel-nav">
+            <button class="nav-button" id="prevBtn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <div class="dots-container" id="dotsContainer"></div>
+            <button class="nav-button" id="nextBtn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+    </section>
+
+
+<!-- Achievements / Stats Section -->
+<section class="stats-section">
+  <h2 class="heading">PathFinder in Numbers</h2>
+  <div class="stats-container">
+    <div class="stat-box">
+      <h2>25K+</h2>
+      <p>Successful Students</p>
+    </div>
+    <div class="stat-box">
+      <h2>120+</h2>
+      <p>Career Paths Explored</p>
+    </div>
+    <div class="stat-box">
+      <h2>500+</h2>
+      <p>Inspiring Stories</p>
+    </div>
+    <div class="stat-box">
+      <h2>1.2M+</h2>
+      <p>Visitors Worldwide</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- Call to Action -->
+<section class="cta">
+  <h2>Start Your Career Journey Today!</h2>
+  <p>Join thousands of students exploring their future with PathFinder.</p>
+  <button onclick="window.location.href='test.html'" >Take the Test</button>
+</section>
+
+
+<div class="Abovefooter">
+  <div class="footer-about">
+    <h3>About Us</h3>
+    <p>
+      PathFinder is your trusted career guide, helping students and professionals
+      discover opportunities, assess skills, and get inspired for the future.
+    </p>
+  </div>
+
+  <div class="footer-links">
+    <h3>Quick Links</h3>
+    <ul>
+      <li><a href="test.html">Career Assessment</a></li>
+      <li><a href="explorer.html">Career Explorer</a></li>
+      <li><a href="blogs.html">Blogs & Articles</a></li>
+      <li><a href="inspiration.html">Inspiration Hub</a></li>
+    </ul>
+  </div>
+
+  <div class="footer-contact">
+    <h3>Contact</h3>
+    <p>Email: support@pathfinder.com</p>
+    <p>Phone: +92 300 1234567</p>
+    <div class="socials">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+  </div>
+</div>
+<footer>
+    <p> &copy; 2025 PathFinder. All rights reserved.</p>
+</footer>
+<script src="main.js"></script>
+
+</body>
+</html>
+
+

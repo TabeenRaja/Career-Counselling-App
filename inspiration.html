@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PathFinder</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="inspiration.css">
+</head>
+
+
+<body>
+
+    <header>
+        <div class="mainLogo" onclick="window.location.href='main.html'">
+            <div class="Hicon" style="margin-left: 20px;"><i class="fas fa-compass"></i></div>
+            <h2 >PathFinder</h2>
+        </div>
+<div class="home" onclick="window.location.href='main.html'">Home</div>
+        <div class="navbar">
+            <ul>
+                <li>
+                    <a href="#" id="dropdownToggle">Services Offered ▾</a>
+                    <ul class="dropdown-menu" id="dropdownMenu">
+                        <li><a href="test.html">Career Assessment Test</a></li>
+                        <li><a href="explorer.html">Career Explorer</a></li>
+                        <li><a href="blogs.html">Blogs & Articles</a></li>
+                        <li><a href="inspiration.html">Inspiration Hub</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" id="themesToggle">Themes ▾</a>
+                    <ul class="dropdown-menu" id="themesMenu">
+                        <li><a href="#" data-theme="light"><i class="fas fa-sun"></i> Light Theme</a></li>
+                        <li><a href="#" data-theme="dark"><i class="fas fa-moon"></i> Dark Theme</a></li>
+                        <li><a href="#" data-theme="contrast"><i class="fas fa-adjust"></i> High Contrast</a></li>
+                        <li><a href="#" data-theme="reading"><i class="fas fa-book-open"></i> Blue Filter</a></li>
+                    </ul>
+                </li>
+              
+            </ul>
+        </div>
+
+        <div class="header-actions">
+            <div class="AboutUs">About Us</div>
+            <div class="ContactUs">Contact Us</div>
+
+            <button class="icon-button" id="textSizeToggle" title="Adjust Text Size">
+                <i class="fas fa-text-height"></i>
+            </button>
+        </div>
+    </header>
+
+    <div class="welcomeMess">
+    <H1 style="color: white; font-size: 45px;">Inspiration Hub</H1>
+    <p style="color: white; font-weight: bold;">Watch real success stories from professionals across different industries who found their calling and built extraordinary careers.</p>
+</div>
+
+    
+
+      <!-- Recommended Videos Section -->
+    <section class="professional-section" style="background: var(--color-neutral-bg);">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="heading">Recommended for You</h2>
+                <button class="view-all-btn" onclick="document.querySelector('.filter-tab[data-category=\'all\']').click(); document.querySelector('.videos-section').scrollIntoView({behavior: 'smooth'});">
+                    View All
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M9 18l6-6-6-6v12z"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="horizontal-scroll" id="recommendedVideos">
+                <!-- Recommended videos will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Trending Videos Section -->
+    <section class="professional-section">
+        <div class="container">
+            <div class="section-header">
+                <h2  class="heading"> Trending Now</h2>
+                <button class="view-all-btn" onclick="document.querySelector('.filter-tab[data-category=\'all\']').click(); document.querySelector('.videos-section').scrollIntoView({behavior: 'smooth'});">
+                    View All
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M9 18l6-6-6-6v12z"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="horizontal-scroll" id="trendingVideos">
+                <!-- Trending videos will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+  
+
+    
+    <!-- Filter Section -->
+    <section class="filter-section">
+        <div class="container">
+          
+            
+            <div class="filter-tabs">
+                <button class="filter-tab active" data-category="all">All Stories</button>
+                <button class="filter-tab" data-category="technology">Technology</button>
+                <button class="filter-tab" data-category="business">Business</button>
+                <button class="filter-tab" data-category="creative">Creative Arts</button>
+                <button class="filter-tab" data-category="healthcare">Healthcare</button>
+                <button class="filter-tab" data-category="education">Education</button>
+                <button class="filter-tab" data-category="entrepreneurship">Entrepreneurship</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Videos Section -->
+    <section class="videos-section" id="historySection">
+        <div class="container">
+            <div class="videos-grid" id="videosGrid">
+                <!-- Video Card 1 -->
+                <div class="video-card" data-category="technology" data-video-id="O0MxA9xi_Vk" data-trending="true">
+                    <div class="video-thumbnail">
+                        <img src="https://img.youtube.com/vi/O0MxA9xi_Vk/hqdefault.jpg" alt="How I Became a Software Engineer" loading="lazy">
+                        <div class="play-button">
+                            <svg class="play-icon" viewBox="0 0 24 24">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="video-content">
+                        <span class="video-category">Technology</span>
+                        <h3 class="video-title">How I Became a Software Engineer</h3>
+                        <p class="video-speaker">Tech Career Journey</p>
+                        <p class="video-description">An inspiring story of transitioning from a non-tech background to becoming a successful software engineer at a top tech company.</p>
+                        <div class="video-meta">
+                            <div class="video-duration">
+                                <svg class="duration-icon" viewBox="0 0 24 24">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12,6 12,12 16,14"/>
+                                </svg>
+                                <span>15 min</span>
+                            </div>
+                            <div class="video-views">2.1M views</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Card 2 -->
+                <div class="video-card" data-category="business" data-video-id="wHGqp8lz36c" data-trending="true">
+                    <div class="video-thumbnail">
+                        <img src="https://img.youtube.com/vi/wHGqp8lz36c/hqdefault.jpg" alt="From Failure to Success" loading="lazy">
+                        <div class="play-button">
+                            <svg class="play-icon" viewBox="0 0 24 24">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="video-content">
+                        <span class="video-category">Business</span>
+                        <h3 class="video-title">From Failure to Success</h3>
+                        <p class="video-speaker">Business Leadership</p>
+                        <p class="video-description">A powerful story about overcoming business failures and building a successful career in corporate leadership.</p>
+                        <div class="video-meta">
+                            <div class="video-duration">
+                                <svg class="duration-icon" viewBox="0 0 24 24">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12,6 12,12 16,14"/>
+                                </svg>
+                                <span>18 min</span>
+                            </div>
+                            <div class="video-views">1.8M views</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Card 3 -->
+                <div class="video-card" data-category="entrepreneurship" data-video-id="ZXsQAXx_ao0" data-recommended="true">
+                    <div class="video-thumbnail">
+                        <img src="https://img.youtube.com/vi/ZXsQAXx_ao0/maxresdefault.jpg" alt="Building a Million Dollar Business" loading="lazy">
+                        <div class="play-button">
+                            <svg class="play-icon" viewBox="0 0 24 24">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="video-content">
+                        <span class="video-category">Entrepreneurship</span>
+                        <h3 class="video-title">Building a Million Dollar Business</h3>
+                        <p class="video-speaker">Startup Success Story</p>
+                        <p class="video-description">Learn how a young entrepreneur built a million-dollar business from scratch with determination and smart strategies.</p>
+                        <div class="video-meta">
+                            <div class="video-duration">
+                                <svg class="duration-icon" viewBox="0 0 24 24">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12,6 12,12 16,14"/>
+                                </svg>
+                                <span>22 min</span>
+                            </div>
+                            <div class="video-views">3.2M views</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Card 4 -->
+                <div class="video-card" data-category="creative" data-video-id="6MBaFL7sCb8" data-recommended="true">
+                    <div class="video-thumbnail">
+                        <img src="https://img.youtube.com/vi/6MBaFL7sCb8/maxresdefault.jpg" alt="Following Your Creative Passion" loading="lazy">
+                        <div class="play-button">
+                            <svg class="play-icon" viewBox="0 0 24 24">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="video-content">
+                        <span class="video-category">Creative Arts</span>
+                        <h3 class="video-title">Following Your Creative Passion</h3>
+                        <p class="video-speaker">Creative Career Path</p>
+                        <p class="video-description">An inspiring journey of pursuing creative arts and building a sustainable career doing what you love.</p>
+                        <div class="video-meta">
+                            <div class="video-duration">
+                                <svg class="duration-icon" viewBox="0 0 24 24">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12,6 12,12 16,14"/>
+                                </svg>
+                                <span>14 min</span>
+                            </div>
+                            <div class="video-views">950K views</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Card 5 -->
+                <div class="video-card" data-category="healthcare" data-video-id="1X0gaqs5Ljw">
+                    <div class="video-thumbnail">
+                        <img src="https://img.youtube.com/vi/1X0gaqs5Ljw/hqdefault.jpg" alt="Making a Difference in Healthcare" loading="lazy">
+                        <div class="play-button">
+                            <svg class="play-icon" viewBox="0 0 24 24">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="video-content">
+                        <span class="video-category">Healthcare</span>
+                        <h3 class="video-title">Making a Difference in Healthcare</h3>
+                        <p class="video-speaker">Medical Professional</p>
+                        <p class="video-description">Discover how healthcare professionals find purpose and build rewarding careers while making a real impact on people's lives.</p>
+                        <div class="video-meta">
+                            <div class="video-duration">
+                                <svg class="duration-icon" viewBox="0 0 24 24">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12,6 12,12 16,14"/>
+                                </svg>
+                                <span>16 min</span>
+                            </div>
+                            <div class="video-views">1.3M views</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Card 6 -->
+                <div class="video-card" data-category="education" data-video-id="SFnMTHhKdkw" data-trending="true">
+                    <div class="video-thumbnail">
+                        <img src="https://img.youtube.com/vi/SFnMTHhKdkw/maxresdefault.jpg" alt="The Power of Teaching" loading="lazy">
+                        <div class="play-button">
+                            <svg class="play-icon" viewBox="0 0 24 24">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="video-content">
+                        <span class="video-category">Education</span>
+                        <h3 class="video-title">The Power of Teaching</h3>
+                        <p class="video-speaker">Education Leader</p>
+                        <p class="video-description">An educator's journey showing how teaching can be one of the most fulfilling and impactful career choices.</p>
+                        <div class="video-meta">
+                            <div class="video-duration">
+                                <svg class="duration-icon" viewBox="0 0 24 24">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12,6 12,12 16,14"/>
+                                </svg>
+                                <span>12 min</span>
+                            </div>
+                            <div class="video-views">780K views</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Card 7 -->
+                <div class="video-card" data-category="technology" data-video-id="7Pq-S557XQU" data-recommended="true">
+                    <div class="video-thumbnail">
+                        <img src="https://img.youtube.com/vi/7Pq-S557XQU/maxresdefault.jpg" alt="Breaking Into Tech Without a Degree" loading="lazy">
+                        <div class="play-button">
+                            <svg class="play-icon" viewBox="0 0 24 24">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="video-content">
+                        <span class="video-category">Technology</span>
+                        <h3 class="video-title">Breaking Into Tech Without a Degree</h3>
+                        <p class="video-speaker">Self-Taught Developer</p>
+                        <p class="video-description">Inspiring story of someone who broke into the tech industry through self-learning and determination, without a computer science degree.</p>
+                        <div class="video-meta">
+                            <div class="video-duration">
+                                <svg class="duration-icon" viewBox="0 0 24 24">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12,6 12,12 16,14"/>
+                                </svg>
+                                <span>20 min</span>
+                            </div>
+                            <div class="video-views">2.5M views</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Card 8 -->
+                <div class="video-card" data-category="business" data-video-id="H14bBuluwB8">
+                    <div class="video-thumbnail">
+                        <img src="https://img.youtube.com/vi/H14bBuluwB8/maxresdefault.jpg" alt="Career Change at 40" loading="lazy">
+                        <div class="play-button">
+                            <svg class="play-icon" viewBox="0 0 24 24">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="video-content">
+                        <span class="video-category">Business</span>
+                        <h3 class="video-title">Career Change at 40</h3>
+                        <p class="video-speaker">Career Transformation</p>
+                        <p class="video-description">Proof that it's never too late to change careers. Learn how to successfully pivot your career at any age.</p>
+                        <div class="video-meta">
+                            <div class="video-duration">
+                                <svg class="duration-icon" viewBox="0 0 24 24">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12,6 12,12 16,14"/>
+                                </svg>
+                                <span>17 min</span>
+                            </div>
+                            <div class="video-views">1.6M views</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Card 9 -->
+                <div class="video-card" data-category="entrepreneurship" data-video-id="8SOQduoLgRw" data-trending="true">
+                    <div class="video-thumbnail">
+                        <img src="https://img.youtube.com/vi/8SOQduoLgRw/hqdefault.jpg" alt="From Employee to Entrepreneur" loading="lazy">
+                        <div class="play-button">
+                            <svg class="play-icon" viewBox="0 0 24 24">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="video-content">
+                        <span class="video-category">Entrepreneurship</span>
+                        <h3 class="video-title">From Employee to Entrepreneur</h3>
+                        <p class="video-speaker">Business Owner</p>
+                        <p class="video-description">The journey from being an employee to starting your own business and the mindset shifts required for success.</p>
+                        <div class="video-meta">
+                            <div class="video-duration">
+                                <svg class="duration-icon" viewBox="0 0 24 24">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12,6 12,12 16,14"/>
+                                </svg>
+                                <span>19 min</span>
+                            </div>
+                            <div class="video-views">1.4M views</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Card 10 -->
+                <div class="video-card" data-category="creative" data-video-id="86x-u-tz0MA">
+                    <div class="video-thumbnail">
+                        <img src="https://img.youtube.com/vi/86x-u-tz0MA/hqdefault.jpg" alt="Building a Creative Career" loading="lazy">
+                        <div class="play-button">
+                            <svg class="play-icon" viewBox="0 0 24 24">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="video-content">
+                        <span class="video-category">Creative Arts</span>
+                        <h3 class="video-title">Building a Creative Career</h3>
+                        <p class="video-speaker">Creative Professional</p>
+                        <p class="video-description">How to turn your creative talents into a sustainable and profitable career in the arts and design industry.</p>
+                        <div class="video-meta">
+                            <div class="video-duration">
+                                <svg class="duration-icon" viewBox="0 0 24 24">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12,6 12,12 16,14"/>
+                                </svg>
+                                <span>13 min</span>
+                            </div>
+                            <div class="video-views">890K views</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Card 11 -->
+                <div class="video-card" data-category="Business" data-video-id="eIho2S0ZahI" data-recommended="true">
+                    <div class="video-thumbnail">
+                        <img src="https://img.youtube.com/vi/eIho2S0ZahI/maxresdefault.jpg" alt="How to speak so people want to listen" loading="lazy">
+                        <div class="play-button">
+                            <svg class="play-icon" viewBox="0 0 24 24">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="video-content">
+                        <span class="video-category">Business</span>
+                        <h3 class="video-title">How to speak so people want to listen</h3>
+                        <p class="video-speaker">A professional Speaker</p>
+                        <p class="video-description">Discover the art of speaking.</p>
+                        <div class="video-meta">
+                            <div class="video-duration">
+                                <svg class="duration-icon" viewBox="0 0 24 24">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12,6 12,12 16,14"/>
+                                </svg>
+                                <span>11 min</span>
+                            </div>
+                            <div class="video-views">670K views</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Card 12 -->
+                <div class="video-card" data-category="education" data-video-id="4p5286T_kn0">
+                    <div class="video-thumbnail">
+                        <img src="https://img.youtube.com/vi/4p5286T_kn0/hqdefault.jpg" alt="Transforming Lives Through Education" loading="lazy">
+                        <div class="play-button">
+                            <svg class="play-icon" viewBox="0 0 24 24">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="video-content">
+                        <span class="video-category">Education</span>
+                        <h3 class="video-title">Transforming Lives Through Education</h3>
+                        <p class="video-speaker">Inspiring Educator</p>
+                        <p class="video-description">See how dedicated educators transform lives and communities through the power of teaching and mentorship.</p>
+                        <div class="video-meta">
+                            <div class="video-duration">
+                                <svg class="duration-icon" viewBox="0 0 24 24">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12,6 12,12 16,14"/>
+                                </svg>
+                                <span>15 min</span>
+                            </div>
+                            <div class="video-views">1.1M views</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Card 13 -->
+                <div class="video-card" data-category="technology" data-video-id="UF8uR6Z6KLc" data-trending="true">
+                    <div class="video-thumbnail">
+                        <img src="https://img.youtube.com/vi/UF8uR6Z6KLc/hqdefault.jpg" alt="Tech Career Motivation" loading="lazy">
+                        <div class="play-button">
+                            <svg class="play-icon" viewBox="0 0 24 24">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="video-content">
+                        <span class="video-category">Technology</span>
+                        <h3 class="video-title">Tech Career Motivation</h3>
+                        <p class="video-speaker">Motivational Speaker</p>
+                        <p class="video-description">Uplifting message about pursuing technology careers and never giving up on your dreams in the tech industry.</p>
+                        <div class="video-meta">
+                            <div class="video-duration">
+                                <svg class="duration-icon" viewBox="0 0 24 24">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12,6 12,12 16,14"/>
+                                </svg>
+                                <span>3 min</span>
+                            </div>
+                            <div class="video-views">5.2M views</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Card 14 -->
+                <div class="video-card" data-category="business" data-video-id="qp0HIF3SfI4" data-recommended="true">
+                    <div class="video-thumbnail">
+                        <img src="https://img.youtube.com/vi/qp0HIF3SfI4/maxresdefault.jpg" alt="Business Success Mindset" loading="lazy">
+                        <div class="play-button">
+                            <svg class="play-icon" viewBox="0 0 24 24">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="video-content">
+                        <span class="video-category">Business</span>
+                        <h3 class="video-title">Business Success Mindset</h3>
+                        <p class="video-speaker">Business Coach</p>
+                        <p class="video-description">Learn the mindset and strategies that successful business professionals use to achieve their career goals.</p>
+                        <div class="video-meta">
+                            <div class="video-duration">
+                                <svg class="duration-icon" viewBox="0 0 24 24">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12,6 12,12 16,14"/>
+                                </svg>
+                                <span>25 min</span>
+                            </div>
+                            <div class="video-views">1.9M views</div>
+                        </div>
+                    </div>
+                </div>
+
+              
+               
+                <!-- Video Card 15 -->
+                <div class="video-card" data-category="education" data-video-id="iG9CE55wbtY" data-recommended="true">
+                    <div class="video-thumbnail">
+                        <img src="https://img.youtube.com/vi/iG9CE55wbtY/hqdefault.jpg" alt="Education Innovation" loading="lazy">
+                        <div class="play-button">
+                            <svg class="play-icon" viewBox="0 0 24 24">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="video-content">
+                        <span class="video-category">Education</span>
+                        <h3 class="video-title">Education Innovation</h3>
+                        <p class="video-speaker">Educational Leader</p>
+                        <p class="video-description">How innovative educators are transforming learning and creating meaningful career paths in education.</p>
+                        <div class="video-meta">
+                            <div class="video-duration">
+                                <svg class="duration-icon" viewBox="0 0 24 24">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12,6 12,12 16,14"/>
+                                </svg>
+                                <span>16 min</span>
+                            </div>
+                            <div class="video-views">1.5M views</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Card 16 -->
+                <div class="video-card" data-category="entrepreneurship" data-video-id="IgKWPdJWuBQ">
+                    <div class="video-thumbnail">
+                        <img src="https://img.youtube.com/vi/IgKWPdJWuBQ/maxresdefault.jpg" alt="Startup Success Story" loading="lazy">
+                        <div class="play-button">
+                            <svg class="play-icon" viewBox="0 0 24 24">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="video-content">
+                        <span class="video-category">Entrepreneurship</span>
+                        <h3 class="video-title">Startup Success Story</h3>
+                        <p class="video-speaker">Startup Founder</p>
+                        <p class="video-description">The complete journey of building a successful startup from idea to exit, with lessons learned along the way.</p>
+                        <div class="video-meta">
+                            <div class="video-duration">
+                                <svg class="duration-icon" viewBox="0 0 24 24">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12,6 12,12 16,14"/>
+                                </svg>
+                                <span>28 min</span>
+                            </div>
+                            <div class="video-views">2.8M views</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Watch History Section -->
+<!-- <section class="professional-section">
+        <div >
+            <div class="section-header">
+                <h2 class="heading">Your Watch History</h2>
+            </div>
+            <div id="watchHistory">
+                <div class="empty-state" id="emptyHistory">
+                    <svg class="empty-state-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    </svg>
+                    <h3>No videos watched yet</h3>
+                    <p>Start watching videos to see your history here</p>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <section class="historySection">
+        <div class="historyContainer">
+            <div class="section-header">
+                <h2 class="heading">Your Watch History</h2>
+            </div>
+            <div id="watchHistory">
+                <div class="empty-state" id="emptyHistory">
+                    <svg class="empty-state-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    </svg>
+                    <h3>No videos watched yet</h3>
+                    <p>Start watching videos to see your history here</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">50K+</div>
+                    <div class="stat-label">Career Transformations</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">200+</div>
+                    <div class="stat-label">Success Stories</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Industry Sectors</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">95%</div>
+                    <div class="stat-label">Success Rate</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="Abovefooter">
+  <div class="footer-about">
+    <h3>About Us</h3>
+    <p>
+      PathFinder is your trusted career guide, helping students and professionals
+      discover opportunities, assess skills, and get inspired for the future.
+    </p>
+  </div>
+
+  <div class="footer-links">
+    <h3>Quick Links</h3>
+    <ul>
+      <li><a href="test.html">Career Assessment</a></li>
+      <li><a href="explorer.html">Career Explorer</a></li>
+      <li><a href="blogs.html">Blogs & Articles</a></li>
+      <li><a href="inspiration.html">Inspiration Hub</a></li>
+    </ul>
+  </div>
+
+  <div class="footer-contact">
+    <h3>Contact</h3>
+    <p>Email: support@pathfinder.com</p>
+    <p>Phone: +92 300 1234567</p>
+    <div class="socials">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+  </div>
+</div>
+<footer>
+    <p> &copy; 2025 PathFinder. All rights reserved.</p>
+</footer>
+<script >
+
+    //dropdown menu in header
+// script.js — safe and defensive
+document.addEventListener('DOMContentLoaded', () => {
+  // --- element picks (may be null if you don't include them; code will not crash) ---
+  const dropdownToggle = document.getElementById('dropdownToggle'); // Services toggle
+  const dropdownMenu = document.getElementById('dropdownMenu');
+
+  const themesToggle = document.getElementById('themesToggle'); // Theme toggle in header
+  const themesMenu = document.getElementById('themesMenu');
+
+  const textSizeToggle = document.getElementById('textSizeToggle'); // optional "A" icon
+  const themeOptions = document.querySelectorAll('[data-theme]'); // items with data-theme="dark" etc
+  const sizeOptions = document.querySelectorAll('[data-size]'); // optional fine-grain sizes
+
+  const aboutBtn = document.querySelector('.AboutUs'); // optional
+  const contactBtn = document.querySelector('.ContactUs'); // optional
+
+  // helper: close both menus
+  function closeAllMenus() {
+    if (dropdownMenu) dropdownMenu.classList.remove('show');
+    if (themesMenu) themesMenu.classList.remove('show');
+  }
+
+  // Toggle helpers (guarded)
+  if (dropdownToggle && dropdownMenu) {
+    dropdownToggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();            // prevents immediate document click handler
+      dropdownMenu.classList.toggle('show');
+      if (themesMenu) themesMenu.classList.remove('show');
+    });
+  }
+
+  if (themesToggle && themesMenu) {
+    themesToggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      themesMenu.classList.toggle('show');
+      if (dropdownMenu) dropdownMenu.classList.remove('show');
+    });
+  }
+
+  // Click outside -> close menus
+  document.addEventListener('click', (e) => {
+    const clicked = e.target;
+    if (dropdownMenu && dropdownToggle) {
+      if (!dropdownMenu.contains(clicked) && !dropdownToggle.contains(clicked)) {
+        dropdownMenu.classList.remove('show');
+      }
+    }
+    if (themesMenu && themesToggle) {
+      if (!themesMenu.contains(clicked) && !themesToggle.contains(clicked)) {
+        themesMenu.classList.remove('show');
+      }
+    }
+  });
+
+  // Escape key closes menus
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeAllMenus();
+  });
+
+  // --- Theme switching & persistence ---
+  // accepted theme names should match your CSS classes:
+  // e.g. for data-theme="dark" you should have `.dark-theme { ... }` in CSS
+  if (themeOptions.length) {
+    themeOptions.forEach(opt => {
+      opt.addEventListener('click', (e) => {
+        e.preventDefault();
+        const selected = opt.getAttribute('data-theme') || 'light';
+
+        // remove known theme classes (adjust if you have different names)
+        document.body.classList.remove('dark-theme', 'contrast-theme', 'reading-theme');
+
+        if (selected !== 'light') {
+          document.body.classList.add(`${selected}-theme`);
+        }
+
+        localStorage.setItem('pathfinder-theme', selected);
+        if (themesMenu) themesMenu.classList.remove('show');
+      });
+    });
+  }
+
+  // load saved theme
+  const savedTheme = localStorage.getItem('pathfinder-theme') || 'light';
+  if (savedTheme && savedTheme !== 'light') {
+    document.body.classList.add(`${savedTheme}-theme`);
+  }
+
+  // --- Font size control (two approaches supported) ---
+  // 1) Cycle button (textSizeToggle) cycles through sizes array
+  const sizes = ['0.95rem', '1rem', '1.1rem', '1.2rem']; // tweak as you like
+  let sizeIndex = Number(localStorage.getItem('pathfinder-font-index')) || 1;
+
+  function applySize(idx) {
+    document.documentElement.style.fontSize = sizes[idx];
+    localStorage.setItem('pathfinder-font-index', idx);
+  }
+  applySize(sizeIndex);
+
+  if (textSizeToggle) {
+    textSizeToggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      sizeIndex = (sizeIndex + 1) % sizes.length;
+      applySize(sizeIndex);
+    });
+  }
+
+  // 2) If you prefer explicit size options (e.g. dropdown items with data-size),
+  // they should have attributes like data-size="16px" or data-size-index="2"
+  if (sizeOptions.length) {
+    sizeOptions.forEach(opt => {
+      opt.addEventListener('click', (e) => {
+        e.preventDefault();
+        const idx = opt.getAttribute('data-size-index');
+        const val = opt.getAttribute('data-size');
+        if (idx !== null) {
+          sizeIndex = Number(idx);
+          applySize(sizeIndex);
+        } else if (val) {
+          document.documentElement.style.fontSize = val;
+          localStorage.setItem('pathfinder-font-index', 'custom');
+        }
+        if (themesMenu) themesMenu.classList.remove('show');
+        if (dropdownMenu) dropdownMenu.classList.remove('show');
+      });
+    });
+  }
+
+  // --- optional nav buttons ---
+  if (aboutBtn) {
+    aboutBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.open('about.html', '_blank', 'noopener,noreferrer');
+    });
+  }
+  if (contactBtn) {
+    contactBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.open('contact.html', '_blank', 'noopener,noreferrer');
+    });
+  }
+
+  // debug: (remove in production) shows which key elements exist
+  console.info('pathfinder: dropdownToggle=', !!dropdownToggle, 'dropdownMenu=', !!dropdownMenu,
+               'themesToggle=', !!themesToggle, 'themesMenu=', !!themesMenu,
+               'textSizeToggle=', !!textSizeToggle);
+});
+
+</script>
+    <script>
+        class PathFinderInspirationHub {
+            constructor() {
+                this.filterTabs = document.querySelectorAll('.filter-tab');
+                this.videoCards = document.querySelectorAll('.video-card');
+                this.videosGrid = document.getElementById('videosGrid');
+                this.trendingContainer = document.getElementById('trendingVideos');
+                this.recommendedContainer = document.getElementById('recommendedVideos');
+                this.watchHistoryContainer = document.getElementById('watchHistory');
+                this.emptyHistoryState = document.getElementById('emptyHistory');
+                
+                // Watch history storage
+                this.watchHistory = JSON.parse(localStorage.getItem('pathfinder_watch_history') || '[]');
+                
+                this.init();
+            }
+            
+            init() {
+                this.bindEvents();
+                this.addVideoClickHandlers();
+                this.populateTrendingVideos();
+                this.populateRecommendedVideos();
+                this.displayWatchHistory();
+                this.addImageErrorHandling();
+            }
+            
+            bindEvents() {
+                this.filterTabs.forEach(tab => {
+                    tab.addEventListener('click', (e) => {
+                        const category = e.target.dataset.category;
+                        this.filterVideos(category);
+                        this.updateActiveTab(e.target);
+                    });
+                });
+            }
+            
+            updateActiveTab(activeTab) {
+                this.filterTabs.forEach(tab => tab.classList.remove('active'));
+                activeTab.classList.add('active');
+            }
+            
+            filterVideos(category) {
+                this.videoCards.forEach((card, index) => {
+                    const cardCategory = card.dataset.category;
+                    const shouldShow = category === 'all' || cardCategory === category;
+                    
+                    if (shouldShow) {
+                        card.style.display = 'block';
+                        card.style.animation = `fadeInUp 0.8s ease-out ${index * 0.05}s both`;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            }
+            
+            addVideoClickHandlers() {
+                this.videoCards.forEach(card => {
+                    card.addEventListener('click', () => {
+                        const title = card.querySelector('.video-title').textContent;
+                        const speaker = card.querySelector('.video-speaker').textContent;
+                        const videoId = card.dataset.videoId;
+                        const category = card.dataset.category;
+                        const thumbnail = card.querySelector('img').src;
+                        
+                        // Add to watch history
+                        this.addToWatchHistory({
+                            title,
+                            speaker,
+                            videoId,
+                            category,
+                            thumbnail,
+                            watchedAt: new Date().toISOString()
+                        });
+                        
+                        this.showVideoModal(title, speaker, videoId);
+                    });
+                });
+            }
+
+    // addToWatchHistory(videoData) {
+    
+    //             this.watchHistory = this.watchHistory.filter(item => item.videoId !== videoData.videoId);
+   
+    //             this.watchHistory.unshift(videoData);
+
+    //             this.watchHistory = this.watchHistory.slice(0, 20);
+         
+    //             localStorage.setItem('pathfinder_watch_history', JSON.stringify(this.watchHistory));      
+    //             this.displayWatchHistory();
+    //         }
+            
+    //         displayWatchHistory() {
+    //             if (this.watchHistory.length === 0) {
+    //                 this.emptyHistoryState.style.display = 'block';
+    //                 return;
+    //             }
+                
+    //             this.emptyHistoryState.style.display = 'none';
+                
+    //             const historyHTML = this.watchHistory.slice(0, 5).map(video => `
+    //                 <div class="history-item" data-video-id="${video.videoId}">
+    //                     <div class="history-thumbnail" style="background-image: url('${video.thumbnail}');"></div>
+    //                     <div class="history-content">
+    //                         <div class="history-title">${video.title}</div>
+    //                         <div class="history-meta">${video.speaker} • ${this.getTimeAgo(video.watchedAt)}</div>
+    //                     </div>
+    //                 </div>
+    //             `).join('');
+                
+    //             this.watchHistoryContainer.innerHTML = historyHTML;
+                
+                
+    //             this.watchHistoryContainer.querySelectorAll('.history-item').forEach(item => {
+    //                 item.addEventListener('click', () => {
+    //                     const videoId = item.dataset.videoId;
+    //                     const video = this.watchHistory.find(v => v.videoId === videoId);
+    //                     if (video) {
+    //                         this.showVideoModal(video.title, video.speaker, video.videoId);
+    //                     }
+    //                 });
+    //             });
+    //         }
+
+ addToWatchHistory(videoData) {
+                // Remove if already exists to avoid duplicates
+                this.watchHistory = this.watchHistory.filter(item => item.videoId !== videoData.videoId);
+                
+                // Add to beginning of array
+                this.watchHistory.unshift(videoData);
+                
+                // Keep only last 20 videos
+                this.watchHistory = this.watchHistory.slice(0, 20);
+                
+                // Save to localStorage
+                localStorage.setItem('pathfinder_watch_history', JSON.stringify(this.watchHistory));
+                
+                // Update display
+                this.displayWatchHistory();
+            }
+            
+            displayWatchHistory() {
+                if (this.watchHistory.length === 0) {
+                    this.emptyHistoryState.style.display = 'block';
+                    return;
+                }
+                
+                this.emptyHistoryState.style.display = 'none';
+                
+                const historyHTML = this.watchHistory.slice(0, 5).map(video => `
+                    <div class="history-item" data-video-id="${video.videoId}">
+                        <div class="history-thumbnail" style="background-image: url('${video.thumbnail}');"></div>
+                        <div class="history-content">
+                            <div class="history-title">${video.title}</div>
+                            <div class="history-meta">${video.speaker} • ${this.getTimeAgo(video.watchedAt)}</div>
+                        </div>
+                    </div>
+                `).join('');
+                
+                this.watchHistoryContainer.innerHTML = historyHTML;
+                
+                // Add click handlers to history items
+                this.watchHistoryContainer.querySelectorAll('.history-item').forEach(item => {
+                    item.addEventListener('click', () => {
+                        const videoId = item.dataset.videoId;
+                        const video = this.watchHistory.find(v => v.videoId === videoId);
+                        if (video) {
+                            this.showVideoModal(video.title, video.speaker, video.videoId);
+                        }
+                    });
+                });
+            }
+            
+            getTimeAgo(dateString) {
+                const now = new Date();
+                const watchedDate = new Date(dateString);
+                const diffInMinutes = Math.floor((now - watchedDate) / (1000 * 60));
+                
+                if (diffInMinutes < 1) return 'Just now';
+                if (diffInMinutes < 60) return `${diffInMinutes}m ago`;
+                if (diffInMinutes < 1440) return `${Math.floor(diffInMinutes / 60)}h ago`;
+                return `${Math.floor(diffInMinutes / 1440)}d ago`;
+            }
+            
+             populateTrendingVideos() {
+                const trendingVideos = Array.from(this.videoCards).filter(card => 
+                    card.dataset.trending === 'true'
+                );
+                
+                this.populateHorizontalSection(this.trendingContainer, trendingVideos, true);
+            }
+            
+            populateRecommendedVideos() {
+                const recommendedVideos = Array.from(this.videoCards).filter(card => 
+                    card.dataset.recommended === 'true'
+                );
+                
+                this.populateHorizontalSection(this.recommendedContainer, recommendedVideos, false);
+            }
+            
+            populateHorizontalSection(container, videos, isTrending = false) {
+                const videosHTML = videos.map(card => {
+                    const title = card.querySelector('.video-title').textContent;
+                    const speaker = card.querySelector('.video-speaker').textContent;
+                    const category = card.querySelector('.video-category').textContent;
+                    const duration = card.querySelector('.video-duration span').textContent;
+                    const views = card.querySelector('.video-views').textContent;
+                    const videoId = card.dataset.videoId;
+                    const thumbnail = card.querySelector('img').src;
+                    
+                    return `
+                        <div class="compact-video-card" data-video-id="${videoId}">
+                            ${isTrending ? '<div class="trending-badge">🔥 TRENDING</div>' : ''}
+                            <div class="compact-thumbnail" style="background-image: url('${thumbnail}');">
+                                <div class="compact-play-button">
+                                    <svg class="play-icon" viewBox="0 0 24 24" width="20" height="20">
+                                        <path d="M8 5v14l11-7z" fill="white"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="compact-content">
+                                <span class="compact-category">${category}</span>
+                                <h4 class="compact-title">${title}</h4>
+                                <div class="compact-meta">
+                                    <span>${duration}</span>
+                                    <span>${views}</span>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                }).join('');
+                
+                container.innerHTML = videosHTML;
+                
+                // Add click handlers
+                container.querySelectorAll('.compact-video-card').forEach(card => {
+                    card.addEventListener('click', () => {
+                        const videoId = card.dataset.videoId;
+                        const originalCard = document.querySelector(`[data-video-id="${videoId}"].video-card`);
+                        if (originalCard) {
+                            originalCard.click();
+                        }
+                    });
+                });
+            }
+            addImageErrorHandling() {
+                // Add error handling for all images
+                document.querySelectorAll('img').forEach(img => {
+                    img.addEventListener('error', function() {
+                        // Create a fallback gradient background
+                        const parent = this.parentElement;
+                        parent.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
+                        parent.innerHTML = `
+                            <div style="
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                                color: white;
+                                text-align: center;
+                                font-size: 14px;
+                                font-weight: 600;
+                            ">
+                                🎬<br>Video Preview
+                            </div>
+                            ${parent.querySelector('.play-button') ? parent.querySelector('.play-button').outerHTML : ''}
+                            ${parent.querySelector('.compact-play-button') ? parent.querySelector('.compact-play-button').outerHTML : ''}
+                        `;
+                    });
+                });
+            }
+            
+            showVideoModal(title, speaker, videoId) {
+                const modal = document.createElement('div');
+                modal.className = 'modal-overlay';
+                
+                modal.innerHTML = `
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <div>
+                                <h3 class="modal-title">${title}</h3>
+                                <p class="modal-speaker">${speaker}</p>
+                            </div>
+                            <button class="close-button" onclick="this.closest('.modal-overlay').remove(); document.body.style.overflow='auto';">
+                                ×
+                            </button>
+                        </div>
+                        <div class="video-container">
+                            <iframe 
+                                class="video-iframe"
+                                src="https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1&fs=1"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                `;
+                
+                document.body.appendChild(modal);
+                document.body.style.overflow = 'hidden';
+                
+                // Smooth modal entrance
+                requestAnimationFrame(() => {
+                    modal.style.opacity = '1';
+                });
+                
+                // Close modal when clicking outside
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) {
+                        this.closeModal(modal);
+                    }
+                });
+                
+                // Close modal with Escape key
+                const handleEscape = (e) => {
+                    if (e.key === 'Escape') {
+                        this.closeModal(modal);
+                        document.removeEventListener('keydown', handleEscape);
+                    }
+                };
+                document.addEventListener('keydown', handleEscape);
+            }
+            
+            closeModal(modal) {
+                modal.style.opacity = '0';
+                setTimeout(() => {
+                    modal.remove();
+                    document.body.style.overflow = 'auto';
+                }, 300);
+            }
+        }
+        
+        // Initialize PathFinder Inspiration Hub
+        document.addEventListener('DOMContentLoaded', () => {
+            new PathFinderInspirationHub();
+        });
+    </script>
+    </body>
+    </html>
