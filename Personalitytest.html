@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personality Test</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="career.css" rel="stylesheet">
+    <script src="personalitytest.js" defer ></script>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="mainLogo" onclick="window.location.href='main.html'">
+            <div class="Hicon" style="margin-left: 20px;">
+                <i class="fas fa-compass"></i>
+            </div>
+            <h2>PathFinder</h2>
+        </div>
+
+        <div class="home" onclick="window.location.href='index.html'">Home</div>
+
+        <div class="navbar">
+            <ul>
+                <li>
+                    <a href="#" id="dropdownToggle">Services Offered ▾</a>
+                    <ul class="dropdown-menu" id="dropdownMenu">
+                        <li><a href="test.html">Career Assessment Test</a></li>
+                        <li><a href="explorer.html">Career Explorer</a></li>
+                        <li><a href="blogs.html">Blogs & Articles</a></li>
+                        <li><a href="inspiration.html">Inspiration Hub</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" id="themesToggle">Themes ▾</a>
+                    <ul class="dropdown-menu" id="themesMenu">
+                        <li><a href="#" data-theme="light"><i class="fas fa-sun"></i> Light Theme</a></li>
+                        <li><a href="#" data-theme="dark"><i class="fas fa-moon"></i> Dark Theme</a></li>
+                        <li><a href="#" data-theme="contrast"><i class="fas fa-adjust"></i> High Contrast</a></li>
+                        <li><a href="#" data-theme="reading"><i class="fas fa-book-open"></i> Blue Filter</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="header-actions">
+            <div class="AboutUs">About Us</div>
+            <div class="ContactUs">Contact Us</div>
+
+            <button class="icon-button" id="textSizeToggle" title="Adjust Text Size">
+                <i class="fas fa-text-height"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+        <div class="titlebox">
+            <h1><b>Personality Assessment</b></h1>
+            <p>
+                Discover your ideal career path through our comprehensive personality analysis.
+                This assessment will help identify your strengths, preferences, and the work environments where you'll thrive.
+            </p>
+        </div>
+
+        <div class="progress">
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <div class="progress-text" id="progressText">Question 1 of 12</div>
+            </div>
+
+            <div id="questionsContainer">
+                <!-- Questions will be dynamically generated here -->
+            </div>
+
+            <div class="results-card" id="resultsCard">
+                <div class="personality-type" id="personalityType">ENFP</div>
+                <div class="personality-name" id="personalityName">The Innovator</div>
+                <p id="personalityDescription">
+                    You're creative, enthusiastic, and people-focused. You thrive in dynamic environments
+                    where you can inspire others and bring new ideas to life.
+                </p>
+
+                <div class="personality-score">
+                    <h3 style="color: #1e3a8a; margin-bottom: 1rem;">Your Personality Breakdown</h3>
+                    <div class="score-grid" id="scoreGrid"></div>
+                </div>
+
+                <div class="career-suggestions">
+                    <h3>Recommended Career Paths with Match Percentages</h3>
+                    <div class="career-list" id="careerList"></div>
+                </div>
+
+                <button class="btn restart-btn" onclick="restartTest()">Take Test Again</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+   <div class="Abovefooter">
+  <div class="footer-about">
+    <h3>About Us</h3>
+    <p>
+      PathFinder is your trusted career guide, helping students and professionals
+      discover opportunities, assess skills, and get inspired for the future.
+    </p>
+  </div>
+
+  <div class="footer-links">
+    <h3>Quick Links</h3>
+    <ul>
+      <li><a href="test.html">Career Assessment</a></li>
+      <li><a href="explorer.html">Career Explorer</a></li>
+      <li><a href="blogs.html">Blogs & Articles</a></li>
+      <li><a href="inspiration.html">Inspiration Hub</a></li>
+    </ul>
+  </div>
+
+  <div class="footer-contact">
+    <h3>Contact</h3>
+    <p>Email: support@pathfinder.com</p><br>
+    <p>Phone: +92 300 1234567</p>
+    <div class="socials">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+  </div>
+</div>
+<footer>
+    <p> &copy; 2025 PathFinder. All rights reserved.</p>
+</footer>
+</body>
+</html>
