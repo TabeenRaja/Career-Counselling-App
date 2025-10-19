@@ -1,0 +1,1776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+ 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+   <header>
+        <div class="mainLogo" onclick="window.location.href='main.html'">
+            <div class="Hicon" style="margin-left: 20px;"><i class="fas fa-compass"></i></div>
+            <h2 >PathFinder</h2>
+        </div>
+
+       
+
+        <div class="header-actions">
+          <!-- <div class="home" onclick="window.location.href='main.html'">Home</div> -->
+            <div class="AboutUs" onclick="window.location.href='aboutus.html'">About Us</div>
+            <div class="ContactUs" onclick="window.location.href='contactus.html'">Contact Us</div>
+
+            <button class="icon-button" id="textSizeToggle" title="Adjust Text Size">
+                <i class="fas fa-text-height"></i>
+            </button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+        <!-- Welcome Section -->
+        <div class="welcome-section">
+            <div class="logo">🧭 PathFinder</div>
+            <h1 class="welcome-title">Navigate Your Future</h1>
+            <p class="welcome-subtitle">Discover your potential, explore career paths, and build the future you envision with our comprehensive guidance platform.</p>
+        </div>
+
+        <!-- Form Section -->
+        <div class="form-section">
+            <div class="form-container">
+                <!-- Sign In Form -->
+                <div class="sign-in-form active" id="signInForm">
+                    <div class="form-header">
+                        <h2 class="form-title">Welcome Back</h2>
+                        <p class="form-subtitle">Continue your journey with PathFinder</p>
+                    </div>
+                    <form id="signInFormElement">
+                        <div class="form-group">
+                            <label for="signInEmail">Email Address</label>
+                            <input type="email" id="signInEmail" name="email" required>
+                            <div class="error-message" id="signInEmailError"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="signInPassword">Password</label>
+                            <div class="password-input-container">
+                                <input type="password" id="signInPassword" name="password" required>
+                                <button type="button" class="password-toggle" id="signInPasswordToggle">
+                                    <svg class="eye-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                        <circle cx="12" cy="12" r="3"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="error-message" id="signInPasswordError"></div>
+                        </div>
+
+                        <div class="forgot-password">
+                            <a href="#" id="forgotPasswordLink">Forgot your password?</a>
+                        </div>
+
+                        <button type="submit" class="submit-btn">Sign In</button>
+
+                        <div class="form-toggle">
+                            Don't have an account? <button type="button" id="showSignUp">Create one here</button>
+                        </div>
+                    </form>
+                </div>
+        <!-- Sign Up Form -->
+                <div class="sign-up-form" id="signUpForm">
+                    <div class="form-header">
+                        <h2 class="form-title">Join PathFinder</h2>
+                        <p class="form-subtitle">Start your journey to success today</p>
+                    </div>
+
+                    <form id="signUpFormElement">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                                <div class="error-message" id="firstNameError"></div>
+                                <div class="success-message" id="firstNameSuccess"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                                <div class="error-message" id="lastNameError"></div>
+                                <div class="success-message" id="lastNameSuccess"></div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="signUpEmail">Email Address</label>
+                            <input type="email" id="signUpEmail" name="email" required>
+                            <div class="error-message" id="signUpEmailError"></div>
+                            <div class="success-message" id="signUpEmailSuccess"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="signUpPassword">Password</label>
+                            <div class="password-input-container">
+                                <input type="password" id="signUpPassword" name="password" required>
+                                <button type="button" class="password-toggle" id="signUpPasswordToggle">
+                                    <svg class="eye-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                        <circle cx="12" cy="12" r="3"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="password-strength">
+                                <div class="strength-bar">
+                                    <div class="strength-fill" id="strengthFill"></div>
+                                </div>
+                                <div class="strength-text" id="strengthText">Password strength</div>
+                            </div>
+                            <div class="error-message" id="signUpPasswordError"></div>
+                        </div>
+
+                        <button type="submit" class="submit-btn">Create Account</button>
+
+                        <div class="form-toggle">
+                            Already have an account? <button type="button" id="showSignIn">Sign in here</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </main>
+
+    
+<div class="Abovefooter">
+  <div class="footer-about">
+    <h3>About Us</h3>
+    <p>
+      PathFinder is your trusted career guide, helping students and professionals
+      discover opportunities, assess skills, and get inspired for the future.
+    </p>
+  </div>
+
+ 
+  
+  <div class="footer-links">
+    <h3>Quick Links</h3>
+    <ul>
+      <li><a href="test.html">Career Assessment</a></li>
+      <li><a href="explorer.html">Career Explorer</a></li>
+      <li><a href="blogs.html">Blogs & Articles</a></li>
+      <li><a href="inspiration.html">Inspiration Hub</a></li>
+      <li><a href="PersonalityTest.html">Personality Test</a></li>
+      <li><a href="resume.html">Resume Builder</a></li>
+    </ul>
+  </div>
+  
+  <div class="footer-contact">
+    <h3>Contact</h3>
+    <p>Email: support@pathfinder.com</p>
+    <p>Phone: +92 300 1234567</p>
+    <div class="socials">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+  </div>
+</div>
+<footer>
+    <p> &copy; 2025 PathFinder. All rights reserved.</p>
+</footer>
+<script>
+
+
+  document.addEventListener('DOMContentLoaded', () => {
+  // --- Elements ---
+  const textSizeToggle = document.getElementById('textSizeToggle');
+  const sizeOptions = document.querySelectorAll('[data-size-index], [data-size]'); // optional explicit size buttons
+
+  // --- Font sizes ---
+  const sizes = ['0.95rem', '1rem', '1.1rem', '1.2rem']; // adjust as needed
+  let sizeIndex = Number(localStorage.getItem('pathfinder-font-index')) || 1;
+
+  // --- Apply font size ---
+  function applySize(idx) {
+    document.documentElement.style.fontSize = sizes[idx];
+    localStorage.setItem('pathfinder-font-index', idx);
+  }
+
+  applySize(sizeIndex);
+
+  // --- Toggle font size cyclically ---
+  if (textSizeToggle) {
+    textSizeToggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      sizeIndex = (sizeIndex + 1) % sizes.length;
+      applySize(sizeIndex);
+    });
+  }
+
+  // --- Explicit size options (dropdown buttons, etc.) ---
+  if (sizeOptions.length) {
+    sizeOptions.forEach(opt => {
+      opt.addEventListener('click', (e) => {
+        e.preventDefault();
+        const idx = opt.getAttribute('data-size-index');
+        const val = opt.getAttribute('data-size');
+
+        if (idx !== null) {
+          sizeIndex = Number(idx);
+          applySize(sizeIndex);
+        } else if (val) {
+          document.documentElement.style.fontSize = val;
+          localStorage.setItem('pathfinder-font-index', 'custom');
+        }
+
+        // close menus if you have them
+        if (window.themesMenu) themesMenu.classList.remove('show');
+        if (window.dropdownMenu) dropdownMenu.classList.remove('show');
+      });
+    });
+  }
+
+  // --- Debug info (remove in production) ---
+  console.info(
+    'pathfinder: textSizeToggle=', !!textSizeToggle,
+    'sizeOptions=', sizeOptions.length
+  );
+});
+
+</script>
+
+   <!-- <script>
+        // Account storage - in real app, this would be a database
+        let registeredAccounts = JSON.parse(localStorage.getItem('pathfinder_accounts') || '[]');
+
+        // Clear any existing session when login page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            localStorage.removeItem('pathfinder_current_user');
+        });
+
+        // Save accounts to localStorage
+        function saveAccounts() {
+            localStorage.setItem('pathfinder_accounts', JSON.stringify(registeredAccounts));
+        }
+
+        // Set current user and redirect to main page
+        function loginUser(user) {
+            localStorage.setItem('pathfinder_current_user', JSON.stringify(user));
+            window.location.href = 'main.html';
+        }
+
+        // Form toggle functionality
+        const signInForm = document.getElementById('signInForm');
+        const signUpForm = document.getElementById('signUpForm');
+        const formSection = document.querySelector('.form-section');
+        const welcomeSection = document.querySelector('.welcome-section');
+        const showSignUpBtn = document.getElementById('showSignUp');
+        const showSignInBtn = document.getElementById('showSignIn');
+
+        function showSignUpForm() {
+            signInForm.classList.add('hidden');
+            setTimeout(() => {
+                signUpForm.classList.add('active');
+            }, 200);
+        }
+
+        function showSignInForm() {
+            signUpForm.classList.remove('active');
+            setTimeout(() => {
+                signInForm.classList.remove('hidden');
+            }, 200);
+        }
+
+        function showWelcomeScreen() {
+            formSection.classList.add('hidden');
+            welcomeSection.classList.add('active');
+            
+            setTimeout(() => {
+                formSection.classList.remove('hidden');
+                welcomeSection.classList.remove('active');
+                showSignInForm();
+            }, 2000);
+        }
+
+        showSignUpBtn.addEventListener('click', showSignUpForm);
+        showSignInBtn.addEventListener('click', showSignInForm);
+
+        // Validation functions
+        function validateEmail(email) {
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(email);
+        }
+
+        function validateName(name) {
+            return name.trim().length >= 2 && /^[a-zA-Z\s'-]+$/.test(name.trim());
+        }
+
+        function validatePassword(password) {
+            return {
+                length: password.length >= 8,
+                uppercase: /[A-Z]/.test(password),
+                lowercase: /[a-z]/.test(password),
+                number: /\d/.test(password),
+                special: /[!@#$%^&*(),.?":{}|<>]/.test(password)
+            };
+        }
+
+        function getPasswordStrength(password) {
+            const checks = validatePassword(password);
+            const score = Object.values(checks).filter(Boolean).length;
+            
+            if (score < 2) return { strength: 'weak', color: '#EF4444', text: 'Weak', width: '25%' };
+            if (score < 4) return { strength: 'medium', color: '#F59E0B', text: 'Fair', width: '50%' };
+            if (score < 5) return { strength: 'good', color: '#10B981', text: 'Good', width: '75%' };
+            return { strength: 'strong', color: '#059669', text: 'Strong', width: '100%' };
+        }
+
+        function showError(inputId, errorId, message) {
+            const input = document.getElementById(inputId);
+            const error = document.getElementById(errorId);
+            input.classList.add('error');
+            input.classList.remove('success');
+            error.textContent = message;
+            error.classList.add('show');
+        }
+
+        function showSuccess(inputId, successId, message = '') {
+            const input = document.getElementById(inputId);
+            const success = document.getElementById(successId);
+            input.classList.add('success');
+            input.classList.remove('error');
+            if (success) {
+                success.textContent = message;
+                success.classList.add('show');
+            }
+        }
+
+        function clearValidation(inputId, errorId, successId = null) {
+            const input = document.getElementById(inputId);
+            const error = document.getElementById(errorId);
+            input.classList.remove('error', 'success');
+            error.classList.remove('show');
+            if (successId) {
+                const success = document.getElementById(successId);
+                if (success) success.classList.remove('show');
+            }
+        }
+
+        // Real-time validation for sign up
+        document.getElementById('firstName').addEventListener('input', function() {
+            const name = this.value;
+            if (name.length === 0) {
+                clearValidation('firstName', 'firstNameError', 'firstNameSuccess');
+            } else if (!validateName(name)) {
+                showError('firstName', 'firstNameError', 'Please enter a valid first name');
+            } else {
+                showSuccess('firstName', 'firstNameSuccess', '✓ Looks good');
+            }
+        });
+
+        document.getElementById('lastName').addEventListener('input', function() {
+            const name = this.value;
+            if (name.length === 0) {
+                clearValidation('lastName', 'lastNameError', 'lastNameSuccess');
+            } else if (!validateName(name)) {
+                showError('lastName', 'lastNameError', 'Please enter a valid last name');
+            } else {
+                showSuccess('lastName', 'lastNameSuccess', '✓ Looks good');
+            }
+        });
+
+        document.getElementById('signUpEmail').addEventListener('input', function() {
+            const email = this.value;
+            if (email.length === 0) {
+                clearValidation('signUpEmail', 'signUpEmailError', 'signUpEmailSuccess');
+            } else if (!validateEmail(email)) {
+                showError('signUpEmail', 'signUpEmailError', 'Please enter a valid email address');
+            } else {
+                showSuccess('signUpEmail', 'signUpEmailSuccess', '✓ Valid email address');
+            }
+        });
+
+        document.getElementById('signUpPassword').addEventListener('input', function() {
+            const password = this.value;
+            const strengthFill = document.getElementById('strengthFill');
+            const strengthText = document.getElementById('strengthText');
+            
+            if (password.length === 0) {
+                strengthFill.style.width = '0%';
+                strengthText.textContent = 'Password strength';
+                strengthText.style.color = 'var(--color-cool-gray)';
+                clearValidation('signUpPassword', 'signUpPasswordError');
+                return;
+            }
+
+            const strength = getPasswordStrength(password);
+            
+            strengthFill.style.width = strength.width;
+            strengthFill.style.backgroundColor = strength.color;
+            strengthText.textContent = strength.text;
+            strengthText.style.color = strength.color;
+
+            if (strength.strength === 'weak') {
+                showError('signUpPassword', 'signUpPasswordError', 'Password should be at least 8 characters with uppercase, lowercase, number, and special character');
+            } else {
+                clearValidation('signUpPassword', 'signUpPasswordError');
+            }
+        });
+
+        // Password toggle functionality
+        function setupPasswordToggle(inputId, toggleId) {
+            const passwordInput = document.getElementById(inputId);
+            const toggleButton = document.getElementById(toggleId);
+            const eyeIcon = toggleButton.querySelector('.eye-icon');
+
+            toggleButton.addEventListener('click', function() {
+                if (passwordInput.type === 'password') {
+                    passwordInput.type = 'text';
+                    // Change to eye-off icon
+                    eyeIcon.innerHTML = `
+                        <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/>
+                        <line x1="1" y1="1" x2="23" y2="23"/>
+                    `;
+                } else {
+                    passwordInput.type = 'password';
+                    // Change back to eye icon
+                    eyeIcon.innerHTML = `
+                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                        <circle cx="12" cy="12" r="3"/>
+                    `;
+                }
+            });
+        }
+
+        // Initialize password toggles
+        document.addEventListener('DOMContentLoaded', function() {
+            setupPasswordToggle('signInPassword', 'signInPasswordToggle');
+            setupPasswordToggle('signUpPassword', 'signUpPasswordToggle');
+        });
+
+        // Form submissions
+        document.getElementById('signInFormElement').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('signInEmail').value;
+            const password = document.getElementById('signInPassword').value;
+            
+            let isValid = true;
+
+            if (!validateEmail(email)) {
+                showError('signInEmail', 'signInEmailError', 'Please enter a valid email address');
+                isValid = false;
+            } else {
+                clearValidation('signInEmail', 'signInEmailError');
+            }
+
+            if (password.length < 1) {
+                showError('signInPassword', 'signInPasswordError', 'Please enter your password');
+                isValid = false;
+            } else {
+                clearValidation('signInPassword', 'signInPasswordError');
+            }
+
+            if (isValid) {
+                // Check if account exists and credentials match
+                const account = registeredAccounts.find(acc => acc.email === email && acc.password === password);
+                
+                if (account) {
+                    // Successful login - redirect to main page
+                    loginUser(account);
+                } else {
+                    // Check if email exists but password is wrong
+                    const emailExists = registeredAccounts.find(acc => acc.email === email);
+                    
+                    if (emailExists) {
+                        showError('signInPassword', 'signInPasswordError', 'Incorrect password. Please try again.');
+                    } else {
+                        showError('signInEmail', 'signInEmailError', 'No account found with this email address.');
+                    }
+                }
+            }
+        });
+
+        document.getElementById('signUpFormElement').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const email = document.getElementById('signUpEmail').value;
+            const password = document.getElementById('signUpPassword').value;
+            
+            let isValid = true;
+
+            // Check if email already exists
+            if (registeredAccounts.find(account => account.email === email)) {
+                showError('signUpEmail', 'signUpEmailError', 'An account with this email already exists');
+                isValid = false;
+            } else if (!validateEmail(email)) {
+                showError('signUpEmail', 'signUpEmailError', 'Please enter a valid email address');
+                isValid = false;
+            }
+
+            if (!validateName(firstName)) {
+                showError('firstName', 'firstNameError', 'Please enter a valid first name');
+                isValid = false;
+            }
+
+            if (!validateName(lastName)) {
+                showError('lastName', 'lastNameError', 'Please enter a valid last name');
+                isValid = false;
+            }
+
+            const passwordStrength = getPasswordStrength(password);
+            if (passwordStrength.strength === 'weak') {
+                showError('signUpPassword', 'signUpPasswordError', 'Please choose a stronger password');
+                isValid = false;
+            }
+
+            if (isValid) {
+                // Create account
+                const newAccount = {
+                    firstName,
+                    lastName,
+                    email,
+                    password,
+                    createdAt: new Date().toISOString()
+                };
+
+                registeredAccounts.push(newAccount);
+                saveAccounts();
+                
+                function showSecurityQuestionModal(firstName, lastName, email, password) {
+            const modal = document.createElement('div');
+            modal.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(15, 23, 42, 0.5);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 1000;
+            `;
+            
+            const modalContent = document.createElement('div');
+            modalContent.style.cssText = `
+                background: white;
+                padding: 40px;
+                border-radius: 16px;
+                max-width: 500px;
+                width: 90%;
+                text-align: center;
+                box-shadow: 0 20px 60px rgba(15, 23, 42, 0.2);
+            `;
+            
+            modalContent.innerHTML = `
+                <h3 style="color: var(--color-dark-blue); margin-bottom: 16px; font-size: 1.5rem;">Security Question</h3>
+                <p style="color: var(--color-cool-gray); margin-bottom: 24px;">Please choose a security question to help recover your account if you forget your password.</p>
+                
+                <select id="securityQuestion" style="width: 100%; padding: 12px 16px; border: 2px solid #E5E7EB; border-radius: 8px; margin-bottom: 16px; font-size: 1rem;">
+                    <option value="">Select a security question...</option>
+                    <option value="pet">What was the name of your first pet?</option>
+                    <option value="school">What elementary school did you attend?</option>
+                    <option value="city">In what city were you born?</option>
+                    <option value="mother">What is your mother's maiden name?</option>
+                    <option value="car">What was the make of your first car?</option>
+                    <option value="book">What is your favorite book?</option>
+                </select>
+                
+                <input type="text" id="securityAnswer" placeholder="Enter your answer" style="width: 100%; padding: 12px 16px; border: 2px solid #E5E7EB; border-radius: 8px; margin-bottom: 20px; font-size: 1rem;">
+                
+                <div id="securityError" style="color: #EF4444; font-size: 0.875rem; margin-bottom: 16px; display: none;"></div>
+                
+                <div style="display: flex; gap: 12px;">
+                    <button id="cancelSecurity" style="flex: 1; padding: 12px; background: #E5E7EB; border: none; border-radius: 8px; cursor: pointer; font-weight: 600;">Cancel</button>
+                    <button id="saveSecurity" style="flex: 1; padding: 12px; background: var(--color-emerald-green); color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: 600;">Create Account</button>
+                </div>
+            `;
+            
+            modal.appendChild(modalContent);
+            document.body.appendChild(modal);
+            
+            document.getElementById('cancelSecurity').addEventListener('click', () => {
+                modal.remove();
+            });
+            
+            document.getElementById('saveSecurity').addEventListener('click', () => {
+                const question = document.getElementById('securityQuestion').value;
+                const answer = document.getElementById('securityAnswer').value.trim();
+                const errorDiv = document.getElementById('securityError');
+                
+                if (!question) {
+                    errorDiv.textContent = 'Please select a security question';
+                    errorDiv.style.display = 'block';
+                    return;
+                }
+                
+                if (!answer || answer.length < 2) {
+                    errorDiv.textContent = 'Please provide an answer (at least 2 characters)';
+                    errorDiv.style.display = 'block';
+                    return;
+                }
+                
+                // Store the account with security question
+                registeredAccounts.push({
+                    firstName,
+                    lastName,
+                    email,
+                    password,
+                    securityQuestion: question,
+                    securityAnswer: answer.toLowerCase()
+                });
+
+                // Create success message
+                const successDiv = document.createElement('div');
+                successDiv.style.cssText = `
+                    position: fixed;
+                    top: 20px;
+                    right: 20px;
+                    background: linear-gradient(135deg, var(--color-emerald-green), var(--color-teal-accent));
+                    color: white;
+                    padding: 16px 24px;
+                    border-radius: 12px;
+                    box-shadow: 0 8px 25px rgba(16, 185, 129, 0.3);
+                    z-index: 1001;
+                    font-weight: 600;
+                `;
+                successDiv.textContent = `Account created successfully! 🎉`;
+                document.body.appendChild(successDiv);
+                
+                setTimeout(() => {
+                    successDiv.remove();
+                }, 2000);
+                
+                // Reset form
+                document.getElementById('signUpFormElement').reset();
+                document.querySelectorAll('.error-message, .success-message').forEach(el => el.classList.remove('show'));
+                document.querySelectorAll('input').forEach(input => input.classList.remove('error', 'success'));
+                document.getElementById('strengthFill').style.width = '0%';
+                document.getElementById('strengthText').textContent = 'Password strength';
+                document.getElementById('strengthText').style.color = 'var(--color-cool-gray)';
+                
+                modal.remove();
+                
+                // Show welcome screen then switch to sign in
+                setTimeout(() => {
+                    showWelcomeScreen();
+                }, 1000);
+            });
+            
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.remove();
+                }
+            });
+        }
+
+        // Forgot password functionality
+        document.getElementById('forgotPasswordLink').addEventListener('click', function(e) {
+            e.preventDefault();
+            showPasswordResetModal();
+        });
+
+        function showPasswordResetModal() {
+            const modal = document.createElement('div');
+            modal.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(15, 23, 42, 0.5);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 1000;
+            `;
+            
+            const modalContent = document.createElement('div');
+            modalContent.style.cssText = `
+                background: white;
+                padding: 40px;
+                border-radius: 16px;
+                max-width: 500px;
+                width: 90%;
+                text-align: center;
+                box-shadow: 0 20px 60px rgba(15, 23, 42, 0.2);
+            `;
+            
+            modalContent.innerHTML = `
+                <h3 style="color: var(--color-dark-blue); margin-bottom: 16px; font-size: 1.5rem;">Reset Password</h3>
+                <p style="color: var(--color-cool-gray); margin-bottom: 24px;">Enter your email address to verify your account and reset your password.</p>
+                
+                <input type="email" id="resetEmail" placeholder="Enter your email address" style="width: 100%; padding: 12px 16px; border: 2px solid #E5E7EB; border-radius: 8px; margin-bottom: 16px; font-size: 1rem;">
+                
+                <div id="resetError" style="color: #EF4444; font-size: 0.875rem; margin-bottom: 16px; display: none;"></div>
+                
+                <div style="display: flex; gap: 12px;">
+                    <button id="cancelReset" style="flex: 1; padding: 12px; background: #E5E7EB; border: none; border-radius: 8px; cursor: pointer; font-weight: 600;">Cancel</button>
+                    <button id="verifyEmail" style="flex: 1; padding: 12px; background: var(--color-emerald-green); color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: 600;">Verify Email</button>
+                </div>
+            `;
+            
+            modal.appendChild(modalContent);
+            document.body.appendChild(modal);
+            
+            document.getElementById('cancelReset').addEventListener('click', () => {
+                modal.remove();
+            });
+            
+            document.getElementById('verifyEmail').addEventListener('click', () => {
+                const email = document.getElementById('resetEmail').value.trim();
+                const errorDiv = document.getElementById('resetError');
+                
+                if (!email) {
+                    errorDiv.textContent = 'Please enter your email address';
+                    errorDiv.style.display = 'block';
+                    return;
+                }
+                
+                if (!validateEmail(email)) {
+                    errorDiv.textContent = 'Please enter a valid email address';
+                    errorDiv.style.display = 'block';
+                    return;
+                }
+                
+                const account = registeredAccounts.find(acc => acc.email === email);
+                
+                if (!account) {
+                    errorDiv.textContent = 'No account found with this email address';
+                    errorDiv.style.display = 'block';
+                    return;
+                }
+                
+                modal.remove();
+                showSecurityQuestionVerification(account);
+            });
+            
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.remove();
+                }
+            });
+        }
+
+        function showSecurityQuestionVerification(account) {
+            const questionTexts = {
+                'pet': 'What was the name of your first pet?',
+                'school': 'What elementary school did you attend?',
+                'city': 'In what city were you born?',
+                'mother': 'What is your mother\'s maiden name?',
+                'car': 'What was the make of your first car?',
+                'book': 'What is your favorite book?'
+            };
+
+            const modal = document.createElement('div');
+            modal.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(15, 23, 42, 0.5);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 1000;
+            `;
+            
+            const modalContent = document.createElement('div');
+            modalContent.style.cssText = `
+                background: white;
+                padding: 40px;
+                border-radius: 16px;
+                max-width: 500px;
+                width: 90%;
+                text-align: center;
+                box-shadow: 0 20px 60px rgba(15, 23, 42, 0.2);
+            `;
+            
+            modalContent.innerHTML = `
+                <h3 style="color: var(--color-dark-blue); margin-bottom: 16px; font-size: 1.5rem;">Security Verification</h3>
+                <p style="color: var(--color-cool-gray); margin-bottom: 8px;">Account found for: <strong>${account.email}</strong></p>
+                <p style="color: var(--color-cool-gray); margin-bottom: 24px;">Please answer your security question to reset your password.</p>
+                
+                <div style="background: var(--color-soft-white); padding: 16px; border-radius: 8px; margin-bottom: 20px; text-align: left;">
+                    <strong style="color: var(--color-dark-blue);">${questionTexts[account.securityQuestion]}</strong>
+                </div>
+                
+                <input type="text" id="securityAnswerInput" placeholder="Enter your answer" style="width: 100%; padding: 12px 16px; border: 2px solid #E5E7EB; border-radius: 8px; margin-bottom: 16px; font-size: 1rem;">
+                
+                <div id="verifyError" style="color: #EF4444; font-size: 0.875rem; margin-bottom: 16px; display: none;"></div>
+                
+                <div style="display: flex; gap: 12px;">
+                    <button id="cancelVerify" style="flex: 1; padding: 12px; background: #E5E7EB; border: none; border-radius: 8px; cursor: pointer; font-weight: 600;">Cancel</button>
+                    <button id="verifyAnswer" style="flex: 1; padding: 12px; background: var(--color-emerald-green); color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: 600;">Verify Answer</button>
+                </div>
+            `;
+            
+            modal.appendChild(modalContent);
+            document.body.appendChild(modal);
+            
+            document.getElementById('cancelVerify').addEventListener('click', () => {
+                modal.remove();
+            });
+            
+            document.getElementById('verifyAnswer').addEventListener('click', () => {
+                const answer = document.getElementById('securityAnswerInput').value.trim().toLowerCase();
+                const errorDiv = document.getElementById('verifyError');
+                
+                if (!answer) {
+                    errorDiv.textContent = 'Please enter your answer';
+                    errorDiv.style.display = 'block';
+                    return;
+                }
+                
+                if (answer !== account.securityAnswer) {
+                    errorDiv.textContent = 'Incorrect answer. Please try again.';
+                    errorDiv.style.display = 'block';
+                    return;
+                }
+                
+                modal.remove();
+                showNewPasswordModal(account);
+            });
+            
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.remove();
+                }
+            });
+        }
+
+        function showNewPasswordModal(account) {
+            const modal = document.createElement('div');
+            modal.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(15, 23, 42, 0.5);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 1000;
+            `;
+            
+            const modalContent = document.createElement('div');
+            modalContent.style.cssText = `
+                background: white;
+                padding: 40px;
+                border-radius: 16px;
+                max-width: 500px;
+                width: 90%;
+                text-align: center;
+                box-shadow: 0 20px 60px rgba(15, 23, 42, 0.2);
+            `;
+            
+            modalContent.innerHTML = `
+                <h3 style="color: var(--color-dark-blue); margin-bottom: 16px; font-size: 1.5rem;">Create New Password</h3>
+                <p style="color: var(--color-cool-gray); margin-bottom: 24px;">Enter your new password for <strong>${account.email}</strong></p>
+                
+                <input type="password" id="newPassword" placeholder="Enter new password" style="width: 100%; padding: 12px 16px; border: 2px solid #E5E7EB; border-radius: 8px; margin-bottom: 16px; font-size: 1rem;">
+                
+                <div class="password-strength" style="margin-bottom: 16px;">
+                    <div class="strength-bar" style="height: 4px; background-color: #E5E7EB; border-radius: 2px; overflow: hidden; margin-bottom: 6px;">
+                        <div class="strength-fill" id="newPasswordStrengthFill" style="height: 100%; transition: all 0.3s ease; border-radius: 2px;"></div>
+                    </div>
+                    <div class="strength-text" id="newPasswordStrengthText" style="font-size: 0.75rem; color: var(--color-cool-gray); font-weight: 500;">Password strength</div>
+                </div>
+                
+                <input type="password" id="confirmPassword" placeholder="Confirm new password" style="width: 100%; padding: 12px 16px; border: 2px solid #E5E7EB; border-radius: 8px; margin-bottom: 16px; font-size: 1rem;">
+                
+                <div id="passwordError" style="color: #EF4444; font-size: 0.875rem; margin-bottom: 16px; display: none;"></div>
+                
+                <div style="display: flex; gap: 12px;">
+                    <button id="cancelPassword" style="flex: 1; padding: 12px; background: #E5E7EB; border: none; border-radius: 8px; cursor: pointer; font-weight: 600;">Cancel</button>
+                    <button id="updatePassword" style="flex: 1; padding: 12px; background: var(--color-emerald-green); color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: 600;">Update Password</button>
+                </div>
+            `;
+            
+            modal.appendChild(modalContent);
+            document.body.appendChild(modal);
+              // Password strength indicator for new password
+            document.getElementById('newPassword').addEventListener('input', function() {
+                const password = this.value;
+                const strengthFill = document.getElementById('newPasswordStrengthFill');
+                const strengthText = document.getElementById('newPasswordStrengthText');
+                
+                if (password.length === 0) {
+                    strengthFill.style.width = '0%';
+                    strengthText.textContent = 'Password strength';
+                    strengthText.style.color = 'var(--color-cool-gray)';
+                    return;
+                }
+
+                const strength = getPasswordStrength(password);
+                
+                strengthFill.style.width = strength.width;
+                strengthFill.style.backgroundColor = strength.color;
+                strengthText.textContent = strength.text;
+                strengthText.style.color = strength.color;
+            });
+            
+            document.getElementById('cancelPassword').addEventListener('click', () => {
+                modal.remove();
+            });
+            
+            document.getElementById('updatePassword').addEventListener('click', () => {
+                const newPassword = document.getElementById('newPassword').value;
+                const confirmPassword = document.getElementById('confirmPassword').value;
+                const errorDiv = document.getElementById('passwordError');
+                
+                if (!newPassword) {
+                    errorDiv.textContent = 'Please enter a new password';
+                    errorDiv.style.display = 'block';
+                    return;
+                }
+                
+                const passwordStrength = getPasswordStrength(newPassword);
+                if (passwordStrength.strength === 'weak') {
+                    errorDiv.textContent = 'Please choose a stronger password';
+                    errorDiv.style.display = 'block';
+                    return;
+                }
+                
+                if (newPassword !== confirmPassword) {
+                    errorDiv.textContent = 'Passwords do not match';
+                    errorDiv.style.display = 'block';
+                    return;
+                }
+                
+                // Update the password in the account
+                account.password = newPassword;
+                
+                const successDiv = document.createElement('div');
+                successDiv.style.cssText = `
+                    position: fixed;
+                    top: 20px;
+                    right: 20px;
+                    background: linear-gradient(135deg, var(--color-emerald-green), var(--color-teal-accent));
+                    color: white;
+                    padding: 16px 24px;
+                    border-radius: 12px;
+                    box-shadow: 0 8px 25px rgba(16, 185, 129, 0.3);
+                    z-index: 1001;
+                    font-weight: 600;
+                `;
+                successDiv.textContent = 'Password updated successfully! 🎉';
+                document.body.appendChild(successDiv);
+                
+                setTimeout(() => {
+                    successDiv.remove();
+                }, 3000);
+                
+                modal.remove();
+            });
+            
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.remove();
+                }
+            });
+        }
+                // // Show success message
+                // const successDiv = document.createElement('div');
+                // successDiv.style.cssText = `
+                //     position: fixed;
+                //     top: 20px;
+                //     right: 20px;
+                //     background: linear-gradient(135deg, var(--color-emerald-green), var(--color-teal-accent));
+                //     color: white;
+                //     padding: 16px 24px;
+                //     border-radius: 12px;
+                //     box-shadow: 0 8px 25px rgba(16, 185, 129, 0.3);
+                //     z-index: 1001;
+                //     font-weight: 600;
+                // `;
+                // successDiv.textContent = `Account created successfully! 🎉`;
+                // document.body.appendChild(successDiv);
+                
+                // setTimeout(() => {
+                //     successDiv.remove();
+                // }, 2000);
+                
+                // Reset form
+                document.getElementById('signUpFormElement').reset();
+                document.querySelectorAll('.error-message, .success-message').forEach(el => el.classList.remove('show'));
+                document.querySelectorAll('input').forEach(input => input.classList.remove('error', 'success'));
+                document.getElementById('strengthFill').style.width = '0%';
+                document.getElementById('strengthText').textContent = 'Password strength';
+                document.getElementById('strengthText').style.color = 'var(--color-cool-gray)';
+                
+                // Show welcome screen then switch to sign in
+                setTimeout(() => {
+                    showWelcomeScreen();
+                }, 1000);
+            }
+        });
+    </script> -->
+
+    <script>
+        // Account storage
+        // Load saved accounts from localStorage
+let registeredAccounts = JSON.parse(localStorage.getItem('pathfinder_accounts')) || [];
+
+//  // Clear any existing session when login page loads
+//         document.addEventListener('DOMContentLoaded', function() {
+//             localStorage.removeItem('pathfinder_current_user');
+//         });
+
+        // Save accounts to localStorage
+        function saveAccounts() {
+            localStorage.setItem('pathfinder_accounts', JSON.stringify(registeredAccounts));
+        }
+
+        // Set current user and redirect to main page
+        function loginUser(user) {
+            localStorage.setItem('pathfinder_current_user', JSON.stringify(user));
+            window.location.href = 'main.html';
+        }
+        // Form toggle functionality
+        const signInForm = document.getElementById('signInForm');
+        const signUpForm = document.getElementById('signUpForm');
+        const formSection = document.querySelector('.form-section');
+        const welcomeSection = document.querySelector('.welcome-section');
+        const showSignUpBtn = document.getElementById('showSignUp');
+        const showSignInBtn = document.getElementById('showSignIn');
+
+        function showSignUpForm() {
+            signInForm.classList.add('hidden');
+            setTimeout(() => {
+                signUpForm.classList.add('active');
+            }, 200);
+        }
+
+        function showSignInForm() {
+            signUpForm.classList.remove('active');
+            setTimeout(() => {
+                signInForm.classList.remove('hidden');
+            }, 200);
+        }
+
+        function showWelcomeScreen() {
+            formSection.classList.add('hidden');
+            welcomeSection.classList.add('active');
+            
+            setTimeout(() => {
+                formSection.classList.remove('hidden');
+                welcomeSection.classList.remove('active');
+                showSignInForm();
+            }, 2000);
+        }
+
+        showSignUpBtn.addEventListener('click', showSignUpForm);
+        showSignInBtn.addEventListener('click', showSignInForm);
+
+        // Validation functions
+        function validateEmail(email) {
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(email);
+        }
+
+        function validateName(name) {
+            return name.trim().length >= 2 && /^[a-zA-Z\s'-]+$/.test(name.trim());
+        }
+
+        function validatePassword(password) {
+            return {
+                length: password.length >= 8,
+                uppercase: /[A-Z]/.test(password),
+                lowercase: /[a-z]/.test(password),
+                number: /\d/.test(password),
+                special: /[!@#$%^&*(),.?":{}|<>]/.test(password)
+            };
+        }
+
+        function getPasswordStrength(password) {
+            const checks = validatePassword(password);
+            const score = Object.values(checks).filter(Boolean).length;
+            
+            if (score < 2) return { strength: 'weak', color: '#EF4444', text: 'Weak', width: '25%' };
+            if (score < 4) return { strength: 'medium', color: '#F59E0B', text: 'Fair', width: '50%' };
+            if (score < 5) return { strength: 'good', color: '#10B981', text: 'Good', width: '75%' };
+            return { strength: 'strong', color: '#059669', text: 'Strong', width: '100%' };
+        }
+
+        function showError(inputId, errorId, message) {
+            const input = document.getElementById(inputId);
+            const error = document.getElementById(errorId);
+            input.classList.add('error');
+            input.classList.remove('success');
+            error.textContent = message;
+            error.classList.add('show');
+        }
+
+        function showSuccess(inputId, successId, message = '') {
+            const input = document.getElementById(inputId);
+            const success = document.getElementById(successId);
+            input.classList.add('success');
+            input.classList.remove('error');
+            if (success) {
+                success.textContent = message;
+                success.classList.add('show');
+            }
+        }
+
+        function clearValidation(inputId, errorId, successId = null) {
+            const input = document.getElementById(inputId);
+            const error = document.getElementById(errorId);
+            input.classList.remove('error', 'success');
+            error.classList.remove('show');
+            if (successId) {
+                const success = document.getElementById(successId);
+                if (success) success.classList.remove('show');
+            }
+        }
+
+        // Real-time validation for sign up
+        document.getElementById('firstName').addEventListener('input', function() {
+            const name = this.value;
+            if (name.length === 0) {
+                clearValidation('firstName', 'firstNameError', 'firstNameSuccess');
+            } else if (!validateName(name)) {
+                showError('firstName', 'firstNameError', 'Please enter a valid first name');
+            } else {
+                showSuccess('firstName', 'firstNameSuccess', '✓ Looks good');
+            }
+        });
+
+        document.getElementById('lastName').addEventListener('input', function() {
+            const name = this.value;
+            if (name.length === 0) {
+                clearValidation('lastName', 'lastNameError', 'lastNameSuccess');
+            } else if (!validateName(name)) {
+                showError('lastName', 'lastNameError', 'Please enter a valid last name');
+            } else {
+                showSuccess('lastName', 'lastNameSuccess', '✓ Looks good');
+            }
+        });
+
+        document.getElementById('signUpEmail').addEventListener('input', function() {
+            const email = this.value;
+            if (email.length === 0) {
+                clearValidation('signUpEmail', 'signUpEmailError', 'signUpEmailSuccess');
+            } else if (!validateEmail(email)) {
+                showError('signUpEmail', 'signUpEmailError', 'Please enter a valid email address');
+            } else {
+                showSuccess('signUpEmail', 'signUpEmailSuccess', '✓ Valid email address');
+            }
+        });
+
+        document.getElementById('signUpPassword').addEventListener('input', function() {
+            const password = this.value;
+            const strengthFill = document.getElementById('strengthFill');
+            const strengthText = document.getElementById('strengthText');
+            
+            if (password.length === 0) {
+                strengthFill.style.width = '0%';
+                strengthText.textContent = 'Password strength';
+                strengthText.style.color = 'var(--color-cool-gray)';
+                clearValidation('signUpPassword', 'signUpPasswordError');
+                return;
+            }
+
+            const strength = getPasswordStrength(password);
+            
+            strengthFill.style.width = strength.width;
+            strengthFill.style.backgroundColor = strength.color;
+            strengthText.textContent = strength.text;
+            strengthText.style.color = strength.color;
+
+            if (strength.strength === 'weak') {
+                showError('signUpPassword', 'signUpPasswordError', 'Password should be at least 8 characters with uppercase, lowercase, number, and special character');
+            } else {
+                clearValidation('signUpPassword', 'signUpPasswordError');
+            }
+        });
+
+         // Password toggle functionality
+        function setupPasswordToggle(inputId, toggleId) {
+            const passwordInput = document.getElementById(inputId);
+            const toggleButton = document.getElementById(toggleId);
+            const eyeIcon = toggleButton.querySelector('.eye-icon');
+
+            toggleButton.addEventListener('click', function() {
+                if (passwordInput.type === 'password') {
+                    passwordInput.type = 'text';
+                    // Change to eye-off icon
+                    eyeIcon.innerHTML = `
+                        <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/>
+                        <line x1="1" y1="1" x2="23" y2="23"/>
+                    `;
+                } else {
+                    passwordInput.type = 'password';
+                    // Change back to eye icon
+                    eyeIcon.innerHTML = `
+                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                        <circle cx="12" cy="12" r="3"/>
+                    `;
+                }
+            });
+        }
+
+        // Initialize password toggles
+        document.addEventListener('DOMContentLoaded', function() {
+            setupPasswordToggle('signInPassword', 'signInPasswordToggle');
+            setupPasswordToggle('signUpPassword', 'signUpPasswordToggle');
+        });
+
+        // Form submissions
+        document.getElementById('signInFormElement').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('signInEmail').value;
+            const password = document.getElementById('signInPassword').value;
+            
+            let isValid = true;
+
+            if (!validateEmail(email)) {
+                showError('signInEmail', 'signInEmailError', 'Please enter a valid email address');
+                isValid = false;
+            } else {
+                clearValidation('signInEmail', 'signInEmailError');
+            }
+
+            if (password.length < 1) {
+                showError('signInPassword', 'signInPasswordError', 'Please enter your password');
+                isValid = false;
+            } else {
+                clearValidation('signInPassword', 'signInPasswordError');
+            }
+
+            if (isValid) {
+                // Check if account exists and credentials match
+                const account = registeredAccounts.find(acc => acc.email === email && acc.password === password);
+            
+                if (account) {
+    // Save the current user to localStorage
+    localStorage.setItem('pathfinder_current_user', JSON.stringify(account));
+
+    // Success message
+    const successDiv = document.createElement('div');
+    successDiv.style.cssText = `
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: linear-gradient(135deg, var(--color-emerald-green), var(--color-teal-accent));
+        color: white;
+        padding: 16px 24px;
+        border-radius: 12px;
+        box-shadow: 0 8px 25px rgba(16, 185, 129, 0.3);
+        z-index: 1000;
+        font-weight: 600;
+    `;
+    successDiv.textContent = `Welcome back, ${account.firstName}! 🎉`;
+    document.body.appendChild(successDiv);
+
+    // Delay redirect to show message
+    setTimeout(() => {
+        window.location.href = "./main.html"; // ✅ change path if main.html is inside a folder
+    }, 1500);
+}
+
+                else {
+                    // Check if email exists but password is wrong
+                    const emailExists = registeredAccounts.find(acc => acc.email === email);
+                    
+                    if (emailExists) {
+                        showError('signInPassword', 'signInPasswordError', 'Incorrect password. Please try again.');
+                    } else {
+                        showError('signInEmail', 'signInEmailError', 'No account found with this email address.');
+                    }
+                }
+            }
+        });
+
+        document.getElementById('signUpFormElement').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const email = document.getElementById('signUpEmail').value;
+            const password = document.getElementById('signUpPassword').value;
+            
+            let isValid = true;
+
+            // Check if email already exists
+            if (registeredAccounts.find(account => account.email === email)) {
+                showError('signUpEmail', 'signUpEmailError', 'An account with this email already exists');
+                isValid = false;
+            } else if (!validateEmail(email)) {
+                showError('signUpEmail', 'signUpEmailError', 'Please enter a valid email address');
+                isValid = false;
+            }
+
+            if (!validateName(firstName)) {
+                showError('firstName', 'firstNameError', 'Please enter a valid first name');
+                isValid = false;
+            }
+
+            if (!validateName(lastName)) {
+                showError('lastName', 'lastNameError', 'Please enter a valid last name');
+                isValid = false;
+            }
+
+            const passwordStrength = getPasswordStrength(password);
+            if (passwordStrength.strength === 'weak') {
+                showError('signUpPassword', 'signUpPasswordError', 'Please choose a stronger password');
+                isValid = false;
+            }
+
+            if (isValid) {
+                // Show security question modal before creating account
+                showSecurityQuestionModal(firstName, lastName, email, password);
+            }
+        });
+
+        function showSecurityQuestionModal(firstName, lastName, email, password) {
+            const modal = document.createElement('div');
+            modal.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(15, 23, 42, 0.5);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 1000;
+            `;
+            
+            const modalContent = document.createElement('div');
+            modalContent.style.cssText = `
+                background: white;
+                padding: 40px;
+                border-radius: 16px;
+                max-width: 500px;
+                width: 90%;
+                text-align: center;
+                box-shadow: 0 20px 60px rgba(15, 23, 42, 0.2);
+            `;
+            
+            modalContent.innerHTML = `
+                <h3 style="color: var(--color-dark-blue); margin-bottom: 16px; font-size: 1.5rem;">Security Question</h3>
+                <p style="color: var(--color-cool-gray); margin-bottom: 24px;">Please choose a security question to help recover your account if you forget your password.</p>
+                
+                <select id="securityQuestion" style="width: 100%; padding: 12px 16px; border: 2px solid #E5E7EB; border-radius: 8px; margin-bottom: 16px; font-size: 1rem;">
+                    <option value="">Select a security question...</option>
+                    <option value="pet">What was the name of your first pet?</option>
+                    <option value="school">What elementary school did you attend?</option>
+                    <option value="city">In what city were you born?</option>
+                    <option value="mother">What is your mother's maiden name?</option>
+                    <option value="car">What was the make of your first car?</option>
+                    <option value="book">What is your favorite book?</option>
+                </select>
+                
+                <input type="text" id="securityAnswer" placeholder="Enter your answer" style="width: 100%; padding: 12px 16px; border: 2px solid #E5E7EB; border-radius: 8px; margin-bottom: 20px; font-size: 1rem;">
+                
+                <div id="securityError" style="color: #EF4444; font-size: 0.875rem; margin-bottom: 16px; display: none;"></div>
+                
+                <div style="display: flex; gap: 12px;">
+                    <button id="cancelSecurity" style="flex: 1; padding: 12px; background: #E5E7EB; border: none; border-radius: 8px; cursor: pointer; font-weight: 600;">Cancel</button>
+                    <button id="saveSecurity" style="flex: 1; padding: 12px; background: var(--color-emerald-green); color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: 600;">Create Account</button>
+                </div>
+            `;
+            
+            modal.appendChild(modalContent);
+            document.body.appendChild(modal);
+            
+            document.getElementById('cancelSecurity').addEventListener('click', () => {
+                modal.remove();
+            });
+            
+            document.getElementById('saveSecurity').addEventListener('click', () => {
+                const question = document.getElementById('securityQuestion').value;
+                const answer = document.getElementById('securityAnswer').value.trim();
+                const errorDiv = document.getElementById('securityError');
+                
+                if (!question) {
+                    errorDiv.textContent = 'Please select a security question';
+                    errorDiv.style.display = 'block';
+                    return;
+                }
+                
+                if (!answer || answer.length < 2) {
+                    errorDiv.textContent = 'Please provide an answer (at least 2 characters)';
+                    errorDiv.style.display = 'block';
+                    return;
+                }
+                
+                  registeredAccounts.push({
+        firstName,
+        lastName,
+        email,
+        password,
+        securityQuestion,
+        securityAnswer
+    });
+
+    localStorage.setItem('pathfinder_accounts', JSON.stringify(registeredAccounts));
+    localStorage.setItem('pathfinder_current_user', JSON.stringify({ email }));
+
+                // Create success message
+                const successDiv = document.createElement('div');
+                successDiv.style.cssText = `
+                    position: fixed;
+                    top: 20px;
+                    right: 20px;
+                    background: linear-gradient(135deg, var(--color-emerald-green), var(--color-teal-accent));
+                    color: white;
+                    padding: 16px 24px;
+                    border-radius: 12px;
+                    box-shadow: 0 8px 25px rgba(16, 185, 129, 0.3);
+                    z-index: 1001;
+                    font-weight: 600;
+                `;
+                successDiv.textContent = `Account created successfully! 🎉`;
+                document.body.appendChild(successDiv);
+                
+                setTimeout(() => {
+                    successDiv.remove();
+                }, 2000);
+                
+                // Reset form
+                document.getElementById('signUpFormElement').reset();
+                document.querySelectorAll('.error-message, .success-message').forEach(el => el.classList.remove('show'));
+                document.querySelectorAll('input').forEach(input => input.classList.remove('error', 'success'));
+                document.getElementById('strengthFill').style.width = '0%';
+                document.getElementById('strengthText').textContent = 'Password strength';
+                document.getElementById('strengthText').style.color = 'var(--color-cool-gray)';
+                
+                modal.remove();
+                
+                // Show welcome screen then switch to sign in
+                setTimeout(() => {
+                    showWelcomeScreen();
+                }, 1000);
+            });
+            
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.remove();
+                }
+            });
+        }
+
+        // Forgot password functionality
+        document.getElementById('forgotPasswordLink').addEventListener('click', function(e) {
+            e.preventDefault();
+            showPasswordResetModal();
+        });
+
+        function showPasswordResetModal() {
+            const modal = document.createElement('div');
+            modal.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(15, 23, 42, 0.5);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 1000;
+            `;
+            
+            const modalContent = document.createElement('div');
+            modalContent.style.cssText = `
+                background: white;
+                padding: 40px;
+                border-radius: 16px;
+                max-width: 500px;
+                width: 90%;
+                text-align: center;
+                box-shadow: 0 20px 60px rgba(15, 23, 42, 0.2);
+            `;
+            
+            modalContent.innerHTML = `
+                <h3 style="color: var(--color-dark-blue); margin-bottom: 16px; font-size: 1.5rem;">Reset Password</h3>
+                <p style="color: var(--color-cool-gray); margin-bottom: 24px;">Enter your email address to verify your account and reset your password.</p>
+                
+                <input type="email" id="resetEmail" placeholder="Enter your email address" style="width: 100%; padding: 12px 16px; border: 2px solid #E5E7EB; border-radius: 8px; margin-bottom: 16px; font-size: 1rem;">
+                
+                <div id="resetError" style="color: #EF4444; font-size: 0.875rem; margin-bottom: 16px; display: none;"></div>
+                
+                <div style="display: flex; gap: 12px;">
+                    <button id="cancelReset" style="flex: 1; padding: 12px; background: #E5E7EB; border: none; border-radius: 8px; cursor: pointer; font-weight: 600;">Cancel</button>
+                    <button id="verifyEmail" style="flex: 1; padding: 12px; background: var(--color-emerald-green); color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: 600;">Verify Email</button>
+                </div>
+            `;
+            
+            modal.appendChild(modalContent);
+            document.body.appendChild(modal);
+            
+            document.getElementById('cancelReset').addEventListener('click', () => {
+                modal.remove();
+            });
+            
+            document.getElementById('verifyEmail').addEventListener('click', () => {
+                const email = document.getElementById('resetEmail').value.trim();
+                const errorDiv = document.getElementById('resetError');
+                
+                if (!email) {
+                    errorDiv.textContent = 'Please enter your email address';
+                    errorDiv.style.display = 'block';
+                    return;
+                }
+                
+                if (!validateEmail(email)) {
+                    errorDiv.textContent = 'Please enter a valid email address';
+                    errorDiv.style.display = 'block';
+                    return;
+                }
+                
+                const account = registeredAccounts.find(acc => acc.email === email);
+                
+                if (!account) {
+                    errorDiv.textContent = 'No account found with this email address';
+                    errorDiv.style.display = 'block';
+                    return;
+                }
+                
+                modal.remove();
+                showSecurityQuestionVerification(account);
+            });
+            
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.remove();
+                }
+            });
+        }
+
+        function showSecurityQuestionVerification(account) {
+            const questionTexts = {
+                'pet': 'What was the name of your first pet?',
+                'school': 'What elementary school did you attend?',
+                'city': 'In what city were you born?',
+                'mother': 'What is your mother\'s maiden name?',
+                'car': 'What was the make of your first car?',
+                'book': 'What is your favorite book?'
+            };
+
+            const modal = document.createElement('div');
+            modal.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(15, 23, 42, 0.5);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 1000;
+            `;
+            
+            const modalContent = document.createElement('div');
+            modalContent.style.cssText = `
+                background: white;
+                padding: 40px;
+                border-radius: 16px;
+                max-width: 500px;
+                width: 90%;
+                text-align: center;
+                box-shadow: 0 20px 60px rgba(15, 23, 42, 0.2);
+            `;
+            
+            modalContent.innerHTML = `
+                <h3 style="color: var(--color-dark-blue); margin-bottom: 16px; font-size: 1.5rem;">Security Verification</h3>
+                <p style="color: var(--color-cool-gray); margin-bottom: 8px;">Account found for: <strong>${account.email}</strong></p>
+                <p style="color: var(--color-cool-gray); margin-bottom: 24px;">Please answer your security question to reset your password.</p>
+                
+                <div style="background: var(--color-soft-white); padding: 16px; border-radius: 8px; margin-bottom: 20px; text-align: left;">
+                    <strong style="color: var(--color-dark-blue);">${questionTexts[account.securityQuestion]}</strong>
+                </div>
+                
+                <input type="text" id="securityAnswerInput" placeholder="Enter your answer" style="width: 100%; padding: 12px 16px; border: 2px solid #E5E7EB; border-radius: 8px; margin-bottom: 16px; font-size: 1rem;">
+                
+                <div id="verifyError" style="color: #EF4444; font-size: 0.875rem; margin-bottom: 16px; display: none;"></div>
+                
+                <div style="display: flex; gap: 12px;">
+                    <button id="cancelVerify" style="flex: 1; padding: 12px; background: #E5E7EB; border: none; border-radius: 8px; cursor: pointer; font-weight: 600;">Cancel</button>
+                    <button id="verifyAnswer" style="flex: 1; padding: 12px; background: var(--color-emerald-green); color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: 600;">Verify Answer</button>
+                </div>
+            `;
+            
+            modal.appendChild(modalContent);
+            document.body.appendChild(modal);
+            
+            document.getElementById('cancelVerify').addEventListener('click', () => {
+                modal.remove();
+            });
+            
+            document.getElementById('verifyAnswer').addEventListener('click', () => {
+                const answer = document.getElementById('securityAnswerInput').value.trim().toLowerCase();
+                const errorDiv = document.getElementById('verifyError');
+                
+                if (!answer) {
+                    errorDiv.textContent = 'Please enter your answer';
+                    errorDiv.style.display = 'block';
+                    return;
+                }
+                
+                if (answer !== account.securityAnswer) {
+                    errorDiv.textContent = 'Incorrect answer. Please try again.';
+                    errorDiv.style.display = 'block';
+                    return;
+                }
+                
+                modal.remove();
+                showNewPasswordModal(account);
+            });
+            
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.remove();
+                }
+            });
+        }
+
+        function showNewPasswordModal(account) {
+            const modal = document.createElement('div');
+            modal.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(15, 23, 42, 0.5);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 1000;
+            `;
+            
+            const modalContent = document.createElement('div');
+            modalContent.style.cssText = `
+                background: white;
+                padding: 40px;
+                border-radius: 16px;
+                max-width: 500px;
+                width: 90%;
+                text-align: center;
+                box-shadow: 0 20px 60px rgba(15, 23, 42, 0.2);
+            `;
+            
+            modalContent.innerHTML = `
+                <h3 style="color: var(--color-dark-blue); margin-bottom: 16px; font-size: 1.5rem;">Create New Password</h3>
+                <p style="color: var(--color-cool-gray); margin-bottom: 24px;">Enter your new password for <strong>${account.email}</strong></p>
+                
+                <input type="password" id="newPassword" placeholder="Enter new password" style="width: 100%; padding: 12px 16px; border: 2px solid #E5E7EB; border-radius: 8px; margin-bottom: 16px; font-size: 1rem;">
+                
+                <div class="password-strength" style="margin-bottom: 16px;">
+                    <div class="strength-bar" style="height: 4px; background-color: #E5E7EB; border-radius: 2px; overflow: hidden; margin-bottom: 6px;">
+                        <div class="strength-fill" id="newPasswordStrengthFill" style="height: 100%; transition: all 0.3s ease; border-radius: 2px;"></div>
+                    </div>
+                    <div class="strength-text" id="newPasswordStrengthText" style="font-size: 0.75rem; color: var(--color-cool-gray); font-weight: 500;">Password strength</div>
+                </div>
+                
+                <input type="password" id="confirmPassword" placeholder="Confirm new password" style="width: 100%; padding: 12px 16px; border: 2px solid #E5E7EB; border-radius: 8px; margin-bottom: 16px; font-size: 1rem;">
+                
+                <div id="passwordError" style="color: #EF4444; font-size: 0.875rem; margin-bottom: 16px; display: none;"></div>
+                
+                <div style="display: flex; gap: 12px;">
+                    <button id="cancelPassword" style="flex: 1; padding: 12px; background: #E5E7EB; border: none; border-radius: 8px; cursor: pointer; font-weight: 600;">Cancel</button>
+                    <button id="updatePassword" style="flex: 1; padding: 12px; background: var(--color-emerald-green); color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: 600;">Update Password</button>
+                </div>
+            `;
+            
+            modal.appendChild(modalContent);
+            document.body.appendChild(modal);
+            
+            // Password strength indicator for new password
+            document.getElementById('newPassword').addEventListener('input', function() {
+                const password = this.value;
+                const strengthFill = document.getElementById('newPasswordStrengthFill');
+                const strengthText = document.getElementById('newPasswordStrengthText');
+                
+                if (password.length === 0) {
+                    strengthFill.style.width = '0%';
+                    strengthText.textContent = 'Password strength';
+                    strengthText.style.color = 'var(--color-cool-gray)';
+                    return;
+                }
+
+                const strength = getPasswordStrength(password);
+                
+                strengthFill.style.width = strength.width;
+                strengthFill.style.backgroundColor = strength.color;
+                strengthText.textContent = strength.text;
+                strengthText.style.color = strength.color;
+            });
+            
+            document.getElementById('cancelPassword').addEventListener('click', () => {
+                modal.remove();
+            });
+            
+            document.getElementById('updatePassword').addEventListener('click', () => {
+                const newPassword = document.getElementById('newPassword').value;
+                const confirmPassword = document.getElementById('confirmPassword').value;
+                const errorDiv = document.getElementById('passwordError');
+                
+                if (!newPassword) {
+                    errorDiv.textContent = 'Please enter a new password';
+                    errorDiv.style.display = 'block';
+                    return;
+                }
+                
+                const passwordStrength = getPasswordStrength(newPassword);
+                if (passwordStrength.strength === 'weak') {
+                    errorDiv.textContent = 'Please choose a stronger password';
+                    errorDiv.style.display = 'block';
+                    return;
+                }
+                
+                if (newPassword !== confirmPassword) {
+                    errorDiv.textContent = 'Passwords do not match';
+                    errorDiv.style.display = 'block';
+                    return;
+                }
+                
+                // Update the password in the account
+                account.password = newPassword;
+                
+                const successDiv = document.createElement('div');
+                successDiv.style.cssText = `
+                    position: fixed;
+                    top: 20px;
+                    right: 20px;
+                    background: linear-gradient(135deg, var(--color-emerald-green), var(--color-teal-accent));
+                    color: white;
+                    padding: 16px 24px;
+                    border-radius: 12px;
+                    box-shadow: 0 8px 25px rgba(16, 185, 129, 0.3);
+                    z-index: 1001;
+                    font-weight: 600;
+                `;
+                successDiv.textContent = 'Password updated successfully! 🎉';
+                document.body.appendChild(successDiv);
+                
+                setTimeout(() => {
+                    successDiv.remove();
+                }, 3000);
+                
+                modal.remove();
+            });
+            
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.remove();
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

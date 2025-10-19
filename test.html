@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Career Compass - Find Your Perfect Career Path</title>
+     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         :root {
@@ -39,6 +40,7 @@
 
         * {
             box-sizing: border-box;
+              font-family: 'Poppins', sans-serif;
         }
 
         .container {
@@ -47,6 +49,134 @@
             padding: 0 20px;
         }
 
+
+
+
+  
+/* --- Profile Button --- */
+.profile-btn {
+ 
+     width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: #f8f9ff;
+            border: 2px solid #e0e7ff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            
+            font-size: 1.2rem;
+}
+
+.profile-btn:hover {
+    /* transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);*/
+    background: linear-gradient(145deg, var(--color-emerald-green), #2dbb7a); 
+  color: #059669;
+            transform: scale(1.1);
+  }
+
+/* Icon inside profile button */
+.profile-icon {
+    font-size: 1.3rem;
+    color: black;
+    /* color: var(--color-emerald-green); */
+    transition: all 0.3s ease;
+}
+
+.profile-btn:hover .profile-icon {
+    color: white;
+}
+
+/* --- Dropdown Menu --- */
+.dropdown-menu2 {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    border-radius: 14px;
+    box-shadow: 0 10px 40px rgba(15, 23, 42, 0.15);
+    border: 1px solid #E5E7EB;
+    min-width: 280px;
+    padding: 16px 0;
+    margin-top: 8px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.dropdown-menu2.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* --- User Info Section --- */
+.user-info {
+    padding: 0 20px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.user-avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #e8f7f0, #c2efdb);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-emerald-green);
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+/* User text info */
+.user-name {
+    font-weight: 600;
+    color: var(--color-dark-blue);
+    font-size: 1rem;
+    margin-bottom: 4px;
+}
+
+.user-email {
+    color: var(--color-cool-gray);
+    font-size: 0.875rem;
+}
+
+/* --- Divider --- */
+.dropdown-divider {
+    height: 1px;
+    background: #E5E7EB;
+    margin: 8px 0;
+}
+
+/* --- Dropdown Items --- */
+.dropdown-item {
+    width: 100%;
+    padding: 12px 20px;
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: var(--color-cool-gray);
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.dropdown-item:hover {
+    background: #f8fafc;
+    color: var(--color-dark-blue);
+}
 
 .logo-wrapper {
   
@@ -133,24 +263,7 @@
             padding: 80px 0;
         }
 
-        .welcome-section {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .welcome-section h2 {
-            font-size: 2.8rem;
-            color: var(--color-navy-blue);
-            margin-bottom: 20px;
-            font-weight: 600;
-        }
-
-        .welcome-section p {
-            font-size: 1.2rem;
-            color: var(--color-cool-gray);
-            max-width: 600px;
-            margin: 0 auto 40px auto;
-        }
+       
 
         
         .features-grid {
@@ -680,29 +793,879 @@
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
+        
+    
+footer{
+    height: 100px;
+}
+
+.Abovefooter {
+  background: linear-gradient(135deg, var(--color-navy-blue), var(--color-dark-blue));
+  color: white;
+  width: 100%;
+  height: 400px;
+  padding: 3rem 2rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 3rem;
+  text-align: left;
+  flex-wrap: wrap; /* responsive */
+
+}
+
+.Abovefooter h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #FBBF24; /* highlight section headings */
+  display: inline-block;
+  padding-bottom: 0.3rem;
+}
+
+.footer-about,
+.footer-links,
+.footer-contact {
+  
+  flex: 1 1 250px; /* equal widths but flexible */
+  max-width: 320px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin: 0.5rem 0;
+}
+
+.footer-links a {
+  color: #f8f9ff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #FBBF24;
+}
+
+.footer-contact .socials {
+  margin-top: 1rem;
+}
+
+.footer-contact .socials a {
+  margin-right: 0.8rem;
+  font-size: 1.2rem;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.footer-contact .socials a:hover {
+  color: #FBBF24;
+}
+
+
+footer {
+        background: linear-gradient(135deg, var(--color-navy-blue), var(--color-dark-blue));
+            color: white;
+            width: 100%;
+            padding: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 1.15rem;
+            font-weight: 500;
+            /* margin-top: 4rem; */
+            box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .main {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .main2 {
+                position: static;
+            }
+            
+            
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                padding: 1rem;
+            }
+            
+            .mainLogo h2 {
+                font-size: 1.5rem;
+            }
+            
+            .welcomeMess {
+                padding: 2rem 1rem;
+            }
+            
+            .welcomeMess h1 {
+                font-size: 2rem;
+            }
+            
+            .main {
+                padding: 2rem 1rem;
+            }
+            
+            .functionalities1, .functionalities2 {
+                grid-template-columns: 1fr;
+            }
+            
+            .box {
+                padding: 1.5rem;
+            }
+        }
+
+        /* Animation Classes */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .stagger-1 { animation-delay: 0.1s; }
+        .stagger-2 { animation-delay: 0.2s; }
+        .stagger-3 { animation-delay: 0.3s; }
+        .stagger-4 { animation-delay: 0.4s; }
+ .mainLogo{
+    width: 20%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    
+}
+
+ .header-actions {
+  width: 32%;
+ display: flex;
+ justify-content: space-evenly;
+  align-items: center;
+gap: 1rem;   }
+
+.home{
+  width: 5%;
+  
+}
+
+.navbar {
+          width: 34%;
+            flex: 1;
+            display: flex;
+            justify-content: space-evenly;
+            margin-right: 25px;
+        }
+        .profile-dropdown {
+  width: 6%;
+    position: relative;
+    margin-left: 16px;
+}
+
+ .main-content {
+            padding: 80px 0;
+        }
+
+        .welcome-section {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .welcome-section h2 {
+            font-size: 2.8rem;
+            color: var(--color-navy-blue);
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .welcome-section p {
+            font-size: 1.2rem;
+            color: var(--color-cool-gray);
+            max-width: 600px;
+            margin: 0 auto 40px auto;
+        }
+
+header{
+    height: 50px;
+ width: 100%;
+ box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+ display: flex;
+ align-items: center;
+ justify-content: space-evenly;
+ padding: 4px;
+}
+ .Hicon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, var(--color-emerald-green), var(--color-teal-accent));
+            color: white;
+            font-size: 1.5rem;
+            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+        }
+         
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+ padding: 0;
+ display: flex;
+align-items: center;
+  gap: 2rem;  }
+
+.navbar li {
+position: relative;
+ }
+.navbar a {
+ text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+ transition: all 0.3s ease;
+ display: block; }
+
+.navbar a:hover {
+  /* background: linear-gradient(135deg, #667eea, #764ba2); */
+
+  color: #059669;
+  transform: translateY(-2px);
+  }
+
+ 
+        .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  min-width: 220px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  padding: 0.5rem 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  z-index: 1000;
+  display: block;   /* ✅ ensures dropdown stacks vertically */
+}
+
+.dropdown-menu li {
+  display: block;   /* ✅ each list item takes full width */
+}
+
+.dropdown-menu a {
+  display: block;   /* ✅ link fills the full width */
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: #333;
+}
+
+ .dropdown-menu.show {
+  opacity: 1;
+    visibility: visible;
+   transform: translateY(0); }
+
+
+
+ .dropdown-menu a:hover {
+  background: #f8f9ff;
+  color: #059669;
+  transform: none;  }
+
+
+
+.home, .AboutUs, .ContactUs {
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+ font-weight: 600;
+ transition: all 0.3s ease;
+ text-decoration: none;
+ display: inline-block; }
+
+  .home:hover, .AboutUs:hover, .ContactUs:hover {
+  transform: translateY(-2px);
+  color: #059669;
+   } 
+
+        .icon-button {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: #f8f9ff;
+            border: 2px solid #e0e7ff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            
+            font-size: 1.2rem;
+        }
+
+        .icon-button:hover {
+           color: #059669;
+            transform: scale(1.1);
+        }
+
+        /* Theme styles */
+        .dropdown-menu a i {
+            margin-right: 8px;
+            width: 16px;
+        }
+
+/* 🌙 Dark Theme */
+.dark-theme {
+  background-color: #0F172A;
+  color: white;
+}
+
+body.dark-theme header,
+body.dark-theme header .navbar a {
+  color: white ;
+}
+
+/* When dark theme is active */
+body.dark-theme .navbar ul li a {
+  color: white !important;
+}
+
+/* Also change dropdown background if you want */
+body.dark-theme .dropdown-menu {
+  background-color: #0F172A !important;  /* dark background */
+  border-color: #333 !important;
+}
+
+/* Optional: change hover color */
+body.dark-theme .dropdown-menu li a:hover {
+  background-color: #293042 !important;
+  color: #2e8cff !important; /* light blue on hover */
+}
+
+
+
+body.dark-theme .heading {
+  background: none !important;                /* remove gradient */
+  -webkit-background-clip: initial !important;/* stop clipping to text */
+  background-clip: initial !important;
+  -webkit-text-fill-color: #ffffff !important;/* force glyph color */
+  color: #ffffff !important;                  /* fallback */
+  transition: color 0.25s ease;
+}
+
+
+.dark-theme .box {
+  background-color: #232b40;
+  color: white;
+  
+  border-color: #334155;
+
+}
+body.dark-theme .box h3 {
+  color: white !important;
+}
+
+
+.dark-theme .m2 {
+  background-color: #283851;
+    color: white;
+border-left: solid 6px #936d0d;
+}
+
+.dark-theme .welcomeMess{
+     background: linear-gradient(135deg, #172653, #0e172d);
+}
+
+/* =========================
+   Dark theme: Testimonials
+   Paste at end of style.css
+   ========================= */
+body.dark-theme .testimonials {
+  background: transparent;
+  color: #e6eef6; /* light text for section */
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Heading inside testimonials: remove gradient + turn white */
+body.dark-theme .testimonials .heading,
+body.dark-theme .testimonials h2 {
+  background: none !important;
+  -webkit-background-clip: initial !important;
+  background-clip: initial !important;
+  -webkit-text-fill-color: #f8fafc !important;
+  color: #f8fafc !important;
+}
+
+/* Carousel container background stays subtle on dark */
+body.dark-theme .carousel-container {
+  background: transparent;
+}
+
+/* Testimonial cards: darker, less contrast shadow */
+body.dark-theme .testimonial-slide {
+  background: #2e3954;
+  box-shadow: 0 8px 30px rgba(2, 6, 23, 0.6) !important;
+  border-radius: 18px;
+  border-left-color: transparent;
+  color: #e6eef6;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+/* Quote icon (SVG fill) */
+body.dark-theme .testimonial-slide .quote-icon svg path {
+  fill: #f59e0b !important; /* keep gold accent */
+}
+
+/* Testimonial text and author */
+body.dark-theme .testimonial-text {
+  color: white !important;
+}
+
+body.dark-theme .author-name {
+  color: white !important;
+}
+
+body.dark-theme .author-role {
+  color: #b6bec7 !important;
+}
+
+/* Author avatar styling to match dark theme */
+body.dark-theme .author-avatar {
+  background: linear-gradient(135deg, #3e5a9c, #4d5a6d) !important;
+  box-shadow: 0 6px 18px rgba(2, 6, 23, 0.6) !important;
+  color: #f8fafc !important;
+}
+
+/* Nav buttons (prev/next) */
+body.dark-theme .nav-button {
+  background: linear-gradient(135deg, #0ea5a9, #059669) !important;
+  box-shadow: 0 8px 25px rgba(3, 58, 38, 0.45) !important;
+  color: #fff !important;
+}
+
+/* Dots */
+body.dark-theme .dot {
+  background: #374151 !important;
+  box-shadow: none !important;
+}
+
+body.dark-theme .dot.active {
+  background: linear-gradient(135deg, #10b981, #059669) !important;
+  box-shadow: 0 6px 18px rgba(16, 185, 129, 0.18) !important;
+}
+
+/* subtle hover for cards */
+body.dark-theme .testimonial-slide:hover {
+  transform: translateY(-8px);
+  background: #474828;
+  box-shadow: 0 18px 40px rgba(2, 6, 23, 0.7);
+}
+
+/* ensure links inside testimonial (if any) are visible */
+body.dark-theme .testimonial-slide a {
+  color: #7dd3fc !important;
+}
+
+/* keep text readable on small screens too */
+@media (max-width: 768px) {
+  body.dark-theme .testimonial-text {
+    color: #d6e3ef !important;
+  }
+}
+
+/* =========================
+   Dark theme: CTA section
+   ========================= */
+body.dark-theme .cta {
+ background: linear-gradient(135deg, #01855b, #0aa370);
+  color: #f8fafc !important;
+  text-align: center;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+
+/* CTA button */
+body.dark-theme .cta button {
+  /* background: linear-gradient(135deg, #10b981, #059669) !important; */
+  color: #ffffff !important;
+  background-color: #2d333f;
+  border: none !important;
+  box-shadow: 0 8px 25px rgba(16, 185, 129, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+body.dark-theme .cta button:hover {
+  transform: scale(1.05);
+  background-color: #1d2129;
+  /* box-shadow: 0 10px 30px rgba(16, 185, 129, 0.5); */
+}
+
+body.dark-theme footer{
+    background: linear-gradient(135deg, #172653, #0e172d);
+}
+body.dark-theme .Abovefooter{
+    background: linear-gradient(135deg, #172653, #0e172d);
+}
+
+/* ⚡ High Contrast Theme */
+
+ /* High Contrast Theme */
+body.invert-theme {
+  filter: invert(100%) hue-rotate(180deg);
+  background-color: #000; 
+  /* fallback for safety */
+}
+
+/* Re-invert content that should look normal */
+body.invert-theme img,
+body.invert-theme video,
+body.invert-theme iframe,
+body.invert-theme .logo,
+body.invert-theme .icon {
+  filter: invert(100%) hue-rotate(180deg);
+}
+
+/* 📘 Reading Mode (Blue Filter) */
+body.reading-theme {
+  filter: sepia(30%) hue-rotate(180deg) brightness(95%) saturate(120%);
+  
+}
+
+
+ .welcomeMess {
+    background: linear-gradient(135deg, var(--color-navy-blue), var(--color-dark-blue));
+    padding: 5rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    
+    box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+}
+
+/* subtle animated gradient overlay */
+.welcomeMess::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.07) 0%, transparent 60%);
+    animation: rotateBG 15s linear infinite;
+    z-index: 0;
+}
+
+@keyframes rotateBG {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.welcomeMess h1 {
+    font-size: 5rem;  /* bigger impact */
+    font-weight: 900; /* extra bold */
+    margin-bottom: 1.5rem;
+    background: white;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    z-index: 1;
+    letter-spacing: 3px; /* makes it stand out more */
+    text-transform: uppercase; /* optional: adds more power */
+    animation: fadeDown 1.2s ease forwards;
+}
+
+
+.welcomeMess p {
+    color: #E5E7EB;
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    animation: fadeUp 1.5s ease forwards;
+}
+
+@keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* 🌙 DARK THEME STYLES */
+body.dark-theme {
+  background-color: #0d1117;
+  color: #e6edf3;
+}
+
+/* Headings & Paragraphs */
+body.dark-theme h1,
+body.dark-theme h2,
+body.dark-theme h3,
+body.dark-theme p {
+  color: #ffffff;
+}
+
+.dark-theme .welcomeMess{
+     background: linear-gradient(135deg, #172653, #0e172d);
+}
+
+
+body.dark-theme footer{
+    background: linear-gradient(135deg, #172653, #0e172d);
+}
+body.dark-theme .Abovefooter{
+    background: linear-gradient(135deg, #172653, #0e172d);
+}
+/* Main Content */
+body.dark-theme .main-content {
+  background-color: #111827;
+  color: #e5e7eb;
+  padding: 40px 0;
+}
+
+/* Feature Cards */
+body.dark-theme .feature-card {
+  background-color: #1e293b;
+  border: 1px solid #2d3d64;
+  color: #f0f6fc;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+  transition: all 0.3s ease;
+}
+
+body.dark-theme .feature-card:hover {
+  transform: translateY(-5px);
+  background-color: #273a59;
+}
+
+/* Buttons */
+body.dark-theme .btn-primary {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+}
+
+body.dark-theme .btn-primary:hover {
+  background-color: #1d4ed8;
+}
+
+body.dark-theme .btn-secondary {
+  background-color: #374151;
+  color: white;
+  border: none;
+}
+
+body.dark-theme .btn-secondary:hover {
+  background-color: #4b5563;
+}
+
+body.dark-theme .stat-number{
+    color: white;
+}
+
+
+/* Assessment Page */
+body.dark-theme .assessment-container {
+  background-color: #1e293b;
+  color: #f1f5f9;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+body.dark-theme .question-title {
+  color: #ffffff;
+}
+/* 🌙 Dark Theme for Question Section */
+body.dark-theme .question-section {
+  background-color: #1e293b; /* dark blue-gray */
+  color: #ffffff; /* make question text white */
+}
+
+/* Make the question text stand out clearly */
+body.dark-theme .question-title {
+  color: #f8fafc; /* bright white-blue tint */
+}
+
+/* Default option appearance */
+body.dark-theme .option-card {
+  background-color: #2d3d64; /* muted dark-blue box */
+  color: white; /* keep text black for readability */
+  border: 1px solid #475569;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover effect for better feedback */
+body.dark-theme .option-card:hover {
+  background-color: #3b4a74;
+  transform: scale(1.02);
+}
+
+/* Selected option style */
+body.dark-theme .option-card.selected {
+  background-color: #93c5fd; /* light blue highlight */
+  color: #000000; /* readable on light bg */
+  border: 2px solid #60a5fa;
+  transform: scale(1.03);
+}
+
+/* Disabled or inactive state (optional) */
+body.dark-theme .option-card:disabled {
+  background-color: #334155;
+  color: white;
+  cursor: not-allowed;
+}
+
+
+/* Progress Bar */
+body.dark-theme .progress-bar {
+  background-color: #334155;
+}
+
+body.dark-theme .progress-fill {
+  background-color: #3b82f6;
+}
+
+/* Results Page */
+body.dark-theme .results-header {
+  color: #f1f5f9;
+}
+
+body.dark-theme .career-item {
+  background-color: #273a59;
+  color: #f8fafc;
+  border: 1px solid #334155;
+  border-radius: 10px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+body.dark-theme .career-item:hover {
+  background-color: #3b4b73;
+}
+
+/* Roadmap Page */
+body.dark-theme .roadmap-container {
+  background-color: #0f172a;
+  color: #e2e8f0;
+}
+
+body.dark-theme .roadmap-header {
+  background-color: #1e293b;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+body.dark-theme .roadmap-timeline {
+  border-left: 3px solid #3b82f6;
+}
+
+/* Smooth transition when switching themes */
+body, .feature-card, .assessment-container, .btn, .career-item {
+  transition: background-color 0.3s, color 0.3s, border 0.3s;
+}
+
     </style>
 </head>
 <body>
-   
+  
+ <header>
+        <div class="mainLogo" onclick="window.location.href='main.html'">
+            <div class="Hicon" style="margin-left: 20px;"><i class="fas fa-compass"></i></div>
+            <h2 >PathFinder</h2>
+        </div>
+<div class="home" onclick="window.location.href='main.html'">Home</div>
+        <div class="navbar">
+            <ul>
+                <li>
+                    <a href="#" id="dropdownToggle">Services Offered ▾</a>
+                    <ul class="dropdown-menu" id="dropdownMenu">
+                        <li><a href="test.html" >Career Assessment Test</a></li>
+                        <li><a href="explorer.html">Career Explorer</a></li>
+                        <li><a href="blogs.html">Blogs & Articles</a></li>
+                        <li><a href="inspiration.html">Inspiration Hub</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" id="themesToggle">Themes ▾</a>
+                    <ul class="dropdown-menu" id="themesMenu">
+                        <li><a href="#" data-theme="light"><i class="fas fa-sun"></i> Light Theme</a></li>
+                        <li><a href="#" data-theme="dark"><i class="fas fa-moon"></i> Dark Theme</a></li>
+                        <li><a href="#" data-theme="invert"><i class="fas fa-adjust"></i> Invert Color</a></li>
+                        <li><a href="#" data-theme="reading"><i class="fas fa-book-open"></i> Blue Filter</a></li>
+                    </ul>
+                </li>
+              
+            </ul>
+        </div>
+
+        <div class="header-actions">
+            <div class="AboutUs">About Us</div>
+            <div class="ContactUs">Contact Us</div>
+
+            <button class="icon-button" id="textSizeToggle" title="Adjust Text Size">
+                <i class="fas fa-text-height"></i>
+            </button>
+        </div>
+            <div class="profile-dropdown" id="profileDropdown">
+                    <button class="profile-btn" id="profileBtn">
+                        <span class="profile-icon">👤</span>
+                    </button>
+                    <div class="dropdown-menu2" id="dropdownMenu2">
+                        <div class="user-info">
+                            <div class="user-name" id="userName"></div>
+                            <div class="user-email" id="userEmail"></div>
+                        </div>
+                        <div class="dropdown-divider"></div>
+                        <button class="dropdown-item" id="logoutBtn">🚪 Log Out</button>
+                        <button class="dropdown-item" id="switchAccountBtn">🔄 Sign in with another account</button>
+                    </div>
+                </div>
+
+    </header>
+
     <div id="welcomePage">
-        <header class="header">
+        <div class="welcomeMess">
             <div class="container">
-                <h1>
-                    <span class="logo-wrapper">
-            <i class="fa-regular fa-compass logo-icon-fa"></i>
-        </span>
+                <h1 style="color: white; font-weight: bold;">
         
         Career Explorer
                 </h1>
-                <p>Navigate Your Path to Professional Success</p>
+                <p style="color: white; font-weight: bold;">Navigate Your Path to Professional Success</p>
             </div>
-        </header>
+        </div>
 
         <main class="main-content">
             <div class="container">
                 <section class="welcome-section">
-                    <h2>Discover Your Perfect Career Match</h2>
-                    <p>Take our comprehensive career assessment to uncover careers that align with your interests, skills, and personality. Get personalized recommendations and detailed roadmaps to achieve your professional goals.</p>
+                    
+                    <h2 >Discover Your Perfect Career Match</h2>
+                    <p >Take our comprehensive career assessment to uncover careers that align with your interests, skills, and personality. Get personalized recommendations and detailed roadmaps to achieve your professional goals.</p>
                     
                     <button class="btn btn-primary btn-large" onclick="startAssessment()">
                         Start Career Assessment
@@ -755,12 +1718,12 @@
 
     
     <div id="assessmentPage" class="hidden">
-        <header class="header">
+        <div class="welcomeMess">
             <div class="container">
                 <h1>Career Assessment</h1>
                 <p>Answer honestly for the most accurate results</p>
             </div>
-        </header>
+        </div>
 
         <main class="main-content">
             <div class="container">
@@ -797,12 +1760,15 @@
 
    
     <div id="resultsPage" class="hidden">
-        <header class="header">
+        <div class="welcomeMess">
             <div class="container">
-                <h1>🎉 Your Career Results</h1>
+                <div style="display: flex; justify-content: space-evenly; width: 100%; height: fit-content;">
+                <h2 style="font-size: 80px;">🎉 </h2>
+                    <h1> Your Career Results</h1>
+                </div>
                 <p>Based on your assessment responses</p>
             </div>
-        </header>
+        </div>
 
         <main class="main-content">
             <div class="container">
@@ -841,6 +1807,40 @@
         </div>
     </div>
 
+
+<div class="Abovefooter">
+  <div class="footer-about">
+    <h3>About Us</h3>
+    <p>
+      PathFinder is your trusted career guide, helping students and professionals
+      discover opportunities, assess skills, and get inspired for the future.
+    </p>
+  </div>
+
+  <div class="footer-links">
+    <h3>Quick Links</h3>
+    <ul>
+      <li><a href="test.html">Career Assessment</a></li>
+      <li><a href="explorer.html">Career Explorer</a></li>
+      <li><a href="blogs.html">Blogs & Articles</a></li>
+      <li><a href="inspiration.html">Inspiration Hub</a></li>
+    </ul>
+  </div>
+
+  <div class="footer-contact">
+    <h3>Contact</h3>
+    <p>Email: support@pathfinder.com</p>
+    <p>Phone: +92 300 1234567</p>
+    <div class="socials">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+  </div>
+</div>
+<footer>
+    <p> &copy; 2025 PathFinder. All rights reserved.</p>
+</footer>
     <script>
         
         const questions = [
@@ -1444,5 +2444,236 @@
             scores = { tech: 0, business: 0, creative: 0, healthcare: 0, education: 0, finance: 0 };
         }
     </script>
+    <script>
+           
+//dropdown menu in header
+// script.js — safe and defensive
+document.addEventListener('DOMContentLoaded', () => {
+  // --- element picks (may be null if you don't include them; code will not crash) ---
+  const dropdownToggle = document.getElementById('dropdownToggle'); // Services toggle
+  const dropdownMenu = document.getElementById('dropdownMenu');
+
+  const themesToggle = document.getElementById('themesToggle'); // Theme toggle in header
+  const themesMenu = document.getElementById('themesMenu');
+
+  const textSizeToggle = document.getElementById('textSizeToggle'); // optional "A" icon
+  const themeOptions = document.querySelectorAll('[data-theme]'); // items with data-theme="dark" etc
+  const sizeOptions = document.querySelectorAll('[data-size]'); // optional fine-grain sizes
+
+  const aboutBtn = document.querySelector('.AboutUs'); // optional
+  const contactBtn = document.querySelector('.ContactUs'); // optional
+
+  // helper: close both menus
+  function closeAllMenus() {
+    if (dropdownMenu) dropdownMenu.classList.remove('show');
+    if (themesMenu) themesMenu.classList.remove('show');
+  }
+
+  // Toggle helpers (guarded)
+  if (dropdownToggle && dropdownMenu) {
+    dropdownToggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();            // prevents immediate document click handler
+      dropdownMenu.classList.toggle('show');
+      if (themesMenu) themesMenu.classList.remove('show');
+    });
+  }
+
+  if (themesToggle && themesMenu) {
+    themesToggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      themesMenu.classList.toggle('show');
+      if (dropdownMenu) dropdownMenu.classList.remove('show');
+    });
+  }
+
+  // Click outside -> close menus
+  document.addEventListener('click', (e) => {
+    const clicked = e.target;
+    if (dropdownMenu && dropdownToggle) {
+      if (!dropdownMenu.contains(clicked) && !dropdownToggle.contains(clicked)) {
+        dropdownMenu.classList.remove('show');
+      }
+    }
+    if (themesMenu && themesToggle) {
+      if (!themesMenu.contains(clicked) && !themesToggle.contains(clicked)) {
+        themesMenu.classList.remove('show');
+      }
+    }
+  });
+
+  // Escape key closes menus
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeAllMenus();
+  });
+
+  // --- Theme switching & persistence ---
+  // accepted theme names should match your CSS classes:
+  // e.g. for data-theme="dark" you should have `.dark-theme { ... }` in CSS
+  if (themeOptions.length) {
+    themeOptions.forEach(opt => {
+      opt.addEventListener('click', (e) => {
+        e.preventDefault();
+        const selected = opt.getAttribute('data-theme') || 'light';
+
+        // remove known theme classes (adjust if you have different names)
+        document.body.classList.remove('dark-theme', 'invert-theme', 'reading-theme');
+
+        if (selected !== 'light') {
+          document.body.classList.add(`${selected}-theme`);
+        }
+
+        localStorage.setItem('pathfinder-theme', selected);
+        if (themesMenu) themesMenu.classList.remove('show');
+      });
+    });
+  }
+
+  // load saved theme
+  const savedTheme = localStorage.getItem('pathfinder-theme') || 'light';
+  if (savedTheme && savedTheme !== 'light') {
+    document.body.classList.add(`${savedTheme}-theme`);
+  }
+
+  // --- Font size control (two approaches supported) ---
+  // 1) Cycle button (textSizeToggle) cycles through sizes array
+  const sizes = ['0.95rem', '1rem', '1.1rem', '1.2rem']; // tweak as you like
+  let sizeIndex = Number(localStorage.getItem('pathfinder-font-index')) || 1;
+
+  function applySize(idx) {
+    document.documentElement.style.fontSize = sizes[idx];
+    localStorage.setItem('pathfinder-font-index', idx);
+  }
+  applySize(sizeIndex);
+
+  if (textSizeToggle) {
+    textSizeToggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      sizeIndex = (sizeIndex + 1) % sizes.length;
+      applySize(sizeIndex);
+    });
+  }
+
+  // 2) If you prefer explicit size options (e.g. dropdown items with data-size),
+  // they should have attributes like data-size="16px" or data-size-index="2"
+  if (sizeOptions.length) {
+    sizeOptions.forEach(opt => {
+      opt.addEventListener('click', (e) => {
+        e.preventDefault();
+        const idx = opt.getAttribute('data-size-index');
+        const val = opt.getAttribute('data-size');
+        if (idx !== null) {
+          sizeIndex = Number(idx);
+          applySize(sizeIndex);
+        } else if (val) {
+          document.documentElement.style.fontSize = val;
+          localStorage.setItem('pathfinder-font-index', 'custom');
+        }
+        if (themesMenu) themesMenu.classList.remove('show');
+        if (dropdownMenu) dropdownMenu.classList.remove('show');
+      });
+    });
+  }
+
+  // --- optional nav buttons ---
+  if (aboutBtn) {
+    aboutBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.open('about.html', '_blank', 'noopener,noreferrer');
+    });
+  }
+  if (contactBtn) {
+    contactBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.open('contact.html', '_blank', 'noopener,noreferrer');
+    });
+  }
+
+  // debug: (remove in production) shows which key elements exist
+  console.info('pathfinder: dropdownToggle=', !!dropdownToggle, 'dropdownMenu=', !!dropdownMenu,
+               'themesToggle=', !!themesToggle, 'themesMenu=', !!themesMenu,
+               'textSizeToggle=', !!textSizeToggle);
+});
+
+    </script>
+ <script>
+document.addEventListener('DOMContentLoaded', function() {
+    const currentUser = JSON.parse(localStorage.getItem('pathfinder_current_user') || 'null');
+
+    if (!currentUser) {
+        window.location.href = 'index.html';
+        return;
+    }
+
+    // Load user data
+    loadUserData(currentUser);
+    setupProfileDropdown();
+});
+
+function loadUserData(user) {
+    // Update user info in dropdown
+    document.getElementById('userName').textContent = `${user.firstName} ${user.lastName}`;
+    document.getElementById('userEmail').textContent = user.email;
+
+    // Update welcome banner (use your correct ID)
+    const welcomeUser = document.getElementById('WelcomeUserName');
+    if (welcomeUser) welcomeUser.textContent = user.firstName;
+}
+
+function setupProfileDropdown() {
+    const profileBtn = document.getElementById('profileBtn');
+    const dropdownMenu = document.getElementById('dropdownMenu2');
+    const logoutBtn = document.getElementById('logoutBtn');
+    const switchAccountBtn = document.getElementById('switchAccountBtn');
+
+    if (!profileBtn || !dropdownMenu) return;
+
+    // Toggle dropdown on click
+    profileBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        dropdownMenu.classList.toggle('show');
+    });
+
+    // Prevent dropdown from closing when clicked inside
+    dropdownMenu.addEventListener('click', function(e) {
+        e.stopPropagation();
+    });
+
+    // Close when clicking outside
+    document.addEventListener('click', function() {
+        dropdownMenu.classList.remove('show');
+    });
+
+    // Logout functionality
+    if (logoutBtn) logoutBtn.addEventListener('click', logout);
+    if (switchAccountBtn) switchAccountBtn.addEventListener('click', logout);
+}
+
+function logout() {
+    // localStorage.removeItem('pathfinder_current_user');
+
+    const logoutDiv = document.createElement('div');
+    logoutDiv.style.cssText = `
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: linear-gradient(135deg, var(--color-emerald-green), var(--color-teal-accent));
+        color: white;
+        padding: 16px 24px;
+        border-radius: 12px;
+        box-shadow: 0 8px 25px rgba(16, 185, 129, 0.3);
+        z-index: 1001;
+        font-weight: 600;
+    `;
+    logoutDiv.textContent = 'Logged out successfully! 👋';
+    document.body.appendChild(logoutDiv);
+
+    setTimeout(() => {
+        logoutDiv.remove();
+        window.location.href = 'index.html';
+    }, 1500);
+}
+</script>
 <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9854e6b5b70fc919',t:'MTc1ODkxMjE0Ny4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>

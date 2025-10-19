@@ -14,21 +14,23 @@
  </head>
  <body>
     
-    <header>
+     <header>
         <div class="mainLogo" onclick="window.location.href='main.html'">
             <div class="Hicon" style="margin-left: 20px;"><i class="fas fa-compass"></i></div>
-            <h2 style="font-weight: 600;">PathFinder</h2>
+            <h2 >PathFinder</h2>
         </div>
-<div class="home" onclick="window.location.href='index.html'">Home</div>
+<div class="home" onclick="window.location.href='main.html'">Home</div>
         <div class="navbar">
             <ul>
                 <li>
                     <a href="#" id="dropdownToggle">Services Offered ▾</a>
                     <ul class="dropdown-menu" id="dropdownMenu">
-                        <li><a href="test.html">Career Assessment Test</a></li>
+                        <li><a href="test.html" >Career Assessment Test</a></li>
                         <li><a href="explorer.html">Career Explorer</a></li>
                         <li><a href="blogs.html">Blogs & Articles</a></li>
                         <li><a href="inspiration.html">Inspiration Hub</a></li>
+                        <li><a href="PersonalityTest.html">Personality Test</a></li>
+                        <li><a href="resume.html">Resume Builder</a></li>
                     </ul>
                 </li>
                 <li>
@@ -36,7 +38,7 @@
                     <ul class="dropdown-menu" id="themesMenu">
                         <li><a href="#" data-theme="light"><i class="fas fa-sun"></i> Light Theme</a></li>
                         <li><a href="#" data-theme="dark"><i class="fas fa-moon"></i> Dark Theme</a></li>
-                        <li><a href="#" data-theme="contrast"><i class="fas fa-adjust"></i> High Contrast</a></li>
+                        <li><a href="#" data-theme="invert"><i class="fas fa-adjust"></i>Invert Color</a></li>
                         <li><a href="#" data-theme="reading"><i class="fas fa-book-open"></i> Blue Filter</a></li>
                     </ul>
                 </li>
@@ -45,16 +47,32 @@
         </div>
 
         <div class="header-actions">
-            <div class="AboutUs">About Us</div>
-            <div class="ContactUs">Contact Us</div>
+            <div class="AboutUs" onclick="window.location.href='aboutus.html'">About Us</div>
+            <div class="ContactUs" onclick="window.location.href='contactus.html'">Contact Us</div>
 
             <button class="icon-button" id="textSizeToggle" title="Adjust Text Size">
                 <i class="fas fa-text-height"></i>
             </button>
         </div>
+            <div class="profile-dropdown" id="profileDropdown">
+                    <button class="profile-btn" id="profileBtn">
+                        <span class="profile-icon">👤</span>
+                    </button>
+                      
+                    <div class="dropdown-menu2" id="dropdownMenu2">
+                        <div class="user-info">
+                            <div class="user-name" id="userName"></div>
+                            <div class="user-email" id="userEmail"></div>
+                        </div>
+                        <div class="dropdown-divider"></div>
+                        <button class="dropdown-item" id="logoutBtn">🚪 Log Out</button>
+                        <button class="dropdown-item" id="switchAccountBtn">🔄 Sign in with another account</button>
+                    </div>
+                </div>
+
     </header>
     <div class="contactus-space">
-    <div class="titlebox">
+    <div class="welcomeMess">
             <h1><b>Contact Us</b></h1>
             <p>Get in touch with our career experts to start your journey toward professional success</p>
     </div>
@@ -77,10 +95,10 @@
        </div>
       </div>
       <div class="form-grid">
-       <div><label for="phone" class="label-text">Phone Number</label> <input type="tel" id="phone" name="phone" class="input-field" placeholder="Your phone no.">
+       <div><label for="phone" class="label-text">Phone Number *</label> <input type="tel" id="phone" name="phone" class="input-field" placeholder="Your phone no.">
        </div>
        <div>
-        <label for="service" class="label">Service Interest</label> 
+        <label for="service" class="label-text">Service Interest *</label> 
         <select id="service" name="service" class="input-field">
          <option value="">Select a service</option> 
          <option value="career-assessment">Career Assessment</option> 
@@ -94,12 +112,14 @@
       </div>
       <div><label for="message" class="label-text">Message *</label> 
         <textarea id="message" name="message" rows="5" required placeholder="Tell us about your career goals and how we can help you..."  class="textarea-field"></textarea>
-      </div><button type="submit" id="submit-btn" class="button-custom"> 
+      </div>
+      <button type="submit" id="submit-btn" class="button-custom"> 
         <span id="submit-text">Send Message</span>
        <svg id="loading-spinner" class="spinner" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle> <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
        </svg></button>
      </form>
-    </section><!-- Contact Information -->
+    </section>
+    <!-- Contact Information -->
     <section class="custom-space-y-6"><!-- Office Info -->
      <div class="contact-section">
       <h2 >Get in Touch</h2>
@@ -112,7 +132,7 @@
          </svg>
         </div>
         <div>
-         <h3 class="heading">Office Address</h3>
+         <h3 class="heading1">Office Address</h3>
          <p id="office-address" class="text">123 Career Street, Professional City, PC 12345</p>
         </div>
        </div>
@@ -125,7 +145,7 @@
          </svg>
         </div>
         <div>
-         <h3 class="heading">Phone</h3>
+         <h3 class="heading1">Phone</h3>
          <p id="phone-number" class="text">(555) 123-4567</p>
         </div>
        </div>
@@ -135,7 +155,7 @@
          </svg>
         </div>
         <div>
-         <h3 class="heading">Email</h3>
+         <h3 class="heading1">Email</h3>
          <p id="email-address" class="text">info@careercounseling.com</p>
         </div>
        </div>
@@ -145,7 +165,7 @@
          </svg>
         </div>
         <div>
-         <h3 class="heading">Office Hours</h3>
+         <h3 class="heading1">Office Hours</h3>
          <p id="office-hours" class="text">Monday - Friday: 9:00 AM - 6:00 PM</p>
         </div>
        </div>
@@ -188,125 +208,268 @@
    
    
    <!-- FAQ Section -->
-  <section class="faq-section">
-  <div class="faq-header">
-    <h2 class="faq-title">Frequently Asked Questions</h2>
-    <p class="faq-subtitle">
-      Get answers to common questions about our career counseling services
-    </p>
-  </div>
-    <div class="faq-container">
-  <!-- FAQ Item 1 -->
-  <div class="faq-item">
-    <button class="faq-button" onclick="toggleFAQ(1)">
-      <h3 class="faq-question">What services do you offer for career counseling?</h3>
-      <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-          d="M19 9l-7 7-7-7"></path>
-      </svg>
-    </button>
-    <div id="faq-1" class="faq-content">
-      <p class="faq-answer">
-        We offer comprehensive career services including career assessments, resume and cover letter reviews, interview preparation, job search strategies, career transition planning, salary negotiation coaching, and professional development guidance. Each service is tailored to your specific needs and career goals.
-      </p>
-    </div>
-  </div>
+  
+    <section class="faq-section">
+        <div class="faq-container">
+            <div class="faq-header">
 
-<!-- FAQ Item 2 -->
-     <div class="faq-item">
-        <button class="faq-button " onclick="toggleFAQ(2)"> 
-            <h3 class="faq-question">How long does the career counseling process take?</h3>
-       <svg class="faq-icon " fill="none" stroke="currentColor" viewbox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-       </svg></button>
-      <div id="faq-2" class="faq-content ">
-       <p class="faq-answer">The duration varies based on your individual needs and goals. A basic career assessment typically takes 2-3 sessions, while comprehensive career transition planning may take 6-12 weeks. We work at your pace and provide ongoing support throughout your career journey.</p>
-      </div>
-     </div>
-     <!-- FAQ Item 3 -->
-     <div class="faq-item">
-        <button class="faq-button" onclick="toggleFAQ(3)"> 
-            <h3 class="faq-question">What are your pricing and payment options?</h3>
-       <svg class="faq-icon " fill="none" stroke="currentColor" viewbox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-       </svg></button>
-      <div id="faq-3" class="faq-content">
-       <p class="faq-answer">We offer flexible pricing packages starting from $150 for individual sessions. Package deals are available for multiple sessions with significant savings. We accept cash, credit cards, and offer payment plans for comprehensive programs. Your initial consultation is always free.</p>
-      </div>
-     </div>
-     <!-- FAQ Item 4 -->
-     <div class="faq-item">
-        <button class="faq-button" onclick="toggleFAQ(4)"> 
-            <h3 class="faq-question">Do you offer virtual or online counseling sessions?</h3>
-       <svg class="faq-icon" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-       </svg></button>
-      <div id="faq-4" class="faq-content ">
-       <p class="faq-answer">Yes! We offer both in-person and virtual counseling sessions via secure video conferencing platforms. Online sessions are just as effective and convenient for busy professionals. All materials and assessments can be shared digitally for seamless remote collaboration.</p>
-      </div>
-     </div>
-      <!-- FAQ Item 5 -->
-  <div class="faq-item">
-    <button class="faq-button" onclick="toggleFAQ(5)">
-      <h3 class="faq-question">What qualifications do your career counselors have?</h3>
-      <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-      </svg>
-    </button>
-    <div id="faq-5" class="faq-content">
-      <p class="faq-answer">
-        Our counselors hold advanced degrees in counseling, psychology, or human resources, plus professional certifications from recognized career counseling organizations. They have 10+ years of experience across various industries and participate in ongoing professional development to stay current with job market trends.
-      </p>
-    </div>
-  </div>
 
-  <!-- FAQ Item 6 -->
-  <div class="faq-item">
-    <button class="faq-button" onclick="toggleFAQ(6)">
-      <h3 class="faq-question">Can you help with career changes to completely different fields?</h3>
-      <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-      </svg>
-    </button>
-    <div id="faq-6" class="faq-content">
-      <p class="faq-answer">
-        Absolutely! Career transitions are one of our specialties. We help identify transferable skills, explore new industries, develop transition strategies, and create action plans for successful career pivots. Many of our clients have successfully changed careers with our guidance and support.
-      </p>
-    </div>
-  </div>
+                <h2 class="heading">Frequently Asked Questions</h2>
+                <p class="faq-subtitle">
+                    Get answers to common questions about our career counseling services and find the information you need to get started.
+                </p>
+            </div>
 
-  <!-- FAQ Item 7 -->
-  <div class="faq-item">
-    <button class="faq-button" onclick="toggleFAQ(7)">
-      <h3 class="faq-question">How soon can I schedule my first appointment?</h3>
-      <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-      </svg>
-    </button>
-    <div id="faq-7" class="faq-content">
-      <p class="faq-answer">
-        We typically have availability within 3-5 business days for new clients. For urgent career situations, we offer same-day consultations when possible. Contact us today to schedule your free initial consultation and take the first step toward your career goals.
-      </p>
-    </div>
-  </div>
+            <div class="faq-grid">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item">
+                    <button class="faq-button">
+                        <div class="faq-question-wrapper">
+                            <div class="faq-number">01</div>
+                            <h3 class="faq-question">What services do you offer for career counseling?</h3>
+                        </div>
+                        <div class="faq-icon-wrapper">
+                            <span class="faq-icon">+</span>
+                        </div>
+                    </button>
+                    <div class="faq-content">
+                        <div class="faq-answer-wrapper">
+                            <p class="faq-answer">
+                                We offer comprehensive career services including <strong>career assessments</strong>, resume and cover letter reviews, interview preparation, job search strategies, career transition planning, salary negotiation coaching, and professional development guidance. Each service is tailored to your specific needs and career goals.
+                            </p>
+                            <div class="faq-tags">
+                                <span class="faq-tag">Career Assessment</span>
+                                <span class="faq-tag">Resume Review</span>
+                                <span class="faq-tag">Interview Prep</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-  <!-- FAQ Item 8 -->
-  <div class="faq-item">
-    <button class="faq-button" onclick="toggleFAQ(8)">
-      <h3 class="faq-question">Do you provide ongoing support after the counseling sessions?</h3>
-      <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-      </svg>
-    </button>
-    <div id="faq-8" class="faq-content">
-      <p class="faq-answer">
-        Yes! We provide 90 days of follow-up support via email and phone for all comprehensive packages. This includes resume updates, interview preparation refreshers, and career check-ins. We're committed to your long-term success, not just the initial counseling sessions.
-      </p>
-    </div>
-  </div>
-    </div>
-   </section>
+                <!-- FAQ Item 2 -->
+                <div class="faq-item">
+                    <button class="faq-button">
+                        <div class="faq-question-wrapper">
+                            <div class="faq-number">02</div>
+                            <h3 class="faq-question">How long does the career counseling process take?</h3>
+                        </div>
+                        <div class="faq-icon-wrapper">
+                            <span class="faq-icon">+</span>
+                        </div>
+                    </button>
+                    <div class="faq-content">
+                        <div class="faq-answer-wrapper">
+                            <p class="faq-answer">
+                                The duration varies based on your individual needs and goals. A <strong>basic career assessment</strong> typically takes 2-3 sessions, while comprehensive career transition planning may take 6-12 weeks. We work at your pace and provide ongoing support throughout your career journey.
+                            </p>
+                            <div class="faq-timeline">
+                                <div class="timeline-item">
+                                    <span class="timeline-duration">2-3 Sessions</span>
+                                    <span class="timeline-service">Basic Assessment</span>
+                                </div>
+                                <div class="timeline-item">
+                                    <span class="timeline-duration">6-12 Weeks</span>
+                                    <span class="timeline-service">Full Transition Planning</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item">
+                    <button class="faq-button">
+                        <div class="faq-question-wrapper">
+                            <div class="faq-number">03</div>
+                            <h3 class="faq-question">What are your pricing and payment options?</h3>
+                        </div>
+                        <div class="faq-icon-wrapper">
+                            <span class="faq-icon">+</span>
+                        </div>
+                    </button>
+                    <div class="faq-content">
+                        <div class="faq-answer-wrapper">
+                            <p class="faq-answer">
+                                We offer flexible pricing packages starting from <strong>$150 for individual sessions</strong>. Package deals are available for multiple sessions with significant savings. We accept cash, credit cards, and offer payment plans for comprehensive programs.
+                            </p>
+                            <div class="faq-pricing-highlight">
+                                <div class="pricing-item">
+                                    <span class="pricing-label">Initial Consultation</span>
+                                    <span class="pricing-value">FREE</span>
+                                </div>
+                                <div class="pricing-item">
+                                    <span class="pricing-label">Individual Session</span>
+                                    <span class="pricing-value">From $150</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="faq-item">
+                    <button class="faq-button">
+                        <div class="faq-question-wrapper">
+                            <div class="faq-number">04</div>
+                            <h3 class="faq-question">Do you offer virtual or online counseling sessions?</h3>
+                        </div>
+                        <div class="faq-icon-wrapper">
+                            <span class="faq-icon">+</span>
+                        </div>
+                    </button>
+                    <div class="faq-content">
+                        <div class="faq-answer-wrapper">
+                            <p class="faq-answer">
+                                <strong>Yes!</strong> We offer both in-person and virtual counseling sessions via secure video conferencing platforms. Online sessions are just as effective and convenient for busy professionals. All materials and assessments can be shared digitally for seamless remote collaboration.
+                            </p>
+                            <div class="faq-features">
+                                <div class="feature-item">
+                                    <span class="feature-icon">📹</span>
+                                    <span>Secure Video Calls</span>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-icon">📄</span>
+                                    <span>Digital Materials</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="faq-item">
+                    <button class="faq-button">
+                        <div class="faq-question-wrapper">
+                            <div class="faq-number">05</div>
+                            <h3 class="faq-question">What qualifications do your career counselors have?</h3>
+                        </div>
+                        <div class="faq-icon-wrapper">
+                            <span class="faq-icon">+</span>
+                        </div>
+                    </button>
+                    <div class="faq-content">
+                        <div class="faq-answer-wrapper">
+                            <p class="faq-answer">
+                                Our team consists of <strong>certified career counselors</strong> with advanced degrees in psychology, human resources, or related fields. All counselors have extensive industry experience and hold professional certifications from recognized organizations like NCDA (National Career Development Association).
+                            </p>
+                            <div class="faq-tags">
+                                <span class="faq-tag">NCDA Certified</span>
+                                <span class="faq-tag">Advanced Degrees</span>
+                                <span class="faq-tag">Industry Experience</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 6 -->
+                <div class="faq-item">
+                    <button class="faq-button">
+                        <div class="faq-question-wrapper">
+                            <div class="faq-number">06</div>
+                            <h3 class="faq-question">Can you help with career changes to different industries?</h3>
+                        </div>
+                        <div class="faq-icon-wrapper">
+                            <span class="faq-icon">+</span>
+                        </div>
+                    </button>
+                    <div class="faq-content">
+                        <div class="faq-answer-wrapper">
+                            <p class="faq-answer">
+                                Absolutely! We specialize in <strong>career transitions</strong> and have helped professionals successfully move between various industries. Our process includes skills assessment, transferable skills identification, industry research, networking strategies, and targeted job search techniques.
+                            </p>
+                            <div class="faq-timeline">
+                                <div class="timeline-item">
+                                    <span class="timeline-duration">Week 1-2</span>
+                                    <span class="timeline-service">Skills Assessment</span>
+                                </div>
+                                <div class="timeline-item">
+                                    <span class="timeline-duration">Week 3-4</span>
+                                    <span class="timeline-service">Industry Research</span>
+                                </div>
+                                <div class="timeline-item">
+                                    <span class="timeline-duration">Week 5-8</span>
+                                    <span class="timeline-service">Job Search Strategy</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 7 -->
+                <div class="faq-item">
+                    <button class="faq-button">
+                        <div class="faq-question-wrapper">
+                            <div class="faq-number">07</div>
+                            <h3 class="faq-question">Do you provide job placement assistance?</h3>
+                        </div>
+                        <div class="faq-icon-wrapper">
+                            <span class="faq-icon">+</span>
+                        </div>
+                    </button>
+                    <div class="faq-content">
+                        <div class="faq-answer-wrapper">
+                            <p class="faq-answer">
+                                While we don't guarantee job placement, we provide comprehensive <strong>job search support</strong> including resume optimization, LinkedIn profile enhancement, interview coaching, and networking strategies. We also maintain relationships with industry partners and can provide referrals when appropriate.
+                            </p>
+                            <div class="faq-features">
+                                <div class="feature-item">
+                                    <span class="feature-icon">🎯</span>
+                                    <span>Targeted Job Search</span>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-icon">🤝</span>
+                                    <span>Industry Connections</span>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-icon">📈</span>
+                                    <span>Success Tracking</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 8 -->
+                <div class="faq-item">
+                    <button class="faq-button">
+                        <div class="faq-question-wrapper">
+                            <div class="faq-number">08</div>
+                            <h3 class="faq-question">What is your cancellation and refund policy?</h3>
+                        </div>
+                        <div class="faq-icon-wrapper">
+                            <span class="faq-icon">+</span>
+                        </div>
+                    </button>
+                    <div class="faq-content">
+                        <div class="faq-answer-wrapper">
+                            <p class="faq-answer">
+                                We offer <strong>flexible scheduling</strong> with 24-hour cancellation notice for individual sessions. Package deals can be cancelled within 7 days of purchase for a full refund. After that, unused sessions can be refunded at 50% of the original cost. Emergency cancellations are handled case-by-case.
+                            </p>
+                            <div class="faq-pricing-highlight">
+                                <div class="pricing-item">
+                                    <span class="pricing-label">Cancellation Notice</span>
+                                    <span class="pricing-value">24 Hours</span>
+                                </div>
+                                <div class="pricing-item">
+                                    <span class="pricing-label">Full Refund Period</span>
+                                    <span class="pricing-value">7 Days</span>
+                                </div>
+                                <div class="pricing-item">
+                                    <span class="pricing-label">Partial Refund</span>
+                                    <span class="pricing-value">50%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
   </main>
-  <div class="contactus-space">
+  <div class="contactus-space"></div>
   <div class="Abovefooter">
   <div class="footer-about">
     <h3>About Us</h3>
@@ -316,6 +479,7 @@
     </p>
   </div>
 
+  
   <div class="footer-links">
     <h3>Quick Links</h3>
     <ul>
@@ -323,6 +487,8 @@
       <li><a href="explorer.html">Career Explorer</a></li>
       <li><a href="blogs.html">Blogs & Articles</a></li>
       <li><a href="inspiration.html">Inspiration Hub</a></li>
+      <li><a href="PersonalityTest.html">Personality Test</a></li>
+      <li><a href="resume.html">Resume Builder</a></li>
     </ul>
   </div>
 
@@ -340,6 +506,237 @@
 <footer>
     <p> &copy; 2025 PathFinder. All rights reserved.</p>
 </footer>
-  </div>
+ <script>
+    
+    
+//dropdown menu in header
+// script.js — safe and defensive
+document.addEventListener('DOMContentLoaded', () => {
+  // --- element picks (may be null if you don't include them; code will not crash) ---
+  const dropdownToggle = document.getElementById('dropdownToggle'); // Services toggle
+  const dropdownMenu = document.getElementById('dropdownMenu');
+
+  const themesToggle = document.getElementById('themesToggle'); // Theme toggle in header
+  const themesMenu = document.getElementById('themesMenu');
+
+  const textSizeToggle = document.getElementById('textSizeToggle'); // optional "A" icon
+  const themeOptions = document.querySelectorAll('[data-theme]'); // items with data-theme="dark" etc
+  const sizeOptions = document.querySelectorAll('[data-size]'); // optional fine-grain sizes
+
+  const aboutBtn = document.querySelector('.AboutUs'); // optional
+  const contactBtn = document.querySelector('.ContactUs'); // optional
+
+  // helper: close both menus
+  function closeAllMenus() {
+    if (dropdownMenu) dropdownMenu.classList.remove('show');
+    if (themesMenu) themesMenu.classList.remove('show');
+  }
+
+  // Toggle helpers (guarded)
+  if (dropdownToggle && dropdownMenu) {
+    dropdownToggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();            // prevents immediate document click handler
+      dropdownMenu.classList.toggle('show');
+      if (themesMenu) themesMenu.classList.remove('show');
+    });
+  }
+
+  if (themesToggle && themesMenu) {
+    themesToggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      themesMenu.classList.toggle('show');
+      if (dropdownMenu) dropdownMenu.classList.remove('show');
+    });
+  }
+
+  // Click outside -> close menus
+  document.addEventListener('click', (e) => {
+    const clicked = e.target;
+    if (dropdownMenu && dropdownToggle) {
+      if (!dropdownMenu.contains(clicked) && !dropdownToggle.contains(clicked)) {
+        dropdownMenu.classList.remove('show');
+      }
+    }
+    if (themesMenu && themesToggle) {
+      if (!themesMenu.contains(clicked) && !themesToggle.contains(clicked)) {
+        themesMenu.classList.remove('show');
+      }
+    }
+  });
+
+  // Escape key closes menus
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeAllMenus();
+  });
+
+  // --- Theme switching & persistence ---
+  // accepted theme names should match your CSS classes:
+  // e.g. for data-theme="dark" you should have `.dark-theme { ... }` in CSS
+  if (themeOptions.length) {
+    themeOptions.forEach(opt => {
+      opt.addEventListener('click', (e) => {
+        e.preventDefault();
+        const selected = opt.getAttribute('data-theme') || 'light';
+
+        // remove known theme classes (adjust if you have different names)
+        document.body.classList.remove('dark-theme', 'invert-theme', 'reading-theme');
+
+        if (selected !== 'light') {
+          document.body.classList.add(`${selected}-theme`);
+        }
+
+        localStorage.setItem('pathfinder-theme', selected);
+        if (themesMenu) themesMenu.classList.remove('show');
+      });
+    });
+  }
+
+  // load saved theme
+  const savedTheme = localStorage.getItem('pathfinder-theme') || 'light';
+  if (savedTheme && savedTheme !== 'light') {
+    document.body.classList.add(`${savedTheme}-theme`);
+  }
+
+  // --- Font size control (two approaches supported) ---
+  // 1) Cycle button (textSizeToggle) cycles through sizes array
+  const sizes = ['0.95rem', '1rem', '1.1rem', '1.2rem']; // tweak as you like
+  let sizeIndex = Number(localStorage.getItem('pathfinder-font-index')) || 1;
+
+  function applySize(idx) {
+    document.documentElement.style.fontSize = sizes[idx];
+    localStorage.setItem('pathfinder-font-index', idx);
+  }
+  applySize(sizeIndex);
+
+  if (textSizeToggle) {
+    textSizeToggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      sizeIndex = (sizeIndex + 1) % sizes.length;
+      applySize(sizeIndex);
+    });
+  }
+
+  // 2) If you prefer explicit size options (e.g. dropdown items with data-size),
+  // they should have attributes like data-size="16px" or data-size-index="2"
+  if (sizeOptions.length) {
+    sizeOptions.forEach(opt => {
+      opt.addEventListener('click', (e) => {
+        e.preventDefault();
+        const idx = opt.getAttribute('data-size-index');
+        const val = opt.getAttribute('data-size');
+        if (idx !== null) {
+          sizeIndex = Number(idx);
+          applySize(sizeIndex);
+        } else if (val) {
+          document.documentElement.style.fontSize = val;
+          localStorage.setItem('pathfinder-font-index', 'custom');
+        }
+        if (themesMenu) themesMenu.classList.remove('show');
+        if (dropdownMenu) dropdownMenu.classList.remove('show');
+      });
+    });
+  }
+
+  // --- optional nav buttons ---
+  if (aboutBtn) {
+    aboutBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.open('about.html', '_blank', 'noopener,noreferrer');
+    });
+  }
+  if (contactBtn) {
+    contactBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.open('contact.html', '_blank', 'noopener,noreferrer');
+    });
+  }
+
+  // debug: (remove in production) shows which key elements exist
+  console.info('pathfinder: dropdownToggle=', !!dropdownToggle, 'dropdownMenu=', !!dropdownMenu,
+               'themesToggle=', !!themesToggle, 'themesMenu=', !!themesMenu,
+               'textSizeToggle=', !!textSizeToggle);
+});
+
+ </script>
+ <script>
+document.addEventListener('DOMContentLoaded', function() {
+    const currentUser = JSON.parse(localStorage.getItem('pathfinder_current_user') || 'null');
+
+    if (!currentUser) {
+        window.location.href = 'index.html';
+        return;
+    }
+
+    // Load user data
+    loadUserData(currentUser);
+    setupProfileDropdown();
+});
+
+function loadUserData(user) {
+    // Update user info in dropdown
+    document.getElementById('userName').textContent = `${user.firstName} ${user.lastName}`;
+    document.getElementById('userEmail').textContent = user.email;
+
+    // Update welcome banner (use your correct ID)
+    const welcomeUser = document.getElementById('WelcomeUserName');
+    if (welcomeUser) welcomeUser.textContent = user.firstName;
+}
+
+function setupProfileDropdown() {
+    const profileBtn = document.getElementById('profileBtn');
+    const dropdownMenu = document.getElementById('dropdownMenu2');
+    const logoutBtn = document.getElementById('logoutBtn');
+    const switchAccountBtn = document.getElementById('switchAccountBtn');
+
+    if (!profileBtn || !dropdownMenu) return;
+
+    // Toggle dropdown on click
+    profileBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        dropdownMenu.classList.toggle('show');
+    });
+
+    // Prevent dropdown from closing when clicked inside
+    dropdownMenu.addEventListener('click', function(e) {
+        e.stopPropagation();
+    });
+
+    // Close when clicking outside
+    document.addEventListener('click', function() {
+        dropdownMenu.classList.remove('show');
+    });
+
+    // Logout functionality
+    if (logoutBtn) logoutBtn.addEventListener('click', logout);
+    if (switchAccountBtn) switchAccountBtn.addEventListener('click', logout);
+}
+
+function logout() {
+    // localStorage.removeItem('pathfinder_current_user');
+
+    const logoutDiv = document.createElement('div');
+    logoutDiv.style.cssText = `
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: linear-gradient(135deg, var(--color-emerald-green), var(--color-teal-accent));
+        color: white;
+        padding: 16px 24px;
+        border-radius: 12px;
+        box-shadow: 0 8px 25px rgba(16, 185, 129, 0.3);
+        z-index: 1001;
+        font-weight: 600;
+    `;
+    logoutDiv.textContent = 'Logged out successfully! 👋';
+    document.body.appendChild(logoutDiv);
+
+    setTimeout(() => {
+        logoutDiv.remove();
+        window.location.href = 'index.html';
+    }, 1500);
+}
+</script>
  </body>
 </html>

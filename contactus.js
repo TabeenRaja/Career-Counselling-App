@@ -1,3 +1,45 @@
+
+ document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(function(item) {
+                const button = item.querySelector('.faq-button');
+                const content = item.querySelector('.faq-content');
+                
+                button.addEventListener('click', function() {
+                    const isActive = item.classList.contains('active');
+                    
+                    // Close all other FAQs
+                    faqItems.forEach(function(otherItem) {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                            otherItem.querySelector('.faq-content').classList.remove('active');
+                        }
+                    });
+                    
+                    // Toggle current FAQ
+                    if (isActive) {
+                        item.classList.remove('active');
+                        content.classList.remove('active');
+                    } else {
+                        item.classList.add('active');
+                        content.classList.add('active');
+                        
+                        // Smooth scroll to FAQ
+                        setTimeout(function() {
+                            item.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'nearest'
+                            });
+                        }, 100);
+                    }
+                });
+            });
+        });
+
+
+
+
  let currentRecordCount = 0;
         
         const defaultConfig = {
@@ -199,32 +241,34 @@
             }, 5000);
         }
 
-        // FAQ Toggle Functionality
-      function toggleFAQ(faqNumber) {
-  const content = document.getElementById(`faq-${faqNumber}`);
-  const button = content.previousElementSibling;
-  const icon = button.querySelector('.faq-icon');
+//         // FAQ Toggle Functionality
+//       function toggleFAQ(faqNumber) {
+//   const content = document.getElementById(`faq-${faqNumber}`);
+//   const button = content.previousElementSibling;
+//   const icon = button.querySelector('.faq-icon');
 
-  const isOpen = content.classList.contains('show');
+//   const isOpen = content.classList.contains('show');
 
-  // Close all other FAQs
-  document.querySelectorAll('.faq-content').forEach(faq => {
-    if (faq !== content) {
-      faq.classList.remove('show');
-      const otherIcon = faq.previousElementSibling.querySelector('.faq-icon');
-      otherIcon.style.transform = 'rotate(0deg)';
-    }
-  });
+//   // Close all other FAQs
+//   document.querySelectorAll('.faq-content').forEach(faq => {
+//     if (faq !== content) {
+//       faq.classList.remove('show');
+//       const otherIcon = faq.previousElementSibling.querySelector('.faq-icon');
+//       otherIcon.style.transform = 'rotate(0deg)';
+//     }
+//   });
 
-  // Toggle this FAQ
-  if (!isOpen) {
-    content.classList.add('show');
-    icon.style.transform = 'rotate(180deg)';
-  } else {
-    content.classList.remove('show');
-    icon.style.transform = 'rotate(0deg)';
-  }
-}
+//   // Toggle this FAQ
+//   if (!isOpen) {
+//     content.classList.add('show');
+//     icon.style.transform = 'rotate(180deg)';
+//   } else {
+//     content.classList.remove('show');
+//     icon.style.transform = 'rotate(0deg)';
+//   }
+// }
 
-        // Initialize the application
-        initializeApp();
+//         // Initialize the application
+//         initializeApp();
+
+  
