@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Career Counseling</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="contactus.js" defer></script>
+  <link href="career.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+ </head>
+ <body>
+    
+    <header>
+        <div class="mainLogo" onclick="window.location.href='main.html'">
+            <div class="Hicon" style="margin-left: 20px;"><i class="fas fa-compass"></i></div>
+            <h2 style="font-weight: 600;">PathFinder</h2>
+        </div>
+<div class="home" onclick="window.location.href='index.html'">Home</div>
+        <div class="navbar">
+            <ul>
+                <li>
+                    <a href="#" id="dropdownToggle">Services Offered ▾</a>
+                    <ul class="dropdown-menu" id="dropdownMenu">
+                        <li><a href="test.html">Career Assessment Test</a></li>
+                        <li><a href="explorer.html">Career Explorer</a></li>
+                        <li><a href="blogs.html">Blogs & Articles</a></li>
+                        <li><a href="inspiration.html">Inspiration Hub</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" id="themesToggle">Themes ▾</a>
+                    <ul class="dropdown-menu" id="themesMenu">
+                        <li><a href="#" data-theme="light"><i class="fas fa-sun"></i> Light Theme</a></li>
+                        <li><a href="#" data-theme="dark"><i class="fas fa-moon"></i> Dark Theme</a></li>
+                        <li><a href="#" data-theme="contrast"><i class="fas fa-adjust"></i> High Contrast</a></li>
+                        <li><a href="#" data-theme="reading"><i class="fas fa-book-open"></i> Blue Filter</a></li>
+                    </ul>
+                </li>
+              
+            </ul>
+        </div>
+
+        <div class="header-actions">
+            <div class="AboutUs">About Us</div>
+            <div class="ContactUs">Contact Us</div>
+
+            <button class="icon-button" id="textSizeToggle" title="Adjust Text Size">
+                <i class="fas fa-text-height"></i>
+            </button>
+        </div>
+    </header>
+    <div class="contactus-space">
+    <div class="titlebox">
+            <h1><b>Contact Us</b></h1>
+            <p>Get in touch with our career experts to start your journey toward professional success</p>
+    </div>
+    </div>
+  
+   <div class="grid"><!-- Contact Form -->
+    <section class="contact-section">
+     <h2>Send us a Message</h2>
+     <div id="success-message" class="success-message hidden">
+      <div>
+       Thank you! Your message has been sent successfully. We'll get back to you within 24 hours.
+      </div>
+     </div>
+
+     <form id="contact-form" class="vertical-gap">
+      <div class="form-grid">
+       <div><label for="name" class="label-text">Full Name *</label> <input type="text" id="name" name="name" required class="input-field" placeholder="Your name">
+       </div>
+       <div><label for="email" class="label-text">Email Address *</label> <input type="email" id="email" name="email" required  class="input-field" placeholder="Your email">
+       </div>
+      </div>
+      <div class="form-grid">
+       <div><label for="phone" class="label-text">Phone Number</label> <input type="tel" id="phone" name="phone" class="input-field" placeholder="Your phone no.">
+       </div>
+       <div>
+        <label for="service" class="label">Service Interest</label> 
+        <select id="service" name="service" class="input-field">
+         <option value="">Select a service</option> 
+         <option value="career-assessment">Career Assessment</option> 
+         <option value="resume-review">Resume Review</option> 
+         <option value="interview-prep">Interview Preparation</option> 
+         <option value="career-transition">Career Transition</option> 
+         <option value="job-search-strategy">Job Search Strategy</option> 
+         <option value="other">Other</option> 
+        </select>
+       </div>
+      </div>
+      <div><label for="message" class="label-text">Message *</label> 
+        <textarea id="message" name="message" rows="5" required placeholder="Tell us about your career goals and how we can help you..."  class="textarea-field"></textarea>
+      </div><button type="submit" id="submit-btn" class="button-custom"> 
+        <span id="submit-text">Send Message</span>
+       <svg id="loading-spinner" class="spinner" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle> <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+       </svg></button>
+     </form>
+    </section><!-- Contact Information -->
+    <section class="custom-space-y-6"><!-- Office Info -->
+     <div class="contact-section">
+      <h2 >Get in Touch</h2>
+      <div class="custom-space-y-6">
+       <div class="row-start">
+        <div class="icon-box" style="background: #dbeafe;">
+         <svg class="icon" style="color: #2563eb" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path> 
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+         </svg>
+        </div>
+        <div>
+         <h3 class="heading">Office Address</h3>
+         <p id="office-address" class="text">123 Career Street, Professional City, PC 12345</p>
+        </div>
+       </div>
+
+       <div class="row-start">
+        <div class="icon-box">
+         <svg class="icon" style="color: #16a34a;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+            </path>
+         </svg>
+        </div>
+        <div>
+         <h3 class="heading">Phone</h3>
+         <p id="phone-number" class="text">(555) 123-4567</p>
+        </div>
+       </div>
+       <div class="row-start">
+        <div class="icon-box" style="background: #f3e8ff;">
+         <svg class="icon" style="color: #9333ea;" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+         </svg>
+        </div>
+        <div>
+         <h3 class="heading">Email</h3>
+         <p id="email-address" class="text">info@careercounseling.com</p>
+        </div>
+       </div>
+       <div class="row-start">
+        <div class="icon-box" style="background-color: #ffedd5">
+         <svg class="icon" style="color: #ea580c;" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+         </svg>
+        </div>
+        <div>
+         <h3 class="heading">Office Hours</h3>
+         <p id="office-hours" class="text">Monday - Friday: 9:00 AM - 6:00 PM</p>
+        </div>
+       </div>
+      </div>
+     </div>
+     
+     
+     <!-- Why Choose Us -->
+     <div class="gradient-box">
+      <h2 class="heading-lg">Why Choose Our Career Counseling?</h2>
+      <ul class="checklist">
+  <li>
+    <svg class="check-icon" fill="currentColor" viewBox="0 0 20 20">
+      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+    </svg>
+    Certified career counselors with 10+ years experience
+  </li>
+  <li>
+    <svg class="check-icon" fill="currentColor" viewBox="0 0 20 20">
+      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+    </svg>
+    Personalized career assessment and planning
+  </li>
+  <li>
+    <svg class="check-icon" fill="currentColor" viewBox="0 0 20 20">
+      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+    </svg>
+    95% client satisfaction rate
+  </li>
+  <li>
+    <svg class="check-icon" fill="currentColor" viewBox="0 0 20 20">
+      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+    </svg>
+    Free initial consultation available
+  </li>
+</ul>
+     </div>
+    </section>
+   </div>
+   
+   
+   <!-- FAQ Section -->
+  <section class="faq-section">
+  <div class="faq-header">
+    <h2 class="faq-title">Frequently Asked Questions</h2>
+    <p class="faq-subtitle">
+      Get answers to common questions about our career counseling services
+    </p>
+  </div>
+    <div class="faq-container">
+  <!-- FAQ Item 1 -->
+  <div class="faq-item">
+    <button class="faq-button" onclick="toggleFAQ(1)">
+      <h3 class="faq-question">What services do you offer for career counseling?</h3>
+      <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M19 9l-7 7-7-7"></path>
+      </svg>
+    </button>
+    <div id="faq-1" class="faq-content">
+      <p class="faq-answer">
+        We offer comprehensive career services including career assessments, resume and cover letter reviews, interview preparation, job search strategies, career transition planning, salary negotiation coaching, and professional development guidance. Each service is tailored to your specific needs and career goals.
+      </p>
+    </div>
+  </div>
+
+<!-- FAQ Item 2 -->
+     <div class="faq-item">
+        <button class="faq-button " onclick="toggleFAQ(2)"> 
+            <h3 class="faq-question">How long does the career counseling process take?</h3>
+       <svg class="faq-icon " fill="none" stroke="currentColor" viewbox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+       </svg></button>
+      <div id="faq-2" class="faq-content ">
+       <p class="faq-answer">The duration varies based on your individual needs and goals. A basic career assessment typically takes 2-3 sessions, while comprehensive career transition planning may take 6-12 weeks. We work at your pace and provide ongoing support throughout your career journey.</p>
+      </div>
+     </div>
+     <!-- FAQ Item 3 -->
+     <div class="faq-item">
+        <button class="faq-button" onclick="toggleFAQ(3)"> 
+            <h3 class="faq-question">What are your pricing and payment options?</h3>
+       <svg class="faq-icon " fill="none" stroke="currentColor" viewbox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+       </svg></button>
+      <div id="faq-3" class="faq-content">
+       <p class="faq-answer">We offer flexible pricing packages starting from $150 for individual sessions. Package deals are available for multiple sessions with significant savings. We accept cash, credit cards, and offer payment plans for comprehensive programs. Your initial consultation is always free.</p>
+      </div>
+     </div>
+     <!-- FAQ Item 4 -->
+     <div class="faq-item">
+        <button class="faq-button" onclick="toggleFAQ(4)"> 
+            <h3 class="faq-question">Do you offer virtual or online counseling sessions?</h3>
+       <svg class="faq-icon" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+       </svg></button>
+      <div id="faq-4" class="faq-content ">
+       <p class="faq-answer">Yes! We offer both in-person and virtual counseling sessions via secure video conferencing platforms. Online sessions are just as effective and convenient for busy professionals. All materials and assessments can be shared digitally for seamless remote collaboration.</p>
+      </div>
+     </div>
+      <!-- FAQ Item 5 -->
+  <div class="faq-item">
+    <button class="faq-button" onclick="toggleFAQ(5)">
+      <h3 class="faq-question">What qualifications do your career counselors have?</h3>
+      <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+      </svg>
+    </button>
+    <div id="faq-5" class="faq-content">
+      <p class="faq-answer">
+        Our counselors hold advanced degrees in counseling, psychology, or human resources, plus professional certifications from recognized career counseling organizations. They have 10+ years of experience across various industries and participate in ongoing professional development to stay current with job market trends.
+      </p>
+    </div>
+  </div>
+
+  <!-- FAQ Item 6 -->
+  <div class="faq-item">
+    <button class="faq-button" onclick="toggleFAQ(6)">
+      <h3 class="faq-question">Can you help with career changes to completely different fields?</h3>
+      <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+      </svg>
+    </button>
+    <div id="faq-6" class="faq-content">
+      <p class="faq-answer">
+        Absolutely! Career transitions are one of our specialties. We help identify transferable skills, explore new industries, develop transition strategies, and create action plans for successful career pivots. Many of our clients have successfully changed careers with our guidance and support.
+      </p>
+    </div>
+  </div>
+
+  <!-- FAQ Item 7 -->
+  <div class="faq-item">
+    <button class="faq-button" onclick="toggleFAQ(7)">
+      <h3 class="faq-question">How soon can I schedule my first appointment?</h3>
+      <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+      </svg>
+    </button>
+    <div id="faq-7" class="faq-content">
+      <p class="faq-answer">
+        We typically have availability within 3-5 business days for new clients. For urgent career situations, we offer same-day consultations when possible. Contact us today to schedule your free initial consultation and take the first step toward your career goals.
+      </p>
+    </div>
+  </div>
+
+  <!-- FAQ Item 8 -->
+  <div class="faq-item">
+    <button class="faq-button" onclick="toggleFAQ(8)">
+      <h3 class="faq-question">Do you provide ongoing support after the counseling sessions?</h3>
+      <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+      </svg>
+    </button>
+    <div id="faq-8" class="faq-content">
+      <p class="faq-answer">
+        Yes! We provide 90 days of follow-up support via email and phone for all comprehensive packages. This includes resume updates, interview preparation refreshers, and career check-ins. We're committed to your long-term success, not just the initial counseling sessions.
+      </p>
+    </div>
+  </div>
+    </div>
+   </section>
+  </main>
+  <div class="contactus-space">
+  <div class="Abovefooter">
+  <div class="footer-about">
+    <h3>About Us</h3>
+    <p>
+      PathFinder is your trusted career guide, helping students and professionals
+      discover opportunities, assess skills, and get inspired for the future.
+    </p>
+  </div>
+
+  <div class="footer-links">
+    <h3>Quick Links</h3>
+    <ul>
+      <li><a href="test.html">Career Assessment</a></li>
+      <li><a href="explorer.html">Career Explorer</a></li>
+      <li><a href="blogs.html">Blogs & Articles</a></li>
+      <li><a href="inspiration.html">Inspiration Hub</a></li>
+    </ul>
+  </div>
+
+  <div class="footer-contact">
+    <h3>Contact</h3>
+    <p>Email: support@pathfinder.com</p><br>
+    <p>Phone: +92 300 1234567</p>
+    <div class="socials">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+  </div>
+</div>
+<footer>
+    <p> &copy; 2025 PathFinder. All rights reserved.</p>
+</footer>
+  </div>
+ </body>
+</html>
