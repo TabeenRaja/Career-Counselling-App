@@ -9,6 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+
 </head>
 <body>
   <header>
@@ -23,7 +25,7 @@
                     <a href="#" id="dropdownToggle">Services Offered ▾</a>
                     <ul class="dropdown-menu" id="dropdownMenu">
                         <li><a href="test.html" >Career Assessment Test</a></li>
-                        <li><a href="explorer.html">Career Explorer</a></li>
+                        <li><a href="CareerExplorer.html">Career Explorer</a></li>
                         <li><a href="blogs.html">Blogs & Articles</a></li>
                         <li><a href="inspiration.html">Inspiration Hub</a></li>
                         <li><a href="PersonalityTest.html">Personality Test</a></li>
@@ -283,10 +285,25 @@
                                                     <span>JPG, PNG up to 5MB</span>
                                                 </div>
                                             </div>
+                                            <button type="button" onclick="openCamera()" class="capture-btn">📸 Capture Photo</button>
+
+   
                                             <div id="photo-preview" class="photo-preview hidden">
                                                 <img id="photo-img" src="" alt="Profile photo">
                                                 <button type="button" class="remove-photo" onclick="removePhoto()">Remove</button>
                                             </div>
+                                            <!-- CAMERA SECTION (must be added!) -->
+<div id="camera-section" class="hidden" style="text-align:center; padding:20px;">
+    <video id="camera-stream" autoplay playsinline style="width:300px; border-radius:10px; background:#000;"></video>
+
+    <div style="margin-top:10px;">
+        <button type="button" onclick="capturePhoto()" class="capture-btn">📸 Take Photo</button>
+        <button type="button" onclick="closeCamera()" class="close-btn">Close</button>
+    </div>
+
+    <canvas id="camera-canvas" style="display:none;"></canvas>
+</div>
+
                                         </div>
                                     </div>
                                 </div>
@@ -412,7 +429,7 @@
                                             </ul>
                                         </div>
                                     </div>
-                                    
+                                   
                                     <div class="skills-container">
                                         <div class="form-group">
                                             <label for="skill-input">Add Skills</label>
@@ -517,6 +534,7 @@
                         <button class="btn btn-secondary" id="prev-btn" onclick="previousSection()" disabled>
                             ← Previous Step
                         </button>
+
                         <button class="btn btn-primary" id="next-btn" onclick="nextSection()">
                             Next Step →
                         </button>
