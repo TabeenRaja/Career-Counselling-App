@@ -1,3 +1,4 @@
+
 // Resume Builder State
 document.addEventListener('DOMContentLoaded', () => {
   const dropdownToggle = document.getElementById('dropdownToggle');
@@ -296,7 +297,59 @@ function handlePhotoUpload(event) {
         reader.readAsDataURL(file);
     }
 }
+//
 
+ 
+    let cameraStream;
+
+function openCamera() {
+    const cameraSection = document.getElementById("camera-section");
+    cameraSection.classList.remove("hidden");
+
+    navigator.mediaDevices.getUserMedia({ video: true })
+        .then(stream => {
+            cameraStream = stream;
+            document.getElementById("camera-stream").srcObject = stream;
+        })
+        .catch(err => {
+            alert("Camera access denied or unavailable.");
+        });
+}
+
+function capturePhoto() {
+    const video = document.getElementById("camera-stream");
+    const canvas = document.getElementById("camera-canvas");
+
+    canvas.width = video.videoWidth;
+    canvas.height = video.videoHeight;
+
+    const context = canvas.getContext("2d");
+    context.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+    const photoDataURL = canvas.toDataURL("image/png");
+
+    // Use same code as upload to preview image
+    resumeData.photo = photoDataURL;
+
+    document.getElementById("photo-img").src = photoDataURL;
+    document.getElementById("photo-preview").classList.remove("hidden");
+
+    document.querySelector('.upload-placeholder').style.display = 'none';
+
+    updatePreview();
+    updateSectionStatus('personal');
+
+    closeCamera();
+}
+
+function closeCamera() {
+    const cameraSection = document.getElementById("camera-section");
+    cameraSection.classList.add("hidden");
+
+    if (cameraStream) {
+        cameraStream.getTracks().forEach(track => track.stop());
+    }
+}
 function removePhoto() {
     resumeData.photo = null;
     document.getElementById('photo').value = '';
@@ -307,20 +360,9 @@ function removePhoto() {
 }
 
 // Form Event Listeners
-function addFormListeners() {
-    // Personal information listeners
-    const personalFields = ['firstName', 'lastName', 'jobTitle', 'email', 'phone', 'location', 'linkedin', 'website'];
-    personalFields.forEach(field => {
-        const element = document.getElementById(field);
-        if (element) {
-            element.addEventListener('input', function() {
-                resumeData.personal[field] = this.value;
-                updatePreview();
-                updateSectionStatus('personal');
-            });
-        }
-    });
-    
+
+
+    function addFormListeners() {   const personalFields = ['firstName', 'lastName', 'jobTitle', 'email', 'phone', 'location', 'linkedin', 'website']; personalFields.forEach(field => { const element = document.getElementById(field); if (element) { element.addEventListener('input', function() { resumeData.personal[field] = this.value; updatePreview(); updateSectionStatus('personal'); }); } });
     // Summary listener
     const summaryField = document.getElementById('summary');
     if (summaryField) {
@@ -548,19 +590,12 @@ function addEducation() {
     addEducationListeners(educationCount);
 }
 
-function addEducationListeners(count) {
-    const fields = ['degree', 'field', 'school', 'year', 'gpa', 'location'];
-    fields.forEach(field => {
-        const element = document.getElementById(`edu-${field}-${count}`);
-        if (element) {
-            element.addEventListener('input', function() {
-                updateEducationData();
-                updatePreview();
-                updateSectionStatus('education');
-            });
-        }
-    });
-}
+function addEducationListeners(count) { 
+    const fields = ['degree', 'field', 'school', 'year', 'gpa', 'location']; 
+    fields.forEach(field => 
+        { const element = document.getElementById(`edu-${field}-${count}`); if (element) { element.addEventListener('input', function() 
+        { updateEducationData(); updatePreview(); updateSectionStatus('education'); }); } }); }
+
 
 function removeEducation(count) {
     const educationItem = document.getElementById(`education-${count}`);
@@ -1108,9 +1143,102 @@ function formatDescription(description) {
 }
 
 // Complete Resume
-function completeResume() {
-    alert('🎉 Congratulations! Your resume is complete. You can now download it as a PDF or continue editing.');
+// function completeResume() {
+//     alert('🎉 Congratulations! Your resume is complete. You can now download it as a PDF or continue editing.');
+
+// }
+//Complete Resume - UPDATED to save to database
+
+//******************************************************************** */
+// async function completeResume() {
+//     // Basic validation: Ensure required fields are filled
+//     if (!resumeData.personal.firstName || !resumeData.personal.lastName || !resumeData.personal.email || !resumeData.personal.phone || !resumeData.personal.jobTitle) {
+//         alert('❌ Please fill in all required personal information (First Name, Last Name, Email, Phone, Job Title) before completing.');
+//         return;
+//     }
+    
+//     // Attempt to save to database
+//     try {
+//         const currentUser = JSON.parse(localStorage.getItem("pathfinder_current_user"));
+// const userId = currentUser?.userId;
+
+// const resumeDataWithUser = { ...resumeData, userId };
+// await saveResumeToDatabase(resumeDataWithUser);
+
+//         // await saveResumeToDatabase(resumeData);
+//         // If save succeeds, show success message
+//         alert('🎉 Congratulations! Your resume is complete and saved. You can now download it as a PDF or continue editing.');
+//     } catch (error) {
+//         // If save fails, show error and stop (error details are already handled in saveResumeToDatabase)
+//         console.error('Save failed in completeResume:', error);
+//         alert('❌ Resume could not be saved. Please check your connection and try again.');
+//     }
+// }
+
+async function completeResume() {
+    // ✅ 1. Basic validation
+    if (!resumeData.personal.firstName || 
+        !resumeData.personal.lastName || 
+        !resumeData.personal.email || 
+        !resumeData.personal.phone || 
+        !resumeData.personal.jobTitle) {
+        alert('❌ Please fill in all required personal information (First Name, Last Name, Email, Phone, Job Title) before completing.');
+        return;
+    }
+    
+
+    try {
+        // ✅ 2. Get the current logged-in user from localStorage
+        const currentUser = JSON.parse(localStorage.getItem("pathfinder_current_user"));
+
+        if (!currentUser || !currentUser.userId) {
+            alert("⚠️ No logged-in user found. Please log in again.");
+            return;
+        }
+
+        // ✅ 3. Attach the logged-in user ID to the resume data
+        const resumeDataWithUser = {
+            ...resumeData,
+            userId: currentUser.userId
+        };
+
+        console.log("📦 Sending resume data to backend:", resumeDataWithUser);
+
+        // ✅ 4. Save to database
+        await saveResumeToDatabase(resumeDataWithUser);
+
+        // ✅ 5. Success message
+        alert('🎉 Congratulations! Your resume is complete and saved. You can now download it as a PDF or continue editing.');
+    } catch (error) {
+        console.error('Save failed in completeResume:', error);
+        alert('❌ Resume could not be saved. Please check your connection and try again.');
+    }
 }
+
+  async function saveResumeToDatabase(resumeData) {
+      try {
+          const response = await fetch("http://localhost:3000/api/saveResume", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify(resumeData)
+          });
+          const result = await response.json();
+          console.log('Response status:', response.status);
+          console.log('Response body:', result);
+          if (response.ok) {
+              alert("✅ Resume saved successfully!");
+          } else {
+              alert("❌ Failed to save resume: " + result.message);
+          }
+      } catch (error) {
+          console.error("Fetch error:", error);
+          alert("⚠️ Network error: " + error.message);
+          throw error;
+      }
+  }
+  
+
+
 
 // Download Resume as PDF
 
@@ -1192,3 +1320,5 @@ function downloadPDF() {
     alert('There was an error generating the PDF. Please try again.');
   });
 }
+
+
