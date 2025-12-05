@@ -524,6 +524,39 @@ body.dark-theme .preview-header h3 {
   color: #f8fafc;
 }
 
+/* ================== SAVE RESUME BUTTON ================== */
+#save-btn {
+  background-color: #28a745;           /* Green shade for save action */
+  color: white;                        /* White text */
+  font-weight: 600;                    /* Slightly bold */
+  padding: 10px 20px;                  /* Comfortable padding */
+  border: none;                        /* Remove default border */
+  border-radius: 8px;                  /* Soft rounded corners */
+  cursor: pointer;                     /* Pointer on hover */
+  transition: all 0.3s ease;           /* Smooth hover animation */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Hover effect */
+#save-btn:hover {
+  background-color: #218838;           /* Slightly darker green */
+  transform: translateY(-2px);         /* Lift up effect */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Active (clicked) effect */
+#save-btn:active {
+  transform: translateY(0);            /* Push back down */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Disabled state (if you ever disable it) */
+#save-btn:disabled {
+  background-color: #a5d6a7;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
 /* Modal */
 body.dark-theme .modal-content {
   background-color: #1e293b;
@@ -1225,6 +1258,73 @@ body.reading-theme {
     object-fit: cover;
     border: 3px solid var(--color-emerald-green);
     margin-bottom: 10px;
+}
+/* Capture Photo Button */
+.capture-btn {
+    background: var(--color-emerald-green);
+    color: white;
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-top: 12px;
+    transition: 0.2s ease;
+}
+
+.capture-btn:hover {
+    background: #0f9d78; /* slightly darker emerald-green */
+}
+
+
+/* Camera Section */
+#camera-section {
+    margin-top: 15px;
+    padding: 15px;
+    background: rgba(16, 185, 129, 0.05);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    border-radius: 12px;
+}
+
+#camera-section video {
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid var(--color-light-gray);
+}
+
+
+/* Inner Camera Buttons */
+#camera-section button {
+    padding: 8px 14px;
+    border-radius: 8px;
+    border: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-right: 8px;
+    margin-top: 12px;
+    transition: 0.2s ease;
+}
+
+/* Capture Button */
+#camera-section button:nth-child(2) {
+    background: var(--color-emerald-green);
+    color: white;
+}
+
+#camera-section button:nth-child(2):hover {
+    background: #0f9d78;
+}
+
+/* Close Button */
+.close-btn {
+    background: #ef4444 !important;
+    color: white;
+}
+
+#camera-section button:nth-child(3):hover {
+    background: #d3d3d3;
 }
 
 .remove-photo {
